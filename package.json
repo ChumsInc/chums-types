@@ -1,0 +1,28 @@
+{
+  "name": "chums-types",
+  "version": "1.0.0",
+  "description": "CHUMS common types",
+  "main": "",
+  "scripts": {
+    "version": "auto-changelog -p && git add CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UtahGooner/chums-types.git"
+  },
+  "author": "Steve Montgomery",
+  "license": "ISC",
+  "types": "./index.d.ts",
+  "bugs": {
+    "url": "https://github.com/UtahGooner/chums-types/issues"
+  },
+  "homepage": "https://github.com/UtahGooner/chums-types#readme",
+  "devDependencies": {
+    "auto-changelog": "^2.4.0"
+  },
+  "auto-changelog": {
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
+  }
+}
