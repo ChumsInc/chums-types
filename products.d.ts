@@ -137,22 +137,22 @@ export interface ProductAttributes {
     productId?: number,
     material?: ProductMaterial,
     dimensionNotes?: string,
-    casePackDimensions: ProductDimension|{},
-    adjustable: AdjustableDimension|{},
-    shippingDimensions: ProductDimension|{},
-    colors: [],
-    dimensions: ProductDimension|{},
+    casePackDimensions?: ProductDimension|{},
+    adjustable?: AdjustableDimension|{},
+    shippingDimensions?: ProductDimension|{},
+    colors?: [],
+    dimensions?: ProductDimension|{},
 }
 
 export interface ProductStatusAttributes {
-    new: boolean,
-    updating: boolean,
-    approved: boolean,
-    live: boolean,
-    discontinued: boolean,
+    new?: boolean,
+    updating?: boolean,
+    approved?: boolean,
+    live?: boolean,
+    discontinued?: boolean,
 }
 
-export interface Product {
+export interface ProductMaster {
     id: number,
     company: string,
     devCode: string,
@@ -170,9 +170,9 @@ export interface Product {
     idSKUGroup: number,
     SKU: string,
     UPC: string,
-    sellAsSelf: number,
-    sellAsMix: number,
-    sellAsColors: number,
+    sellAsSelf: boolean,
+    sellAsMix: boolean,
+    sellAsColors: boolean,
     color: string|null,
     suggestedRetailPrice: number,
     stdPrice: number,
@@ -180,6 +180,6 @@ export interface Product {
     notes: string|null,
     userId: number|null,
     dateCreated: string,
-    dateUpdated: string,m
+    dateUpdated: string,
     attributes?: ProductAttributes,
 }
