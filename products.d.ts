@@ -134,7 +134,6 @@ export interface AdjustableDimension {
 }
 export interface ProductAttributes {
     notes?: string,
-    productId?: number,
     material?: ProductMaterial,
     dimensionNotes?: string,
     casePackDimensions?: ProductDimension|{},
@@ -159,10 +158,6 @@ export interface ProductMaster {
     name: string,
     status: ProductStatusAttributes,
     active: boolean,
-    isNew: boolean,
-    isUpdating: boolean,
-    isApproved: boolean,
-    isLive: boolean,
     productType: string|null,
     productLine: string|null,
     category: string|null,
@@ -181,5 +176,6 @@ export interface ProductMaster {
     userId: number|null,
     dateCreated: string,
     dateUpdated: string,
+    season: Pick<ProductSeason, 'id'|'code'|'active'>,
     attributes?: ProductAttributes,
 }
