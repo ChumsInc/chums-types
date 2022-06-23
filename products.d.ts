@@ -176,6 +176,6 @@ export interface ProductMaster {
     userId: number|null,
     dateCreated: string,
     dateUpdated: string,
-    season: Pick<ProductSeason, 'id'|'code'|'active'>,
+    season: Pick<ProductSeason, 'id'|'code'|'active'>|null,
     attributes?: ProductAttributes,
 }
