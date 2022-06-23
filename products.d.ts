@@ -2,7 +2,6 @@
  * CHUMS common product types
  *  @author Steve Montgomery <https://github.com/UtahGooner>
  */
-import {BooleanLike} from "./basic-types";
 
 export type ProductType = 'F'|'K'|'R'|'D';
 
@@ -121,14 +120,14 @@ export interface ProductMaterial {
 
 export interface ProductDimension {
     quantity?: number,
-    length: number|null,
-    width: number|null,
-    weight: number|null,
-    height: number|null,
+    length?: number|null,
+    width?: number|null,
+    weight?: number|null,
+    height?: number|null,
 }
 export interface AdjustableDimension {
-    min: number|null,
-    max: number|null,
+    min?: number|null,
+    max?: number|null,
     name?: string,
     isAdjustable?: boolean,
 }
@@ -136,11 +135,11 @@ export interface ProductAttributes {
     notes?: string,
     material?: ProductMaterial,
     dimensionNotes?: string,
-    casePackDimensions?: ProductDimension|{},
-    adjustable?: AdjustableDimension|{},
-    shippingDimensions?: ProductDimension|{},
+    casePackDimensions?: ProductDimension,
+    adjustable?: AdjustableDimension,
+    shippingDimensions?: ProductDimension,
     colors?: [],
-    dimensions?: ProductDimension|{},
+    dimensions?: ProductDimension,
 }
 
 export interface ProductStatusAttributes {
