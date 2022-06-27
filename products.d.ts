@@ -177,4 +177,5 @@ export interface ProductMaster {
     dateUpdated: string,
     season: Pick<ProductSeason, 'id'|'code'|'active'>|null,
     attributes?: ProductAttributes,
+    itemQuantity?: number,
 }
