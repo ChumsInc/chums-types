@@ -124,7 +124,9 @@ export interface ProductDimension {
     width?: number|null,
     weight?: number|null,
     height?: number|null,
+    readonly volume?: number;
 }
+
 export interface AdjustableDimension {
     min?: number|null,
     max?: number|null,
