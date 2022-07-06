@@ -21,7 +21,7 @@ export interface CustomerUser extends BasicCustomerUser {
     notesFrom?: string,
 }
 
-export interface UserRecord {
+export interface User {
     id: number,
     name: string,
     phone: string,
@@ -46,17 +46,17 @@ export interface UserRecord {
     timestamp: string,
 }
 
-export interface ExtendedUserRecord extends UserRecord {
-    accounts?: UserAccountRecord[],
-    roles?: UserRoleRecord[],
+export interface ExtendedUser extends User {
+    accounts?: UserAccount[],
+    roles?: UserRole[],
 }
 
-export type UserProfile = Omit<UserRecord,
+export type UserProfile = Omit<User,
     "internal_only"|"waitingauth"|"last_login"|"hits"|"idTimeclockEmployee"|"timestamp">
 
-export interface UserProfileRecord extends UserProfile {
-    accounts?: UserAccountRecord[],
-    roles?: UserRoleRecord[],
+export interface ExtendedUserProfile extends UserProfile {
+    accounts?: UserAccount[],
+    roles?: UserRole[],
     picture?: string|null,
 }
 
@@ -79,7 +79,7 @@ export interface LoadSessionUserProps {
     pass?: string|null,
 }
 
-export interface UserAccountRecord {
+export interface UserAccount {
     id: number,
     userid: number,
     Company: string,
@@ -98,7 +98,7 @@ export interface UserAccountRecord {
     timestamp: string,
 }
 
-export interface UserRoleRecord {
+export interface UserRole {
     id: number,
     role: string,
 }
