@@ -159,7 +159,7 @@ export interface ProductMaster {
     name: string,
     status: ProductStatusAttributes,
     active: boolean,
-    productType: string|null,
+    productType: ProductType|null,
     productLine: string|null,
     category: string|null,
     subCategory: string|null,
