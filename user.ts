@@ -51,7 +51,7 @@ export interface ExtendedUserRecord extends UserRecord {
     roles?: UserRoleRecord[],
 }
 
-type UserProfile = Omit<UserRecord,
+export type UserProfile = Omit<UserRecord,
     "internal_only"|"waitingauth"|"last_login"|"hits"|"idTimeclockEmployee"|"timestamp">
 
 export interface UserProfileRecord extends UserProfile {
