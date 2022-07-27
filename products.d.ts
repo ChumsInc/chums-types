@@ -181,3 +181,11 @@ export interface ProductMaster {
     attributes?: ProductAttributes,
     itemQuantity?: number,
 }
+
+export interface BinLocation {
+    WarehouseCode: string;
+    ItemCode: string;
+    ItemCodeDesc: string,
+    SalesUnitOfMeasure: string,
+    BinLocation: string|null;
+}
