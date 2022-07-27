@@ -185,7 +185,7 @@ export interface ProductMaster {
 export interface BinLocation {
     WarehouseCode: string;
     ItemCode: string;
-    ItemCodeDesc: string,
-    SalesUnitOfMeasure: string,
+    ItemCodeDesc?: string,
+    SalesUnitOfMeasure?: string,
     BinLocation: string|null;
 }
