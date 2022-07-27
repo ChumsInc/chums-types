@@ -187,5 +187,5 @@ export interface BinLocation {
     ItemCode: string;
     ItemCodeDesc?: string,
     SalesUnitOfMeasure?: string,
-    BinLocation: string|null;
+    BinLocation: string;
 }
