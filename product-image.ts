@@ -1,22 +1,25 @@
 
+export type ImageSizePath = '80'|'125'|'250'|'400'|'800'|'2048'|'originals';
+
 export interface ImageSize {
     width: number,
     height: number,
     size: number,
 }
-export interface ImageSizeList {
-    [key:string]: ImageSize,
+
+export type ImageSizeList = {
+    [key in ImageSizePath]: ImageSize;
+};
+export type ColorSpaceList = {
+    [key in ImageSizePath]: string;
 }
-export interface ColorSpaceList {
-    [key:string]: string,
-}
-export interface ImageFormatList {
-    [key:string]: string,
+export type ImageFormatList = {
+    [key in ImageSizePath]: string;
 }
 
 export interface ProductImage {
     filename: string,
-    pathnames: string[],
+    pathnames: ImageSizePath[],
     sizes: ImageSizeList,
     color_space?: ColorSpaceList,
     img_format?: ImageFormatList,
@@ -46,4 +49,9 @@ export interface ProductAltItem {
     ItemCodeDesc: string
     ProductType: string,
     InactiveItem: string
+}
+
+export interface GenericImage extends ImageSize {
+    path: string,
+    filename: string,
 }
