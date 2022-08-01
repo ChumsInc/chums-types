@@ -10,5 +10,6 @@ export * from './product-image';
 export * from './products';
 export * from './returns';
 export * from './redux';
+export * from './salesperson';
 export * from './ui/tabs';
 export * from './user';
