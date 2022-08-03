@@ -12,7 +12,8 @@
   },
   "author": "Steve Montgomery",
   "license": "ISC",
-  "types": "./index.d.ts",
+  "tmain": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bugs": {
     "url": "https://github.com/UtahGooner/chums-types/issues"
   },
@@ -24,5 +25,8 @@
     "template": "keepachangelog",
     "unreleased": true,
     "commitLimit": false
-  }
+  },
+  "files": [
+    "/dist"
+  ]
 }
