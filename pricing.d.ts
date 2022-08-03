@@ -1,3 +1,4 @@
+import {DBCompany} from "./basic-types";
 
 export interface PriceLevel {
     PriceLevel: string;
@@ -6,7 +7,7 @@ export interface PriceLevel {
 }
 
 export interface BasePriceCode {
-    Company: string;
+    Company: DBCompany;
     PriceCodeRecord: '0'|'1'|'2';
     PriceCode: string;
     PriceCodeDesc: string;
@@ -61,11 +62,21 @@ export interface CustomerPriceCode extends BasePriceCode {
 
 export interface PriceCodeChange extends BasePriceCode {
     CustomerPriceLevel: string,
-    newDiscountMarkup1?: number|null,
+    newDiscountMarkup1?: number,
     UserName: string,
     timestamp: string;
 }
 
 export interface PriceCodeUsers {
     UserName: string;
+}
+
+export interface PriceCodeItem {
+    ItemCode: string;
+    ItemCodeDesc: string;
+    ProductType: string;
+    StandardUnitOfMeasure: string;
+    StandardUnitPrice: number;
+    SuggestedRetailPrice: number;
+    AverageUnitCost: number;
 }
