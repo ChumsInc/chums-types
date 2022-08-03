@@ -6,6 +6,7 @@
 export * from './basic-types';
 export * from './direct-labor';
 export * from './generics';
+export * from './pricing';
 export * from './product-image';
 export * from './products';
 export * from './returns';
