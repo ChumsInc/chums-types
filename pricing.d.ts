@@ -67,8 +67,9 @@ export interface PriceCodeChange extends BasePriceCode {
     timestamp: string;
 }
 
-export interface PriceCodeUsers {
+export interface PriceCodeUser {
     UserName: string;
+    changes: number;
 }
 
 export interface PriceCodeItem {
