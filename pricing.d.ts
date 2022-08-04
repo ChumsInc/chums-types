@@ -63,8 +63,8 @@ export interface CustomerPriceCode extends BasePriceCode {
 export interface PriceCodeChange extends BasePriceCode {
     CustomerPriceLevel: string,
     newDiscountMarkup1?: number,
-    UserName: string,
-    timestamp: string;
+    UserName?: string,
+    timestamp?: string;
 }
 
 export interface PriceCodeUser {
