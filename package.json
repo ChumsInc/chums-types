@@ -2,7 +2,6 @@
   "name": "chums-types",
   "version": "2.1.1",
   "description": "CHUMS common types",
-  "main": "",
   "scripts": {
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
@@ -12,8 +11,7 @@
   },
   "author": "Steve Montgomery",
   "license": "ISC",
-  "tmain": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "index.d.ts",
   "bugs": {
     "url": "https://github.com/UtahGooner/chums-types/issues"
   },
@@ -25,8 +23,5 @@
     "template": "keepachangelog",
     "unreleased": true,
     "commitLimit": false
-  },
-  "files": [
-    "/dist"
-  ]
+  }
 }
