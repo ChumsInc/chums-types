@@ -65,6 +65,7 @@ export interface PriceCodeChange extends BasePriceCode {
     newDiscountMarkup1?: number,
     UserName?: string,
     timestamp?: string;
+    hasChange:boolean;
 }
 
 export interface PriceCodeUser {
