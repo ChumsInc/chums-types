@@ -39,7 +39,7 @@ export interface FullPriceCode extends BasePriceCode {
 }
 
 export interface BasePriceCodeInfo extends BasePriceCode {
-    ItemsCount: number;
+    ItemsCount?: number;
 }
 
 export interface CustomerPriceLevelPriceCode extends BasePriceCode {
