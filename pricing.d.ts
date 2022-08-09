@@ -1,5 +1,7 @@
 import {DBCompany} from "./basic-types";
 
+export type PricingMethod = 'C'|'D'|'M'|'O'|'P';
+
 export interface PriceLevel {
     PriceLevel: string;
     PriceLevelDescription: string;
@@ -13,7 +15,7 @@ export interface BasePriceCode {
     PriceCodeDesc: string;
     BreakQuantity1: number,
     DiscountMarkup1: number,
-    PricingMethod: 'C'|'D'|'M'|'O'|'P',
+    PricingMethod: PricingMethod;
     DateUpdated: string;
 }
 
