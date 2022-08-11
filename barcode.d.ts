@@ -36,6 +36,8 @@ export interface BarcodeItem {
     ItemDescription: string,
     Color: string,
     SKU: string,
+    CustomerPart: string;
+    UPC: string;
     MSRP: string,
     SpecialInstructions: string;
     Notes: string;
