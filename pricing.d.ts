@@ -6,6 +6,9 @@ export interface PriceLevel {
     PriceLevel: string;
     PriceLevelDescription: string;
     SortOrder: number;
+    active:boolean;
+    customers: number,
+    priceCodes: number;
 }
 
 export interface BasePriceCode {
