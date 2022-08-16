@@ -74,9 +74,12 @@ export interface PriceCodeChange extends BasePriceCode {
 }
 
 export interface PriceCodeUser {
+    id: number;
     UserName: string;
+    email: string;
     changes: number;
 }
+
 
 export interface PriceCodeItem {
     ItemCode: string;
