@@ -13,5 +13,6 @@ export * from './products';
 export * from './returns';
 export * from './sales-orders';
 export * from './salesperson';
+export * from './store-map';
 export * from './ui/tabs';
 export * from './user';
