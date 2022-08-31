@@ -3,6 +3,7 @@ export interface StoreMapCustomer {
     ARDivisionNo: string|null;
     CustomerNo: string|null;
     ShipToCode: string|null;
+    CustomerName: string;
     AddressLine1: string|null;
     AddressLine2: string|null;
     AddressLine3: string|null;
