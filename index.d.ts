@@ -3,6 +3,7 @@
  *  @author Steve Montgomery <https://github.com/UtahGooner>
  */
 
+export * from './amazon-fba';
 export * from './barcode';
 export * from './basic-types';
 export * from './direct-labor';
