@@ -9,23 +9,23 @@ export interface BarcodeCustomer {
 }
 
 export interface BarcodeCustomerSettings extends BarcodeCustomer {
-    "reqAltItemNumber": BooleanLike;
-    "reqItemDescription": BooleanLike;
-    "reqColor": BooleanLike;
-    "reqSKU": BooleanLike;
-    "reqCustomerPart": BooleanLike;
-    "reqUPC": BooleanLike;
-    "reqMSRP": BooleanLike;
-    "reqCustom1": BooleanLike;
-    "reqCustom2": BooleanLike;
-    "reqCustom3": BooleanLike;
-    "reqCustom4": BooleanLike;
-    "custom1Name": string;
-    "custom2Name": string;
-    "custom3Name": string;
-    "custom4Name": string;
-    "SpecialInstructions": string;
-    "Notes": string;
+    reqAltItemNumber: BooleanLike;
+    reqItemDescription: BooleanLike;
+    reqColor: BooleanLike;
+    reqSKU: BooleanLike;
+    reqCustomerPart: BooleanLike;
+    reqUPC: BooleanLike;
+    reqMSRP: BooleanLike;
+    reqCustom1: BooleanLike;
+    reqCustom2: BooleanLike;
+    reqCustom3: BooleanLike;
+    reqCustom4: BooleanLike;
+    custom1Name: string;
+    custom2Name: string;
+    custom3Name: string;
+    custom4Name: string;
+    SpecialInstructions: string;
+    Notes: string;
 }
 
 export interface BarcodeItem {
