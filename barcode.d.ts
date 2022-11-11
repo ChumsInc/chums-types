@@ -30,6 +30,7 @@ export interface BarcodeCustomerSettings extends BarcodeCustomer {
 
 export interface BarcodeItem {
     ID: number,
+    CustomerID?: number,
     Company: string,
     ItemCode: string,
     AltItemCode: string,
