@@ -6,6 +6,8 @@ export interface BarcodeCustomer {
     CustomerNo:string;
     CustomerName: string;
     id: number;
+    SpecialInstructions: string;
+    Notes: string;
 }
 
 export interface BarcodeCustomerSettings extends BarcodeCustomer {
@@ -24,8 +26,6 @@ export interface BarcodeCustomerSettings extends BarcodeCustomer {
     custom2Name: string;
     custom3Name: string;
     custom4Name: string;
-    SpecialInstructions: string;
-    Notes: string;
 }
 
 export interface BarcodeItem {
