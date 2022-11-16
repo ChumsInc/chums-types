@@ -26,6 +26,7 @@ export interface BarcodeCustomerSettings extends BarcodeCustomer {
     custom2Name: string;
     custom3Name: string;
     custom4Name: string;
+    timestamp?: string;
 }
 
 export interface BarcodeItem {
@@ -46,5 +47,5 @@ export interface BarcodeItem {
     Custom2: string,
     Custom3: string,
     Custom4: string;
-    timestamp: string;
+    timestamp?: string;
 }
