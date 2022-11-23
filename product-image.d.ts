@@ -7,13 +7,13 @@ export interface ImageSize {
 }
 
 export type ImageSizeList = {
-    [key in ImageSizePath]: ImageSize;
+    [key in ImageSizePath]?: ImageSize;
 };
 export type ColorSpaceList = {
-    [key in ImageSizePath]: string;
+    [key in ImageSizePath]?: string;
 }
 export type ImageFormatList = {
-    [key in ImageSizePath]: string;
+    [key in ImageSizePath]?: string;
 }
 
 export interface ProductImage {
