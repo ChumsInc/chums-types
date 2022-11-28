@@ -40,14 +40,19 @@ export interface ProductImage {
     preferred_image?: boolean,
 }
 
-export interface ProductAltItem {
+export interface ProductAltItemKey {
     id: number,
     filename: string,
     item_code: string,
-    active: boolean,
-    ItemCodeDesc: string
-    ProductType: string,
-    InactiveItem: string
+}
+export interface ProductAltItem extends ProductAltItemKey {
+    id: number,
+    filename: string,
+    item_code: string,
+    active?: boolean,
+    ItemCodeDesc?: string
+    ProductType?: string,
+    InactiveItem?: string
 }
 
 export interface GenericImage extends ImageSize {
