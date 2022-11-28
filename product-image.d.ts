@@ -16,6 +16,7 @@ export type ImageFormatList = {
     [key in ImageSizePath]?: string;
 }
 
+
 export interface ProductImage {
     filename: string,
     pathnames: ImageSizePath[],
@@ -35,7 +36,7 @@ export interface ProductImage {
     Category?:string|null,
     ItemCollection?: string|null,
     BaseSKU?:string|null,
-    item_codes?: string[],
+    item_codes?: ProductAltItem[],
     preferred_image?: boolean,
 }
 
@@ -43,7 +44,6 @@ export interface ProductAltItem {
     id: number,
     filename: string,
     item_code: string,
-    itemCode: string,
     active: boolean,
     ItemCodeDesc: string
     ProductType: string,
