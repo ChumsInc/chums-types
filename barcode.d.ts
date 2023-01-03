@@ -1,10 +1,10 @@
 import {BooleanLike} from "./basic-types";
-import {ProductStatus, ProductType} from "./products";
+import {ProductType} from "./products";
 
 export interface BarcodeCustomer {
     Company: string;
     ARDivisionNo: string;
-    CustomerNo:string;
+    CustomerNo: string;
     CustomerName: string;
     id: number;
     SpecialInstructions: string;
@@ -49,7 +49,8 @@ export interface BarcodeItem {
     Custom3: string,
     Custom4: string;
     timestamp?: string;
-    InactiveItem?: 'Y'|'N'|null;
-    ProductType?: ProductType|null;
-    ProductStatus?: string|null;
+    InactiveItem?: 'Y' | 'N' | null;
+    ProductType?: ProductType | null;
+    ProductStatus?: string | null;
+    SuggestedRetailPrice?: string | number | null;
 }
