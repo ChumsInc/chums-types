@@ -1,4 +1,5 @@
 import {BooleanLike} from "./basic-types";
+import {ProductStatus, ProductType} from "./products";
 
 export interface BarcodeCustomer {
     Company: string;
@@ -48,4 +49,7 @@ export interface BarcodeItem {
     Custom3: string,
     Custom4: string;
     timestamp?: string;
+    InactiveItem?: 'Y'|'N'|null;
+    ProductType?: ProductType|null;
+    ProductStatus?: string|null;
 }
