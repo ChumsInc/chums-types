@@ -97,7 +97,7 @@ export interface SalesOrderDetailLine {
     QuantityOnBackOrder: number|string;
     QuantityOnWorkOrder: number|string;
     QuantityOnPurchaseOrder: number|string;
-    BinLocation: number|string|null;
+    BinLocation: string|null;
     ShipWeight: number|string;
     ProductType: string|null;
     InactiveItem: 'Y'|'N'|null,
