@@ -7,6 +7,7 @@ export interface BarcodeCustomer {
     CustomerNo: string;
     CustomerName: string;
     id: number;
+    active: boolean;
     SpecialInstructions: string;
     Notes: string;
 }
