@@ -2,6 +2,7 @@
  * CHUMS common product types
  *  @author Steve Montgomery <https://github.com/UtahGooner>
  */
+import {YesNo} from "./generics";
 
 export type ProductType = 'F'|'K'|'R'|'D';
 
@@ -201,4 +202,22 @@ export interface ProductSearchItem {
     UDF_UPC: string|null;
     UDF_UPC_BY_COLOR: string|null;
     SuggestedRetailPrice: string|number;
+}
+
+export interface ProductColorUPC {
+    id: number;
+    company: string;
+    ItemCode: string;
+    upc: string;
+    notes: string;
+    tags: unknown|null;
+    active: boolean;
+}
+
+export interface ProductColorUPCResponse extends ProductColorUPC {
+    ItemCodeDesc: string|null;
+    ProductType: ProductType|null;
+    InactiveItem: YesNo|null;
+    UDF_UPC: string|null;
+    UDF_UPC_BY_COLOR: string|null;
 }
