@@ -35,7 +35,26 @@ export interface ProductCollection {
     Category3: string,
 }
 
+
+/**
+ * BaseSKU should be used in SKU System editor
+ */
+
 export interface BaseSKU {
+    id: number,
+    sku_group_id: number,
+    sku: string,
+    description: string,
+    upc: string,
+    active: boolean,
+    notes?: string|null,
+    tags?: unknown|null,
+}
+
+/**
+ * BaseSKUSearch should be used when loading search filters from '/api/search'...
+ */
+export interface BaseSKUSearch extends BaseSKU {
     Category4: string,
     id: number|null,
     sku_group_id: number|null,
