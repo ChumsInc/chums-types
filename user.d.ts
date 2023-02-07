@@ -40,7 +40,7 @@ export interface PublicUserProps {
     b2b_login: string;
 }
 
-export interface User extends PublicUserProps {
+export interface User extends CustomerUser, PublicUserProps {
     internal_only: BooleanLike;
     waitingauth: BooleanLike;
     last_login: string;
