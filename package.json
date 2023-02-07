@@ -19,6 +19,9 @@
   "devDependencies": {
     "auto-changelog": "^2.4.0"
   },
+  "peerDependencies": {
+    "@reduxjs/toolkit": "^1.9.2"
+  },
   "auto-changelog": {
     "template": "keepachangelog",
     "unreleased": true,
