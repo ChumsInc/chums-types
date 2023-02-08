@@ -1,17 +1,25 @@
 import {BooleanLike} from "./basic-types";
 
+
+export enum UserAccountType {
+    UserAccountNone = 0,
+    UserAccountEmployee = 1,
+    UserAccountRep = 2,
+    UserAccountCustomer = 4,
+}
+
 export interface BasicCustomerUser {
     id: number;
     name: string;
     email: string;
-    accountType: number;
+    accountType: UserAccountType;
 }
 
 export interface CustomerUser extends BasicCustomerUser {
     id: number;
     name: string;
     email: string;
-    accountType: number;
+    accountType: UserAccountType;
     Company: string;
     ARDivisionNo: string;
     CustomerNo: string;
@@ -32,7 +40,7 @@ export interface UserRecord {
     state: string;
     zip: string;
     country: string;
-    accountType: number;
+    accountType: UserAccountType;
     active: BooleanLike;
     notes: string;
     created: string;
@@ -101,6 +109,12 @@ export interface UserAccount {
     customers: number;
     shipToCustomers: number;
     timestamp: string;
+}
+
+export interface AccessRole {
+    id: number;
+    role: string;
+    description: string;
 }
 
 export interface UserRole {
