@@ -21,7 +21,7 @@ export interface CustomerUser extends BasicCustomerUser {
     notesFrom?: string;
 }
 
-export interface PublicUserProps {
+export interface UserRecord {
     id: number;
     name: string;
     phone: string;
@@ -41,7 +41,7 @@ export interface PublicUserProps {
     b2b_login: string|null;
 }
 
-export interface User extends CustomerUser, PublicUserProps {
+export interface User extends UserRecord {
     internal_only: BooleanLike;
     waitingauth: BooleanLike;
     last_login: string|null;
