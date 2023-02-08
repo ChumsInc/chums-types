@@ -24,6 +24,7 @@ export interface CustomerUser extends BasicCustomerUser {
 export interface UserRecord {
     id: number;
     name: string;
+    email:string;
     phone: string;
     company: string;
     address: string;
