@@ -35,15 +35,15 @@ export interface PublicUserProps {
     notes: string;
     created: string;
     pwd_change_required: BooleanLike;
-    logins: number;
-    b2b_ct: number;
-    b2b_login: string;
+    logins: number|null;
+    b2b_ct: number|null;
+    b2b_login: string|null;
 }
 
 export interface User extends CustomerUser, PublicUserProps {
     internal_only: BooleanLike;
     waitingauth: BooleanLike;
-    last_login: string;
+    last_login: string|null;
     hits: number;
     idTimeclockEmployee: number;
     timestamp: string;
