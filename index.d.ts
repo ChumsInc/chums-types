@@ -12,7 +12,6 @@ export * from './item';
 export * from './pricing';
 export * from './product-image';
 export * from './products';
-export * from './redux-utils';
 export * from './returns';
 export * from './sales-orders';
 export * from './salesperson';

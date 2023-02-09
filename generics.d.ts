@@ -4,3 +4,5 @@ export interface Editable {
 export type LoadingStatus = 'idle' | 'pending' | 'succeeded' | 'failed';
 
 export type YesNo = 'Y'|'N';
+
+
