@@ -88,3 +88,5 @@ export {
     TimeClockEmployee,
     PasswordValidationResponse
 } from './user';
+
+export * as ShopifyIntegration from './shopify/index'

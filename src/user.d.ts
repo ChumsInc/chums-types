@@ -1,7 +1,7 @@
 import {BooleanLike} from "./basic-types";
 
 
-export declare enum UserAccountType {
+export enum UserAccountType {
     UserAccountNone = 0,
     UserAccountEmployee = 1,
     UserAccountRep = 2,
