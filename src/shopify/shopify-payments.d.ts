@@ -4,6 +4,7 @@ export interface ShopifyPayment {
     id: number;
     status: string;
     date: string;
+    currency: string;
     amount: string;
     summary: object;
 }
