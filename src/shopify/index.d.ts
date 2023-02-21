@@ -17,7 +17,8 @@ export type {
 } from './shopify-chums-types';
 export type {
     DeprecatedFulfillment, DeprecatedFulfillmentResponse, DeprecatedShopifyFulfillmentBody
-} from './shopify-deprecated'
+} from './shopify-deprecated';
+export {ShopifyFulfillmentOrder, ShopifyFulfillmentOrdersList, ShopifyFulfillmentOrderLineItem} from './shopify-fulfillment-orders';
 export type {
     InventoryLevelChange,
     SavedInventoryLevel,
