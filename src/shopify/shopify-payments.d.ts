@@ -21,7 +21,7 @@ export interface SavedPayment extends ShopifyPayment {
 
 export interface ShopifyPaymentTransaction {
     id: number;
-    type: 'payout' | 'charge' | 'refund';
+    type: 'payout' | 'charge' | 'refund' | 'adjustment';
     payout_id: number;
     payout_status: string;
     currency: string;
