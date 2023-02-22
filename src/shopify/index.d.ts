@@ -1,5 +1,5 @@
 export type {
-    PriceMoney, MoneyString, PriceSet, ShopifyListResult, ShopifyObject, StoreName, StoreNames
+    PriceMoney, MoneyString, PriceSet, ShopifyListResult, ShopifyObject, StoreName, StoreNames,
 } from './shopify-generics';
 export type {
     ItemValidation,
@@ -13,12 +13,14 @@ export type {
     SageItem,
     SageOrderDetailLine,
     SavedProduct,
-    SavedVariant
+    SavedVariant,
 } from './shopify-chums-types';
 export type {
-    DeprecatedFulfillment, DeprecatedFulfillmentResponse, DeprecatedShopifyFulfillmentBody
+    DeprecatedFulfillment, DeprecatedFulfillmentResponse, DeprecatedShopifyFulfillmentBody,
 } from './shopify-deprecated';
-export {ShopifyFulfillmentOrder, ShopifyFulfillmentOrdersList, ShopifyFulfillmentOrderLineItem} from './shopify-fulfillment-orders';
+export {
+    ShopifyFulfillmentOrder, ShopifyFulfillmentOrdersList, ShopifyFulfillmentOrderLineItem,
+} from './shopify-fulfillment-orders';
 export type {
     InventoryLevelChange,
     SavedInventoryLevel,
@@ -27,7 +29,8 @@ export type {
     ShopifyInventoryItem,
     ShopifyInventoryItemsResponse,
     ShopifyInventoryLevel,
-    ShopifyInventoryLevelResponse
+    ShopifyInventoryLevelResponse,
+
 } from './shopify-inventory';
 export type {
     ExtendedSavedOrder,
@@ -49,11 +52,12 @@ export type {
     ShopifyItem,
     ShopifyShippingLine,
     ShopifyTaxLine,
-    ItemLocation
+    ItemLocation,
+    ShopifyCustomer
 } from './shopify-orders';
 export type {
-    SavedPayment, ShopifyPayment, ShopifyPaymentResponse, ShopifyPaymentTransaction, ShopifyPaymentTransactionsResponse
+    SavedPayment, ShopifyPayment, ShopifyPaymentResponse, ShopifyPaymentTransaction, ShopifyPaymentTransactionsResponse,
 } from './shopify-payments';
 export type {
-    ChangedVariant, ShopifyProductVariant, ShopifyProductsResponse, ShopifyProduct
+    ChangedVariant, ShopifyProductVariant, ShopifyProductsResponse, ShopifyProduct,
 } from './shopify-products';

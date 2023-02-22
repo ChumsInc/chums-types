@@ -71,6 +71,14 @@ export interface ShopifyItem {
     discount_allocations: ShopifyDiscountAllocation[]
 }
 
+export interface ShopifyCustomer {
+    id: number;
+    email: string;
+    first_name: string;
+    last_name: string;
+    orders_count: number;
+    tags: string;
+}
 
 export interface ShopifyOrder {
     id: number | string;
@@ -97,7 +105,7 @@ export interface ShopifyOrder {
     financial_status: string | null;
     total_price: string;
     billing_address: ShopifyAddress;
-    customer: object;
+    customer: ShopifyCustomer;
     line_items: ShopifyItem[];
     shipping_address: ShopifyAddress;
     shipping_lines: ShopifyShippingLine[],
