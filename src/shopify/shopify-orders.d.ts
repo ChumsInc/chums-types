@@ -84,7 +84,14 @@ export interface ShopifyOrder {
     email: string;
     gateway: string;
     subtotal_price_set: PriceSet;
-    tax_lines: ShopifyTaxLine[]
+    tags: string;
+    tax_lines: ShopifyTaxLine[];
+    taxes_included: boolean;
+    total_discounts: string;
+    total_discounts_set: PriceSet;
+    total_line_items_price: string;
+    total_line_items_price_set: PriceSet;
+    total_outstanding: string;
     fulfillment_status: string | null;
     financial_status: string | null;
     total_price: string;
