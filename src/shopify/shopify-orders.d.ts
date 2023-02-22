@@ -17,8 +17,15 @@ export interface ShopifyTaxLine {
 export interface ShopifyShippingLine {
     id: number;
     code: string;
+    discounted_price: string;
+    discounted_price_set: PriceSet;
     title: string;
     price: string;
+    price_set: PriceSet;
+    source: string;
+    tax_lines: ShopifyTaxLine[],
+    discount_allocations: ShopifyDiscountAllocation[]
+
 }
 
 
