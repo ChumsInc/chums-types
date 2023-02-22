@@ -77,6 +77,7 @@ export interface ShopifyOrder {
     number: number;
     cancelled_at: string | null;
     closed_at: string | null;
+    created_at: string;
     updated_at: string;
     name: string;
     payment_gateway_names: string[];
