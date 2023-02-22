@@ -104,6 +104,8 @@ export interface ShopifyOrder {
     fulfillment_status: string | null;
     financial_status: string | null;
     total_price: string;
+    total_price_set: PriceSet;
+    total_price_usd: string;
     billing_address: ShopifyAddress;
     customer: ShopifyCustomer;
     line_items: ShopifyItem[];
