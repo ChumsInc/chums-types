@@ -198,6 +198,7 @@ export interface SavedOrder {
     shopify_order: ShopifyOrder|null;
 }
 export interface SageImportResponse {
+    error?: string;
     post: object;
     Company: string;
     SalesOrderNo: string;
