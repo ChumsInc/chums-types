@@ -51,7 +51,13 @@ export interface ShopifyRisk {
     message: string;
     merchant_message: string;
 }
-
+export interface ShopifyOrderPaymentDetails {
+    credit_card_bin: string;
+    avs_result_code: string;
+    cvv_result_code: string;
+    credit_card_number: string;
+    credit_card_company: string;
+}
 export interface ShopifyItem {
     id: number,
     admin_graphql_api_id: string,
@@ -95,35 +101,65 @@ export interface ShopifyCustomer {
 
 export interface ShopifyOrder {
     id: number | string;
-    number: number;
+    admin_graphql_api_id: string;
+    app_id: number;
+    browser_ip: string;
+    buyer_accepts_marketing: boolean;
+    cancel_reason: string|null;
     cancelled_at: string | null;
     closed_at: string | null;
+    confirmed: boolean;
+    contact_email: string;
     created_at: string;
-    updated_at: string;
-    name: string;
-    payment_gateway_names: string[];
+    currency: string;
+    current_subtotal_price: string;
+    current_subtotal_price_set: PriceSet;
+    current_total_discounts: string;
+    current_total_discounts_set: PriceSet;
+    current_total_duties_set: unknown|null;
+    current_total_price: string;
+    current_total_price_set: PriceSet;
+    current_total_tax: string;
+    current_total_tax_set: PriceSet;
+    customer_locale: string;
     discount_codes?: ShopifyDiscountCode[];
     email: string;
+    estimated_taxes: boolean;
+    financial_status: string | null;
+    fulfillment_status: string | null;
     gateway: string;
+    name: string;
+    number: number;
+    order_status_url: string;
+    payment_gateway_names: string[];
+    presentment_money: string;
+    processed_at: string;
     subtotal_price: string;
     subtotal_price_set: PriceSet;
     tags: string;
     tax_lines: ShopifyTaxLine[];
     taxes_included: boolean;
+    test: boolean;
     total_discounts: string;
     total_discounts_set: PriceSet;
     total_line_items_price: string;
     total_line_items_price_set: PriceSet;
     total_outstanding: string;
-    fulfillment_status: string | null;
-    financial_status: string | null;
     total_price: string;
     total_price_set: PriceSet;
     total_price_usd: string;
     total_shipping_price_set: PriceSet;
+    total_tax: string;
+    total_tax_set:PriceSet;
+    total_weight: number;
+    updated_at: string;
     billing_address: ShopifyAddress;
     customer: ShopifyCustomer;
+    discount_applications: unknown[];
+    fulfillments: unknown[]
     line_items: ShopifyItem[];
+    payment_details: ShopifyOrderPaymentDetails;
+    refunds: unknown[];
     shipping_address: ShopifyAddress;
     shipping_lines: ShopifyShippingLine[],
     risks: ShopifyRisk[];

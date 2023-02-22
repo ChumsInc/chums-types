@@ -53,7 +53,8 @@ export type {
     ShopifyShippingLine,
     ShopifyTaxLine,
     ItemLocation,
-    ShopifyCustomer
+    ShopifyCustomer,
+    ShopifyOrderPaymentDetails
 } from './shopify-orders';
 export type {
     SavedPayment, ShopifyPayment, ShopifyPaymentResponse, ShopifyPaymentTransaction, ShopifyPaymentTransactionsResponse,
