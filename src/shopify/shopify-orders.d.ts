@@ -8,10 +8,16 @@ export interface ShopifyDiscountCode {
     code: string;
 }
 export interface ShopifyTaxLine {
+    channel_liable: boolean;
     price: string;
+    price_set: PriceSet;
+    rate: number|string;
+    title: string;
 }
 export interface ShopifyShippingLine {
+    id: number;
     code: string;
+    title: string;
     price: string;
 }
 
@@ -92,6 +98,7 @@ export interface ShopifyOrder {
     discount_codes?: ShopifyDiscountCode[];
     email: string;
     gateway: string;
+    subtotal_price: string;
     subtotal_price_set: PriceSet;
     tags: string;
     tax_lines: ShopifyTaxLine[];
@@ -106,6 +113,7 @@ export interface ShopifyOrder {
     total_price: string;
     total_price_set: PriceSet;
     total_price_usd: string;
+    total_shipping_price_set: PriceSet;
     billing_address: ShopifyAddress;
     customer: ShopifyCustomer;
     line_items: ShopifyItem[];
