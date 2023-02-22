@@ -1,4 +1,4 @@
-import {SavedOrder} from "./shopify-orders";
+import {ExtendedSavedOrder} from "./shopify-orders";
 
 export interface ShopifyPayment {
     id: number;
@@ -21,7 +21,7 @@ export interface SavedPayment extends ShopifyPayment {
 
 export interface ShopifyPaymentTransaction {
     id: number;
-    type: 'payout'|'charge'|'refund';
+    type: 'payout' | 'charge' | 'refund';
     payout_id: number;
     payout_status: string;
     currency: string;
@@ -29,9 +29,9 @@ export interface ShopifyPaymentTransaction {
     fee: string;
     net: string;
     source_id: number;
-    source_order_id: number|null;
+    source_order_id: number | null;
 
-    order:SavedOrder|null;
+    order: ExtendedSavedOrder | null;
 }
 
 export interface ShopifyPaymentTransactionsResponse {
