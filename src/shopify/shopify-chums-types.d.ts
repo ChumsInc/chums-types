@@ -26,6 +26,7 @@ export interface SageFulfillmentItem {
     QuantityOrdered: number;
     QuantityShipped: number;
     UnitOfMeasureConvFactor: number;
+    inventory_item_id: number|string;
 }
 
 export type SageFulfillmentItemRecord = SageFulfillmentItem & RowDataPacket;
