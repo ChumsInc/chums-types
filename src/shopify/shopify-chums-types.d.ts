@@ -42,6 +42,7 @@ export type SageFulfillmentTrackingRecord = SageFulfillmentTracking & RowDataPac
 export interface SageFulfillmentInfo {
     detail: SageFulfillmentItem[];
     tracking: SageFulfillmentTracking[];
+    source?: string;
 }
 
 export interface SageTrackingResponse {

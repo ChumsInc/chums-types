@@ -16,8 +16,11 @@ export type {
     SavedVariant,
 } from './shopify-chums-types';
 export type {
-    DeprecatedFulfillment, DeprecatedFulfillmentResponse, DeprecatedShopifyFulfillmentBody,
+    DeprecatedShopifyFulfillmentBody,
 } from './shopify-deprecated';
+export type {
+    Fulfillment, FulfillmentResponse
+} from './shopify-fulfillment';
 export {
     ShopifyFulfillmentOrder, ShopifyFulfillmentOrdersList, ShopifyFulfillmentOrderLineItem,
 } from './shopify-fulfillment-orders';

@@ -6,12 +6,3 @@ export interface DeprecatedShopifyFulfillmentBody {
     notify_customer: boolean;
 }
 
-export interface DeprecatedFulfillment {
-    id: number;
-    order_id: number;
-    status: string;
-}
-
-export interface DeprecatedFulfillmentResponse {
-    fulfillment: DeprecatedFulfillment
-}
