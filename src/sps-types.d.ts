@@ -134,4 +134,5 @@ export interface SPSConversionResponse {
     customer: SPSCustomerMap | null;
     unitsOfMeasure: SPSItemUnit[];
     ItemCodes: (string|null)[];
+    csvLines?: SPSOrderLine[];
 }
