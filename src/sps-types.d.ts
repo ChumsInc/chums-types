@@ -1,6 +1,7 @@
 export interface SPSBaseCustomer {
     ARDivisionNo: string;
     CustomerNo: string;
+    CustomerName?: string;
 }
 
 export interface SPSCustomerKey extends SPSBaseCustomer {
