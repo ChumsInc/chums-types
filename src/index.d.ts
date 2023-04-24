@@ -154,3 +154,10 @@ export {
     PriceMoney,
     MoneyString
 } from './shopify/index'
+
+export {
+    SPSOrderLine, SPSSalesOrder, SPSBaseCustomer, SPSCustomerMap, SPSCustomerValueMap, SPSSalesOrderDetailLine,
+    SPSCustomerShipToAddress, SPSCustomerKey, SPSItemUnit, SPSCustomerMapRow, SPSCustomerValueOptions,
+    SPSCustomerOptions, SPSCustomerMapField, SPSCustomerBillingAddress, SPSCustomerValueMapRow,
+    SPSConversionResponse, SPSShipToKey
+} from './sps-types'
