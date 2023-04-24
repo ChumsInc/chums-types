@@ -78,7 +78,7 @@ export interface SPSCustomerValueOptions {
 export interface SPSCustomerValueMap extends SPSCustomerKey{
     id: number;
     customerId: number;
-    MapField: string;
+    MapField: 'ShipExpireDate'|'CancelDate'|'ShipToCode'|'ShipVia'|'ItemCode';
     CSVField:string;
     CustomerValue:string;
     MappedValue: string|null;
@@ -134,4 +134,5 @@ export interface SPSConversionResponse {
     customer: SPSCustomerMap | null;
     unitsOfMeasure: SPSItemUnit[];
     ItemCodes: (string|null)[];
+    csvLines?: SPSOrderLine[];
 }
