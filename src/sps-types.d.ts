@@ -42,9 +42,8 @@ export interface SPSSalesOrderDetailLine {
 }
 
 export interface SPSOrderLine {
-    _index: string;
-
-    [key: string]: string;
+    _index: number;
+    [key: string]: string|number;
 }
 
 export interface SPSCustomerMapField {
