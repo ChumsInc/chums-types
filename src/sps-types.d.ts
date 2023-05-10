@@ -27,7 +27,6 @@ export interface SPSSalesOrder extends SPSCustomerKey {
 }
 
 export interface SPSSalesOrderDetailLine {
-    _index: number;
     VendorStyle: string;
     ItemCode: string | null;
     ItemCodeDesc: string | null;
@@ -42,8 +41,7 @@ export interface SPSSalesOrderDetailLine {
 }
 
 export interface SPSOrderLine {
-    _index: number;
-    [key: string]: string|number;
+    [key: string]: string;
 }
 
 export interface SPSCustomerMapField {
