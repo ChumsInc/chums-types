@@ -156,8 +156,8 @@ export {
 } from './shopify/index'
 
 export {
-    SPSOrderLine, SPSSalesOrder, SPSBaseCustomer, SPSCustomerMap, SPSCustomerValueMap, SPSSalesOrderDetailLine,
+    SPSOrderLine, SPSSalesOrder, SPSBaseCustomer, SPSCustomerMap, SPSValueMap, SPSSalesOrderDetailLine,
     SPSCustomerShipToAddress, SPSCustomerKey, SPSItemUnit, SPSCustomerMapRow, SPSCustomerValueOptions,
-    SPSCustomerOptions, SPSCustomerMapField, SPSCustomerBillingAddress, SPSCustomerValueMapRow,
+    SPSCustomerOptions, SPSCustomerMapField, SPSCustomerBillingAddress, SPSValueMapRow,
     SPSConversionResponse, SPSShipToKey
 } from './sps-types'
