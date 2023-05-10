@@ -76,9 +76,12 @@ export interface SPSCustomerValueOptions {
     UOMOverride?: string;
 
 }
+
+export type OrderMapField = 'ShipExpireDate' | 'CancelDate' | 'ShipToCode' | 'ShipVia' | 'ItemCode';
+
 export interface SPSValueMap {
     id: number;
-    MapField: 'ShipExpireDate' | 'CancelDate' | 'ShipToCode' | 'ShipVia' | 'ItemCode';
+    MapField: OrderMapField;
     CSVField: string;
     CustomerValue: string;
     MappedValue: string | null;
