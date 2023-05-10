@@ -16,7 +16,6 @@ export * from './sales-orders';
 export * from './salesperson';
 export * from './shopify/index'
 export * from './sort';
-export * from './sps-types'
 export * from './store-map';
 export * from './ui/tabs';
 export * from './user';
