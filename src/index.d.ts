@@ -11,6 +11,7 @@ export * from './generics';
 export * from './item';
 export * from './pricing';
 export * from './product-image';
+export * from './production';
 export * from './returns';
 export * from './sales-orders';
 export * from './salesperson';
