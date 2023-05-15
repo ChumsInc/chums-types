@@ -47,4 +47,7 @@ export interface WorkOrderStatus {
     StatusJSON: {
         [key in WorkOrderStatusCode]?: WorkOrderOperationStatus;
     }
+    WorkOrder: string;
+    WODueDate: string;
+    QtyDue: string;
 }
