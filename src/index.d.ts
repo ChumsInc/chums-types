@@ -8,6 +8,7 @@ export * from './barcode';
 export * from './basic-types';
 export * from './direct-labor';
 export * from './generics';
+export * from './invoice';
 export * from './item';
 export * from './pricing';
 export * from './product-image';
