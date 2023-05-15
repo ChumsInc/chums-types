@@ -1,4 +1,3 @@
-import {RowDataPacket} from "mysql2";
 import {StoreName} from "./shopify-generics";
 
 
@@ -29,15 +28,11 @@ export interface SageFulfillmentItem {
     inventory_item_id: number|string;
 }
 
-export type SageFulfillmentItemRecord = SageFulfillmentItem & RowDataPacket;
-
 export interface SageFulfillmentTracking {
     SalesOrderNo: string;
     TrackingId: string;
     StarshipShipVia: string;
 }
-
-export type SageFulfillmentTrackingRecord = SageFulfillmentTracking & RowDataPacket;
 
 export interface SageFulfillmentInfo {
     detail: SageFulfillmentItem[];

@@ -1,5 +1,4 @@
 import {MoneyString, PriceSet} from "./shopify-generics";
-import {RowDataPacket} from "mysql2";
 import {SageItem} from "./shopify-chums-types";
 
 export interface ShopifyDiscountCode {
@@ -208,7 +207,7 @@ export interface SageImportResponse {
     import_order: object;
 }
 
-export interface SavedOrderRow extends Omit<SavedOrder, 'import_result'|'shopify_order'>, RowDataPacket {
+export interface SavedOrderRow extends Omit<SavedOrder, 'import_result'|'shopify_order'> {
     import_result: string | null;
     shopify_order: string | null;
 }
@@ -224,7 +223,7 @@ export interface ExtendedSavedOrder extends SavedOrder {
     Balance: string | null;
 }
 
-export interface ExtendedSavedOrderRow  extends Omit<ExtendedSavedOrder, 'import_result'|'shopify_order'>, RowDataPacket {
+export interface ExtendedSavedOrderRow  extends Omit<ExtendedSavedOrder, 'import_result'|'shopify_order'> {
     import_result: string | null;
     shopify_order: string | null;
 }
