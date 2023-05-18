@@ -67,7 +67,7 @@ export interface SalesOrderHeader {
 export interface SalesOrderDetailLine {
     LineKey: string;
     LineSeqNo: string;
-    SequenceNo: string;
+    SequenceNo?: string;
     ItemCode: string;
     ItemType: SalesOrderItemType;
     ItemCodeDesc: string;
@@ -89,31 +89,57 @@ export interface SalesOrderDetailLine {
     CommentText: string;
     StandardUnitPrice: number|string;
     SuggestedRetailPrice: number|string;
+    Valuation?: string;
+    LotSerialFullyDistributed?: string;
+    LotSerialDistribution?: ItemDistribution;
     UDF_UPC: string|null;
     UDF_UPC_BY_COLOR: string|null;
-    QuantityOnHand: number|string;
-    QuantityRequiredForWO: number|string;
-    QuantityOnSalesOrder: number|string;
-    QuantityOnBackOrder: number|string;
-    QuantityOnWorkOrder: number|string;
-    QuantityOnPurchaseOrder: number|string;
-    BinLocation: string|null;
     ShipWeight: number|string;
     ProductType: string|null;
     InactiveItem: 'Y'|'N'|null,
-    ProductLine: string;
     UDF_SHIP_CODE: string|null;
-    QuantityCommitted: number|string;
-    QuantityOnWOPO: number|string;
-    QuantityImmediateAvailable: number|string;
-    QuantityAvailable: number|string;
+    QuantityOnHand?: number|string;
+    QuantityRequiredForWO?: number|string;
+    QuantityOnSalesOrder?: number|string;
+    QuantityOnBackOrder?: number|string;
+    QuantityOnWorkOrder?: number|string;
+    QuantityOnPurchaseOrder?: number|string;
+    BinLocation?: string|null;
+    ProductLine?: string;
+    QuantityCommitted?: number|string;
+    QuantityOnWOPO?: number|string;
+    QuantityImmediateAvailable?: number|string;
+    QuantityAvailable?: number|string;
     image: string|null;
+    CustomerUPC?: string;
+    CustomerItem?: string;
 }
 
 export interface SalesOrder extends SalesOrderHeader {
     invoices: string[],
     detail: SalesOrderDetailLine[],
-    payment?: unknown[],
+    payment?: SalesOrderPayment[],
     b2bUsers?: string[];
+    Invoices?: InvoiceNoRecord[]
 }
 
+export interface SalesOrderPayment {
+    PaymentType: string,
+    last4: string,
+    exp?: string,
+    ExpirationDateYear?: string,
+    ExpirationDateMonth?: string,
+}
+
+export interface InvoiceNoRecord {
+    Company:string,
+    InvoiceNo:string,
+    HeaderSeqNo:string,
+    InvoiceType:string,
+}
+
+export interface ItemDistribution {
+    LotSerialNo: string,
+    QuantityOrdered: number,
+    QuantityShipped: number,
+}
