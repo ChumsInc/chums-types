@@ -6,6 +6,7 @@
 export * from './amazon-fba';
 export * from './barcode';
 export * from './basic-types';
+export * from './customer';
 export * from './direct-labor';
 export * from './generics';
 export * from './invoice';
