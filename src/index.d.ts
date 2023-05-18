@@ -12,6 +12,7 @@ export * from './invoice';
 export * from './item';
 export * from './pricing';
 export * from './product-image';
+export * from './products';
 export * from './production';
 export * from './returns';
 export * from './sales-orders';
