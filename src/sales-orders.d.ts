@@ -120,7 +120,6 @@ export interface SalesOrder extends SalesOrderHeader {
     detail: SalesOrderDetailLine[],
     payment?: SalesOrderPayment[],
     b2bUsers?: string[];
-    Invoices?: InvoiceNoRecord[]
 }
 
 export interface SalesOrderPayment {

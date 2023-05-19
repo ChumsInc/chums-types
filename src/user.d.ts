@@ -135,3 +135,16 @@ export interface TimeClockEmployee {
     FirstName: string;
     LastName: string;
 }
+
+export interface ValidatedProfile {
+    user: UserProfile;
+    accounts: UserAccount[];
+    roles: string[];
+    picture?: string|null;
+}
+
+export interface ValidationResponse {
+    valid: boolean;
+    status: string;
+    profile?: ValidatedProfile;
+}
