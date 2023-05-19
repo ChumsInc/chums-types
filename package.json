@@ -1,6 +1,6 @@
 {
   "name": "chums-types",
-  "version": "2.8.3",
+  "version": "2.8.4",
   "description": "CHUMS common types",
   "scripts": {
     "version": "auto-changelog -p && git add CHANGELOG.md"
