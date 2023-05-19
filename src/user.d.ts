@@ -136,15 +136,25 @@ export interface TimeClockEmployee {
     LastName: string;
 }
 
-export interface ValidatedProfile {
+export interface ValidatedUserProfile {
     user: UserProfile;
     accounts: UserAccount[];
-    roles: string[];
+    roles: string[]|UserRole[];
     picture?: string|null;
 }
 
-export interface ValidationResponse {
+export interface UserValidationResponse {
     valid: boolean;
     status: string;
-    profile?: ValidatedProfile;
+    profile?: ValidatedUserProfile;
 }
+
+
+export interface BaseJWTToken {
+    aud?: string,
+    iat?: number,
+    exp?: number,
+    iss?: string,
+}
+
+export interface UserJWTToken extends ValidatedUserProfile, BaseJWTToken {}
