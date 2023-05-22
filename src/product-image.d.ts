@@ -6,6 +6,15 @@ export interface ImageSize {
     size: number,
 }
 
+export interface BaseImage {
+    filename: string;
+    path: string;
+    width: number;
+    height: number;
+    size: number;
+}
+
+
 export type ImageSizeList = {
     [key in ImageSizePath]?: ImageSize;
 };
@@ -59,4 +68,19 @@ export interface ProductAltItem extends ProductAltItemKey {
 export interface GenericImage extends ImageSize {
     path: string
     filename: string;
+}
+
+
+export interface ItemImageRecord {
+    ItemCode: string,
+    filename?: string,
+    pathnames?: string[],
+    sizes?: ImageSizeList,
+    color_space?: ColorSpaceList,
+    img_format?: ImageFormatList,
+}
+
+export interface ItemImage {
+    ItemCode: string,
+    filename: string,
 }
