@@ -54,4 +54,7 @@ export interface BarcodeItem {
     ProductType?: ProductType | null;
     ProductStatus?: string | null;
     SuggestedRetailPrice?: string | number | null;
+    itemSticker?: boolean;
+    bagSticker?: boolean;
+    caseSticker?: boolean;
 }
