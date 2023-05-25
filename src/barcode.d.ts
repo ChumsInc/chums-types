@@ -1,4 +1,3 @@
-import {BooleanLike} from "./basic-types";
 import {ProductType} from "./products";
 
 export interface BarcodeCustomer {
@@ -13,21 +12,24 @@ export interface BarcodeCustomer {
 }
 
 export interface BarcodeCustomerSettings extends BarcodeCustomer {
-    reqAltItemNumber: BooleanLike;
-    reqItemDescription: BooleanLike;
-    reqColor: BooleanLike;
-    reqSKU: BooleanLike;
-    reqCustomerPart: BooleanLike;
-    reqUPC: BooleanLike;
-    reqMSRP: BooleanLike;
-    reqCustom1: BooleanLike;
-    reqCustom2: BooleanLike;
-    reqCustom3: BooleanLike;
-    reqCustom4: BooleanLike;
+    reqAltItemNumber: boolean;
+    reqItemDescription: boolean;
+    reqColor: boolean;
+    reqSKU: boolean;
+    reqCustomerPart: boolean;
+    reqUPC: boolean;
+    reqMSRP: boolean;
+    reqCustom1: boolean;
+    reqCustom2: boolean;
+    reqCustom3: boolean;
+    reqCustom4: boolean;
     custom1Name: string;
     custom2Name: string;
     custom3Name: string;
     custom4Name: string;
+    itemStickerAll?: boolean;
+    bagStickerAll?: boolean;
+    caseStickerAll?: boolean;
     timestamp?: string;
 }
 
