@@ -13,21 +13,6 @@ export interface DLCode {
     timestamp: string;
 }
 
-export interface DLCodeStep {
-    dlCodeId: number;
-    dlCode:string;
-    id: number;
-    stepOrder: number;
-    stepCode: string;
-    description: string;
-    workCenter: string;
-    machine: string;
-    active: boolean;
-    standardAllowedMinutes: number;
-    fixedCosts: number;
-    stepCost: number;
-}
-
 export interface DLBasicStep {
     id: number;
     stepCode: string;
@@ -49,6 +34,13 @@ export interface DLStep extends DLBasicStep {
     averageHourlyRate: number;
     laborCost: number;
     timings?: StepTiming[];
+}
+
+export interface DLCodeStep extends DLBasicStep {
+    dlCodeId: number,
+    dlCode: string,
+    stepOrder: number,
+    stepId: number,
 }
 
 export interface StepTiming {
