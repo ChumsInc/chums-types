@@ -11,6 +11,7 @@ export * from './bill-materials.js';
 export * from './customer.js';
 export * from './direct-labor.js';
 export * from './generics.js';
+export * from './general-ledger.js';
 export * from './invoice.js';
 export * from './item.js';
 export * from './pricing.js';
@@ -25,4 +26,5 @@ export * from './sort.js';
 export * from './store-map.js';
 export * from './ui/tabs.js';
 export * from './user.js';
+export * from './work-order.js';
 export * as ShopifyIntegration from './shopify/index.js'
