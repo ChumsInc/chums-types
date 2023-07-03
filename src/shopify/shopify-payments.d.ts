@@ -1,5 +1,4 @@
-import {ExtendedSavedOrder} from "./shopify-orders";
-
+import { ExtendedSavedOrder } from "./shopify-orders.js";
 export interface ShopifyPayment {
     id: number;
     status: string;
@@ -8,17 +7,13 @@ export interface ShopifyPayment {
     amount: string;
     summary: object;
 }
-
 export interface ShopifyPaymentResponse {
     payouts: ShopifyPayment[];
 }
-
 export interface SavedPayment extends ShopifyPayment {
     completed: boolean;
     date_completed?: string;
 }
-
-
 export interface ShopifyPaymentTransaction {
     id: number;
     type: 'payout' | 'charge' | 'refund' | 'adjustment';
@@ -30,11 +25,8 @@ export interface ShopifyPaymentTransaction {
     net: string;
     source_id: number;
     source_order_id: number | null;
-
     order: ExtendedSavedOrder | null;
 }
-
 export interface ShopifyPaymentTransactionsResponse {
-    transactions: ShopifyPaymentTransaction[]
+    transactions: ShopifyPaymentTransaction[];
 }
-

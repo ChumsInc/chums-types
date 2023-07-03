@@ -1,6 +1,5 @@
-import {MoneyString, PriceSet} from "./shopify-generics";
-import {SageItem} from "./shopify-chums-types";
-
+import { MoneyString, PriceSet } from "./shopify-generics.js";
+import { SageItem } from "./shopify-chums-types.js";
 export interface ShopifyDiscountCode {
     type: string;
     amount: string;
@@ -10,7 +9,7 @@ export interface ShopifyTaxLine {
     channel_liable: boolean;
     price: string;
     price_set: PriceSet;
-    rate: number|string;
+    rate: number | string;
     title: string;
 }
 export interface ShopifyShippingLine {
@@ -22,12 +21,9 @@ export interface ShopifyShippingLine {
     price: string;
     price_set: PriceSet;
     source: string;
-    tax_lines: ShopifyTaxLine[],
-    discount_allocations: ShopifyDiscountAllocation[]
-
+    tax_lines: ShopifyTaxLine[];
+    discount_allocations: ShopifyDiscountAllocation[];
 }
-
-
 export interface ShopifyAddress {
     name: string;
     address1: string;
@@ -37,7 +33,6 @@ export interface ShopifyAddress {
     city: string;
     province_code: string;
 }
-
 export interface ShopifyRisk {
     id: number;
     order_id: number;
@@ -58,37 +53,36 @@ export interface ShopifyOrderPaymentDetails {
     credit_card_company: string;
 }
 export interface ShopifyItem {
-    id: number,
-    admin_graphql_api_id: string,
-    destination_location: ItemLocation,
-    fulfillable_quantity: number,
-    fulfillment_service: string,
-    fulfillment_status: null,
-    gift_card: boolean,
-    grams: number,
-    name: string,
-    origin_location: ItemLocation,
-    price: MoneyString,
-    price_set: PriceSet,
-    product_exists: boolean,
-    product_id: number,
-    properties: unknown[],
-    quantity: number,
-    requires_shipping: boolean,
-    sku: string,
-    taxable: boolean,
-    title: string,
-    total_discount: MoneyString,
-    total_discount_set: PriceSet,
-    variant_id: number,
-    variant_inventory_management: null,
-    variant_title: string,
-    vendor: string,
-    tax_lines: unknown[],
-    duties: unknown[],
-    discount_allocations: ShopifyDiscountAllocation[]
+    id: number;
+    admin_graphql_api_id: string;
+    destination_location: ItemLocation;
+    fulfillable_quantity: number;
+    fulfillment_service: string;
+    fulfillment_status: null;
+    gift_card: boolean;
+    grams: number;
+    name: string;
+    origin_location: ItemLocation;
+    price: MoneyString;
+    price_set: PriceSet;
+    product_exists: boolean;
+    product_id: number;
+    properties: unknown[];
+    quantity: number;
+    requires_shipping: boolean;
+    sku: string;
+    taxable: boolean;
+    title: string;
+    total_discount: MoneyString;
+    total_discount_set: PriceSet;
+    variant_id: number;
+    variant_inventory_management: null;
+    variant_title: string;
+    vendor: string;
+    tax_lines: unknown[];
+    duties: unknown[];
+    discount_allocations: ShopifyDiscountAllocation[];
 }
-
 export interface ShopifyCustomer {
     id: number;
     email: string;
@@ -97,14 +91,13 @@ export interface ShopifyCustomer {
     orders_count: number;
     tags: string;
 }
-
 export interface ShopifyOrder {
     id: number | string;
     admin_graphql_api_id: string;
     app_id: number;
     browser_ip: string;
     buyer_accepts_marketing: boolean;
-    cancel_reason: string|null;
+    cancel_reason: string | null;
     cancelled_at: string | null;
     closed_at: string | null;
     confirmed: boolean;
@@ -115,7 +108,7 @@ export interface ShopifyOrder {
     current_subtotal_price_set: PriceSet;
     current_total_discounts: string;
     current_total_discounts_set: PriceSet;
-    current_total_duties_set: unknown|null;
+    current_total_duties_set: unknown | null;
     current_total_price: string;
     current_total_price_set: PriceSet;
     current_total_tax: string;
@@ -149,52 +142,45 @@ export interface ShopifyOrder {
     total_price_usd: string;
     total_shipping_price_set: PriceSet;
     total_tax: string;
-    total_tax_set:PriceSet;
+    total_tax_set: PriceSet;
     total_weight: number;
     updated_at: string;
     billing_address: ShopifyAddress;
     customer: ShopifyCustomer;
     discount_applications: unknown[];
-    fulfillments: unknown[]
+    fulfillments: unknown[];
     line_items: ShopifyItem[];
     payment_details: ShopifyOrderPaymentDetails;
     refunds: unknown[];
     shipping_address: ShopifyAddress;
-    shipping_lines: ShopifyShippingLine[],
+    shipping_lines: ShopifyShippingLine[];
     risks: ShopifyRisk[];
 }
-
-
 export interface ItemLocation {
-    id: number,
-    country_code: string,
-    province_code: string,
-    name: string,
-    address1: string,
-    address2: string,
-    city: string,
-    zip: string
+    id: number;
+    country_code: string;
+    province_code: string;
+    name: string;
+    address1: string;
+    address2: string;
+    city: string;
+    zip: string;
 }
-
-
-
 export interface ShopifyDiscountAllocation {
     amount: string;
     amount_set: PriceSet;
     discount_application_index: number;
 }
-
 export type SagePaymentType = 'WEBCC' | 'PAYPA';
-
 export interface SavedOrder {
     id: number | string;
-    import_result: SageImportResponse|null;
+    import_result: SageImportResponse | null;
     sage_Company: 'chums';
     sage_SalesOrderNo: string;
     import_status: string;
     created_at: string;
     updated_at: string | null;
-    shopify_order: ShopifyOrder|null;
+    shopify_order: ShopifyOrder | null;
 }
 export interface SageImportResponse {
     error?: string;
@@ -206,12 +192,10 @@ export interface SageImportResponse {
     import_status: string;
     import_order: object;
 }
-
-export interface SavedOrderRow extends Omit<SavedOrder, 'import_result'|'shopify_order'> {
+export interface SavedOrderRow extends Omit<SavedOrder, 'import_result' | 'shopify_order'> {
     import_result: string | null;
     shopify_order: string | null;
 }
-
 export interface ExtendedSavedOrder extends SavedOrder {
     ARDivisionNo: string;
     CustomerNo: string;
@@ -222,8 +206,7 @@ export interface ExtendedSavedOrder extends SavedOrder {
     InvoiceNo: string | null;
     Balance: string | null;
 }
-
-export interface ExtendedSavedOrderRow  extends Omit<ExtendedSavedOrder, 'import_result'|'shopify_order'> {
+export interface ExtendedSavedOrderRow extends Omit<ExtendedSavedOrder, 'import_result' | 'shopify_order'> {
     import_result: string | null;
     shopify_order: string | null;
 }
@@ -240,13 +223,12 @@ export interface SageImportableOrder {
     ShipVia: string;
     FreightAmt: string;
     SalesTaxAmt: string;
-    TaxSchedule?:string;
+    TaxSchedule?: string;
     TaxableAmt?: string;
     NonTaxableAmt?: string;
     orderDetail: SageItem[];
     orderCharges: SageItem[];
 }
-
 export interface SageAddress {
     name: string;
     address1: string;
@@ -257,11 +239,8 @@ export interface SageAddress {
     city: string;
     province_code: string;
 }
-
-
-
 export interface ShopifyOrdersResponse {
-    orders: ShopifyOrder[]
+    orders: ShopifyOrder[];
 }
 export interface ShopifyOrderResponse {
     order: ShopifyOrder;

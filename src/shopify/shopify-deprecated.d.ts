@@ -5,4 +5,3 @@ export interface DeprecatedShopifyFulfillmentBody {
     tracking_numbers?: string[];
     notify_customer: boolean;
 }
-

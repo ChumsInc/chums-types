@@ -1,4 +1,3 @@
-
 export interface ShopifyFulfillmentOrderLineItem {
     id: number;
     fulfillment_order_id: number;
@@ -8,15 +7,13 @@ export interface ShopifyFulfillmentOrderLineItem {
     fulfillable_quantity: number;
     variant_id: number;
 }
-
 export interface ShopifyFulfillmentOrder {
     id: number;
     order_id: number;
     status: string;
     supported_actions: string[];
-    line_items: ShopifyFulfillmentOrderLineItem[]
+    line_items: ShopifyFulfillmentOrderLineItem[];
 }
-
 export interface ShopifyFulfillmentOrdersList {
-    fulfillment_orders: ShopifyFulfillmentOrder[]
+    fulfillment_orders: ShopifyFulfillmentOrder[];
 }
