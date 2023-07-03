@@ -3,7 +3,8 @@
   "version": "2.9.0",
   "description": "CHUMS common types",
   "type": "module",
-  "main": "",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
   "scripts": {
     "build": "tsc",
     "version": "auto-changelog -p && git add CHANGELOG.md"
@@ -14,7 +15,6 @@
   },
   "author": "Steve Montgomery",
   "license": "ISC",
-  "types": "src/index.d.ts",
   "bugs": {
     "url": "https://github.com/UtahGooner/chums-types/issues"
   },
