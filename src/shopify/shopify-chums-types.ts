@@ -1,7 +1,5 @@
 import {StoreName} from "./shopify-generics.js";
 
-
-
 export interface SageItem {
     ItemType?: string,
     ItemCode: string,

@@ -19,8 +19,10 @@ export type {
 export type {
     Fulfillment, FulfillmentResponse
 } from './shopify-fulfillment.js';
-export {
-    ShopifyFulfillmentOrder, ShopifyFulfillmentOrdersList, ShopifyFulfillmentOrderLineItem,
+export type {
+    ShopifyFulfillmentOrder,
+    ShopifyFulfillmentOrdersList,
+    ShopifyFulfillmentOrderLineItem,
 } from './shopify-fulfillment-orders.js';
 export type {
     InventoryLevelChange,

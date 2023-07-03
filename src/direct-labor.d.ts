@@ -40,7 +40,7 @@ export interface DLBasicStep {
 export interface DLStep extends DLBasicStep {
     instructions: string;
     idCurrentTiming: number | null;
-    lastUpdated: string;
+    lastUpdated: string | null;
     notes: string;
     timestamp: string;
     averageHourlyRate: number;
