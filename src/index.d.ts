@@ -7,6 +7,7 @@ export * from './amazon-fba';
 export * from './b2b';
 export * from './barcode';
 export * from './basic-types';
+export * from './bill-materials';
 export * from './customer';
 export * from './direct-labor';
 export * from './generics';
