@@ -9,6 +9,7 @@ export interface DLCode {
     laborBudget: number,
     fixedCosts: number,
     directLaborCost: number,
+    StdRatePiece: number,
     timestamp: string,
 }
 
