@@ -56,16 +56,20 @@ export interface WOManifestEntry {
     ItemCode?: string|null;
     QuantityShipped: number;
     ShipDate: string;
+    PackDate: string,
     Comment?: string;
 }
 export interface WOManifestEntryItem extends WOManifestEntry {
-    WarehouseCode?: string,
-    ItemCode?: string,
-    ItemCodeDesc?: string,
-    BoxNo?: number,
-    QuantityOrdered: number,
-    QuantityComplete?: number,
-    PackDate?: string,
+    WarehouseCode?: string|null;
+    ItemCode?: string|null;
+    ItemCodeDesc?: string|null;
+    BoxNo: number|null;
+    QuantityOrdered: number|null;
+    QuantityComplete?: number|null;
     MakeFor?: string,
     BinLocation?: string|null;
+}
+
+export interface WOManifestShipDate {
+    ShipDate: string;
 }
