@@ -47,3 +47,25 @@ export interface OperationCode extends OperationCodeKey {
     AppliedFixedOvhdAcct: string,
     FixedOvhdPercentOfCost: number,
 }
+
+
+export interface WOManifestEntry {
+    id: number;
+    Company: 'chums'|'bc';
+    WorkOrderNo: string|null;
+    ItemCode?: string|null;
+    QuantityShipped: number;
+    ShipDate: string;
+    Comment?: string;
+}
+export interface WOManifestEntryItem extends WOManifestEntry {
+    WarehouseCode?: string,
+    ItemCode?: string,
+    ItemCodeDesc?: string,
+    BoxNo?: number,
+    QuantityOrdered: number,
+    QuantityComplete?: number,
+    PackDate?: string,
+    MakeFor?: string,
+    BinLocation?: string|null;
+}
