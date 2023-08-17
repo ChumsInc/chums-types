@@ -48,13 +48,12 @@ export interface WOManifestEntry {
     Company: 'chums' | 'bc';
     WorkOrderNo: string | null;
     ItemCode?: string | null;
+    WarehouseCode?: string | null;
     QuantityShipped: number;
     ShipDate: string;
     Comment?: string;
 }
 export interface WOManifestEntryItem extends WOManifestEntry {
-    WarehouseCode?: string | null;
-    ItemCode?: string | null;
     ItemCodeDesc?: string | null;
     PackDate: string;
     BoxNo: number | null;
