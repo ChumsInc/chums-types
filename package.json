@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/UtahGooner/chums-types.git"
+    "url": "git+https://github.com/ChumsInc/chums-types.git"
   },
   "author": "Steve Montgomery",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/UtahGooner/chums-types/issues"
+    "url": "https://github.com/ChumsInc/chums-types/issues"
   },
-  "homepage": "https://github.com/UtahGooner/chums-types#readme",
+  "homepage": "https://github.com/ChumsInc/chums-types#readme",
   "devDependencies": {
     "@tsconfig/node18": "^18.2.0",
     "auto-changelog": "^2.4.0",
