@@ -67,6 +67,7 @@ export interface WOManifestEntryItem extends WOManifestEntry {
     QuantityComplete?: number|null;
     MakeFor?: string,
     BinLocation?: string|null;
+    Status: string|null;
 }
 
 export interface WOManifestShipDate {
