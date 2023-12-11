@@ -47,3 +47,26 @@ export interface WorkOrderStatus {
     WODueDate: string;
     QtyDue: string;
 }
+export interface PMManifestEntry {
+    id: number;
+    Company: 'chums' | 'bc';
+    WorkTicketNo: string | null;
+    ItemCode?: string | null;
+    WarehouseCode?: string | null;
+    QuantityShipped: number;
+    ShipDate: string;
+    Comment?: string;
+}
+export interface PMManifestEntryItem extends PMManifestEntry {
+    ItemCodeDesc?: string | null;
+    PackDate: string;
+    BoxNo: number | null;
+    QuantityOrdered: number | null;
+    QuantityComplete?: number | null;
+    MakeFor?: string;
+    BinLocation?: string | null;
+    Status: string | null;
+}
+export interface PMManifestShipDate {
+    ShipDate: string;
+}
