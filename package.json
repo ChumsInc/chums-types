@@ -1,6 +1,6 @@
 {
   "name": "chums-types",
-  "version": "2.9.3",
+  "version": "2.9.4",
   "description": "CHUMS common types",
   "type": "module",
   "main": "src/index.js",
