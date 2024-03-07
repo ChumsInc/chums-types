@@ -26,4 +26,5 @@ export * from './store-map.js';
 export * from './ui/tabs.js';
 export * from './user.js';
 export * from './work-order.js';
+export * from './work-ticket.js';
 export * as ShopifyIntegration from './shopify/index.js';
