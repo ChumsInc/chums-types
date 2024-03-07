@@ -13,7 +13,6 @@ export interface WorkTicketHeader {
     QuantityOrdered:string|null;
     QuantityPlanned:string|null;
     QuantityCompleted:string|null;
-    operationDetail: WorkTicketDetail[];
 }
 
 export interface WorkTicketDetail {
@@ -25,4 +24,8 @@ export interface WorkTicketDetail {
     RevisedBudgetMaterialsCost: string|null;
     StandardAllowedMinutes: string|null;
     idSteps: number;
+}
+
+export interface WorkTicket extends WorkTicketHeader {
+    operationDetail: WorkTicketDetail[];
 }
