@@ -1,7 +1,19 @@
-export interface AccountInvoice {
+import {SalesOrderItemType} from "./sales-orders.js";
+import {ProductType} from "./products.js";
+
+export type InvoiceType = 'IN'|'CM'|'DM'|'AD'|'FC'|'CA'|'XD';
+export type InvoiceOrderType = 'B'|'S'|'1';
+
+export interface InvoiceKey {
+    InvoiceNo: string;
+    HeaderSeqNo: string;
+    InvoiceType: InvoiceType;
+}
+
+export interface AccountInvoice extends InvoiceKey {
     Company: string,
     InvoiceNo: string,
-    InvoiceType: string,
+    InvoiceType: InvoiceType,
     InvoiceDate: string,
     CustomerPONo: string,
     SalesOrderNo: string|null,
@@ -21,11 +33,11 @@ export interface AccountInvoice {
 export interface InvoiceHistoryHeader extends AccountInvoice {
     InvoiceNo: string,
     HeaderSeqNo: string,
-    InvoiceType: string,
+    InvoiceType: InvoiceType,
     InvoiceDate: string,
     SalesOrderNo: string|null,
     OrderDate: string|null,
-    OrderType: string,
+    OrderType: InvoiceOrderType,
     OrderStatus: string, // do I need this field?
     ARDivisionNo: string,
     CustomerNo: string,
@@ -89,7 +101,7 @@ export interface PaperlessLogRow {
 export interface InvoiceHistoryDetail {
     DetailSeqNo: string,
     ItemCode: string,
-    ItemType: '1' | '2' | '3' | '4' | '5',
+    ItemType: SalesOrderItemType
     ItemCodeDesc: string,
     QuantityOrdered: number|string,
     QuantityShipped: number|string,
@@ -108,7 +120,7 @@ export interface InvoiceHistoryDetail {
     Valuation: string|null,
     // fields below are derived from other tables
     InactiveItem?: 'Y' | 'N';
-    ProductType?: string
+    ProductType?: ProductType|null;
     UDF_UPC?: string|null,
     UDF_UPC_BY_COLOR?: string|null,
     CustomerUPC?: string;
