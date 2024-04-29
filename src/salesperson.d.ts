@@ -5,6 +5,7 @@ export interface Salesperson {
     SalespersonName: string;
     active: boolean;
 }
+
 export interface SalespersonLookupResult extends Salesperson {
     Customers: number;
     ShipToAccounts: number;

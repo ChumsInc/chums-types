@@ -3,6 +3,7 @@ export interface Fulfillment {
     order_id: number;
     status: string;
 }
+
 export interface FulfillmentResponse {
     fulfillment: Fulfillment;
 }

@@ -1,8 +1,10 @@
 export interface Tab {
-    id: string;
-    title: string;
+    id: string,
+    title: string,
+
     /** Bootstrap icon className */
-    icon?: string;
-    canClose?: boolean;
-    disabled?: boolean;
+    icon?: string,
+
+    canClose?: boolean,
+    disabled?: boolean,
 }

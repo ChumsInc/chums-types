@@ -3,7 +3,7 @@
   "version": "2.9.5",
   "description": "CHUMS common types",
   "type": "module",
-  "main": "src/index.js",
+  "main": "",
   "types": "src/index.d.ts",
   "scripts": {
     "build": "tsc",

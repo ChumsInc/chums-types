@@ -1,25 +1,29 @@
-import { DBCompany } from "./basic-types.js";
-export type PricingMethod = 'C' | 'D' | 'M' | 'O' | 'P';
+import type {DBCompany} from "./basic-types.d.ts";
+
+export type PricingMethod = 'C'|'D'|'M'|'O'|'P';
+
 export interface PriceLevel {
     PriceLevel: string;
     PriceLevelDescription: string;
     SortOrder: number;
-    active: boolean;
-    customers: number;
+    active:boolean;
+    customers: number,
     priceCodes: number;
 }
+
 export interface BasePriceCode {
     Company: DBCompany;
-    PriceCodeRecord: '0' | '1' | '2';
+    PriceCodeRecord: '0'|'1'|'2';
     PriceCode: string;
     PriceCodeDesc: string;
-    BreakQuantity1: number;
-    DiscountMarkup1: number;
+    BreakQuantity1: number,
+    DiscountMarkup1: number,
     PricingMethod: PricingMethod;
     DateUpdated: string;
 }
+
 export interface FullPriceCode extends BasePriceCode {
-    CustomerPriceLevel: string;
+    CustomerPriceLevel: string,
     ItemCode: string;
     ARDivisionNo: string;
     CustomerNo: string;
@@ -38,36 +42,45 @@ export interface FullPriceCode extends BasePriceCode {
     DateUpdated: string;
     UserUpdatedKey: string;
 }
+
 export interface BasePriceCodeInfo extends BasePriceCode {
     ItemsCount?: number;
 }
+
 export interface CustomerPriceLevelPriceCode extends BasePriceCode {
     PriceCodeRecord: '0';
-    CustomerPriceLevel: string;
+    CustomerPriceLevel: string,
 }
+
 export interface ItemPriceCode extends BasePriceCode {
     PriceCodeRecord: '1';
     ItemCode: string;
 }
+
 export interface CustomerPriceCode extends BasePriceCode {
     PriceCodeRecord: '2';
     ItemCode: string;
     ARDivisionNo: string;
     CustomerNo: string;
 }
+
+
 export interface PriceCodeChange extends BasePriceCode {
-    CustomerPriceLevel: string;
-    newDiscountMarkup1?: number;
-    UserName?: string;
+    CustomerPriceLevel: string,
+    newDiscountMarkup1?: number,
+    UserName?: string,
     timestamp?: string;
-    hasChange?: boolean;
+    hasChange?:boolean;
 }
+
 export interface PriceCodeUser {
     id: number;
     UserName: string;
     email: string;
     changes: number;
 }
+
+
 export interface PriceCodeItem {
     ItemCode: string;
     ItemCodeDesc: string;

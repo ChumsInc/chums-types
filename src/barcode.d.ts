@@ -1,4 +1,5 @@
-import { ProductType } from "./products.js";
+import type {ProductType} from "./products.d.ts";
+
 export interface BarcodeCustomer {
     Company: string;
     ARDivisionNo: string;
@@ -9,6 +10,7 @@ export interface BarcodeCustomer {
     SpecialInstructions: string;
     Notes: string;
 }
+
 export interface BarcodeCustomerSettings extends BarcodeCustomer {
     reqAltItemNumber: boolean;
     reqItemDescription: boolean;
@@ -30,23 +32,24 @@ export interface BarcodeCustomerSettings extends BarcodeCustomer {
     caseStickerAll?: boolean;
     timestamp?: string;
 }
+
 export interface BarcodeItem {
-    ID: number;
-    CustomerID?: number;
-    Company: string;
-    ItemCode: string;
-    AltItemCode: string;
-    ItemDescription: string;
-    Color: string;
-    SKU: string;
+    ID: number,
+    CustomerID?: number,
+    Company: string,
+    ItemCode: string,
+    AltItemCode: string,
+    ItemDescription: string,
+    Color: string,
+    SKU: string,
     CustomerPart: string;
     UPC: string;
-    MSRP: string;
+    MSRP: string,
     SpecialInstructions: string;
     Notes: string;
-    Custom1: string;
-    Custom2: string;
-    Custom3: string;
+    Custom1: string,
+    Custom2: string,
+    Custom3: string,
     Custom4: string;
     timestamp?: string;
     InactiveItem?: 'Y' | 'N' | null;
