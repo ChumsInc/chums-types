@@ -1,6 +1,6 @@
 {
   "name": "chums-types",
-  "version": "2.9.5",
+  "version": "3.0.0",
   "description": "CHUMS common types",
   "type": "module",
   "main": "",
