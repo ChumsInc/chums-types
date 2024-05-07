@@ -45,7 +45,10 @@ export interface UserRecord {
     notes: string;
     created: string;
     pwd_change_required: BooleanLike;
+    primaryAccount: string|null;
     logins: number|null;
+    intranet_ct: number|null;
+    intranet_login: string|null;
     b2b_ct: number|null;
     b2b_login: string|null;
 }
