@@ -3,13 +3,13 @@ export interface DLCode {
     dlCode: string;
     workCenter: string;
     operationCode: string;
-    active: number|boolean;
+    active: boolean;
     description: string;
-    standardAllowedMinutes: number;
-    laborBudget: number;
-    fixedCosts: number;
-    directLaborCost: number;
-    StdRatePiece: number;
+    standardAllowedMinutes: number|string;
+    laborBudget: number|string;
+    fixedCosts: number|string;
+    directLaborCost: number|string;
+    StdRatePiece: number|string;
     timestamp: string;
 }
 
@@ -19,9 +19,9 @@ export interface DLBasicStep {
     description: string;
     machine: string;
     workCenter: string;
-    standardAllowedMinutes: number;
-    fixedCosts: number;
-    stepCost: number;
+    standardAllowedMinutes: number|string;
+    fixedCosts: number|string;
+    stepCost: number|string;
     active: boolean;
 }
 
@@ -31,8 +31,8 @@ export interface DLStep extends DLBasicStep {
     lastUpdated: string|null;
     notes: string;
     timestamp: string;
-    averageHourlyRate: number;
-    laborCost: number;
+    averageHourlyRate: number|string;
+    laborCost: number|string;
     timings?: StepTiming[];
 }
 
@@ -46,11 +46,11 @@ export interface DLCodeStep extends DLBasicStep {
 export interface StepTiming {
     id: number;
     idSteps: number;
-    efficiency: number;
+    efficiency: number|string;
     timingDate: string;
-    avgTiming: number;
-    standardAllowedMinutes: number;
-    quantityPerTiming: number;
+    avgTiming: number|string;
+    standardAllowedMinutes: number|string;
+    quantityPerTiming: number|string;
     notes: string|null;
     timestamp: string;
     entries: number[];
