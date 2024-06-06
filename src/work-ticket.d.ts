@@ -14,12 +14,15 @@ export interface WorkTicketHeader {
     QuantityCompleted: string | null;
 }
 export interface WorkTicketDetail {
+    TemplateNo: string|null;
     WorkCenter: string | null;
+    StepNo: string|null;
     ActivityCode: string | null;
     ActivityDesc: string | null;
     RevisedBudgetHours: string | null;
     UnitCost: string | null;
     RevisedBudgetMaterialsCost: string | null;
+    expectedSAM: string|null;
     StandardAllowedMinutes: string | null;
     idSteps: number;
 }
