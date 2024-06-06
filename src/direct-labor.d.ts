@@ -59,7 +59,7 @@ export interface StepTiming {
     entries: number[];
 }
 
-export interface BasicEntry {
+export interface BasicDLEntry {
     id: number,
     EmployeeNumber: string,
     EntryDate: string|null,
@@ -77,7 +77,7 @@ export interface BasicEntry {
     StandardAllowedMinutes?: string|number;
 }
 
-export interface Entry extends BasicEntry {
+export interface DLEntry extends BasicDLEntry {
     FullName: string,
     StandardAllowedMinutes: string|number,
     AllowedMinutes: string|number,
@@ -102,7 +102,7 @@ export interface DLEmployee {
 }
 
 
-export interface EmployeeEntryTotal {
+export interface EmployeeDLEntryTotal {
     EmployeeNumber: string,
     FullName: string,
     Minutes: string|number,

@@ -23,9 +23,9 @@ export type {
     DLBasicStep,
     StepTiming,
     DLEmployee,
-    BasicEntry,
-    Entry,
-    EmployeeEntryTotal,
+    BasicDLEntry,
+    DLEntry,
+    EmployeeDLEntryTotal,
     DLDepartmentKey
 } from './direct-labor.d.ts';
 
