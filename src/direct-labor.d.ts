@@ -70,6 +70,9 @@ export interface BasicDLEntry {
     Quantity: number,
     WorkCenter: string;
     StepCode: string;
+    TemplateNo?:string;
+    StepNo?: string;
+    ActivityCode?: string;
     Description?: string;
     DocumentType?: string;
     WarehouseCode?: string;
