@@ -16,7 +16,18 @@ export type {BillType, BillHeader, BillOptionHeader} from './bill-materials.d.ts
 export type {CustomerValidationResponse} from './customer.d.ts';
 
 export type * as DirectLaborTypes from './direct-labor.d.ts';
-export type {DLCode, DLCodeStep, DLStep, DLBasicStep, StepTiming} from './direct-labor.d.ts';
+export type {
+    DLCode,
+    DLCodeStep,
+    DLStep,
+    DLBasicStep,
+    StepTiming,
+    DLEmployee,
+    BasicEntry,
+    Entry,
+    EmployeeEntryTotal,
+    DLDepartmentKey
+} from './direct-labor.d.ts';
 
 export type {YesNo, Editable, LoadingStatus} from './generics.d.ts';
 export type {GLAccount} from './general-ledger.d.ts';

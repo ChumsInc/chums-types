@@ -58,3 +58,54 @@ export interface StepTiming {
     timestamp: string;
     entries: number[];
 }
+
+export interface BasicEntry {
+    id: number,
+    EmployeeNumber: string,
+    EntryDate: string|null,
+    DocumentNo: string;
+    LineNo: number,
+    idSteps: number,
+    Minutes: number,
+    Quantity: number,
+    WorkCenter: string;
+    StepCode: string;
+    Description?: string;
+    DocumentType?: string;
+    WarehouseCode?: string;
+    ItemCode?: string;
+    StandardAllowedMinutes?: string|number;
+}
+
+export interface Entry extends BasicEntry {
+    FullName: string,
+    StandardAllowedMinutes: string|number,
+    AllowedMinutes: string|number,
+    UPH: number,
+    StdUPH: number,
+    Description: string,
+    DocumentType: string,
+    ItemCode: string,
+    WarehouseCode: string,
+    timestamp?: string,
+}
+
+export type DLDepartmentKey = '5H' | '5HT' | '5S' | '8H' | '8HT';
+
+export interface DLEmployee {
+    EmployeeNumber: string,
+    FirstName: string,
+    LastName: string,
+    FullName: string,
+    active: boolean,
+    Department: DLDepartmentKey|string,
+}
+
+
+export interface EmployeeEntryTotal {
+    EmployeeNumber: string,
+    FullName: string,
+    Minutes: string|number,
+    AllowedMinutes: string|number,
+    Rate: string|number,
+}
