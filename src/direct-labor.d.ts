@@ -3,7 +3,7 @@ export interface DLCode {
     dlCode: string;
     workCenter: string;
     WOWorkCenter: string; // temporary field to migrate to new Sage Production Management fields
-    WOOperationCode: stirng; // temporary field to migrate to new Sage Production Management fields
+    WOOperationCode: string; // temporary field to migrate to new Sage Production Management fields
     operationCode: string;  // to be removed
     templateNo: string|null;
     active: boolean;
