@@ -24,7 +24,9 @@ export interface WorkTicketDetail {
     RevisedBudgetMaterialsCost: string | null;
     expectedSAM: string|null;
     idSteps: number;
+    StepCode: string|null;
     StandardAllowedMinutes: string | null;
+
     stepDescription: string|null;
 }
 export interface WorkTicket extends WorkTicketHeader {
