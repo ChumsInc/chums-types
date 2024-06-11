@@ -7,6 +7,7 @@
   "types": "src/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "build-yaml": "rimraf yaml && mkdir yaml && node build-yaml.js",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "repository": {
@@ -28,5 +29,9 @@
     "template": "keepachangelog",
     "unreleased": true,
     "commitLimit": false
+  },
+  "dependencies": {
+    "rimraf": "^5.0.7",
+    "typeconv": "^2.3.1"
   }
 }
