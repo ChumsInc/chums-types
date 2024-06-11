@@ -1,12 +1,7 @@
-import {
-    getTypeScriptReader,
-    getOpenApiWriter,
-    makeConverter,
-} from 'typeconv'
-import pkg from './package.json' with {type: "json"};
+import {getOpenApiWriter, getTypeScriptReader, makeConverter,} from 'typeconv'
+import pkg from './package.json' with {type: 'json'};
 import path from 'node:path';
-import {readdir, stat, readFile, writeFile} from 'node:fs/promises';
-import {exec} from 'node:child_process';
+import {readdir, readFile, stat, writeFile} from 'node:fs/promises';
 
 
 const reader = getTypeScriptReader({});
@@ -29,22 +24,6 @@ async function readFiles(src) {
     console.log('readFiles(path)', src);
     const files = await getFiles(src);
     for await (const file of files) {
-        // const dir = path.join('./yaml', file.replace(srcPath, '').replace(/\\[\w\-]+.d.ts/, '')).replace('\\', '/');
-        // // console.log(dir);
-        // const cmd = `npx typeconv -v -f ts -t oapi -o ${dir} ${file.replace(srcPath, 'src').replace(/\\/g, '/')}`;
-        // console.log(cmd);
-        // await new Promise((resolve, reject) => {
-        //     exec(cmd, (error, stdout, stderr) => {
-        //         if (error) {
-        //             console.error(error);
-        //             return resolve();
-        //         }
-        //         console.log(`stdout: ${stdout}`);
-        //         console.error(`stderr: ${stderr}`);
-        //         resolve()
-        //     });
-        //
-        // })
         const content = await readFile(file);
         const yaml = await convert({data: content.toString()});
         await writeFile(file.replace(srcPath, outputPath).replace(/.d.ts$/, '.yaml'), yaml.data);
