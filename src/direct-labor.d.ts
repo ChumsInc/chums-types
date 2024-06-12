@@ -56,7 +56,7 @@ export interface StepTiming {
     quantityPerTiming: number|string;
     notes: string|null;
     timestamp: string;
-    entries: number[];
+    entries: (string|number)[];
 }
 
 export interface BasicDLEntry {

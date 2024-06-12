@@ -1,7 +1,7 @@
 import {getOpenApiWriter, getTypeScriptReader, makeConverter,} from 'typeconv'
 import pkg from './package.json' with {type: 'json'};
 import path from 'node:path';
-import {readdir, readFile, stat, writeFile} from 'node:fs/promises';
+import {readdir, readFile, stat, writeFile, mkdir} from 'node:fs/promises';
 
 
 const reader = getTypeScriptReader({});
@@ -11,12 +11,43 @@ const {convert} = makeConverter(reader, writer);
 const srcPath = path.resolve(process.cwd(), './src');
 const outputPath = path.resolve(process.cwd(), './yaml');
 
+async function mkDirIfNotExists(path) {
+    try {
+        const dir = await stat(path);
+        if (dir.isDirectory()) {
+            return;
+        }
+        await mkdir(path);
+    } catch(err) {
+        if (err instanceof Error) {
+            console.debug("mkDirIfNotExists()", err.message);
+            return Promise.reject(err);
+        }
+        console.debug("mkDirIfNotExists()", err);
+        return Promise.reject(new Error('Error in mkDirIfNotExists()'));
+    }
+}
+
 async function getFiles(dir) {
     const _dirs = await readdir(dir);
-    const files = await Promise.all(_dirs.map(async (_dir) => {
+    const files = [];
+
+    for await (const _dir of _dirs) {
         const res = path.resolve(dir, _dir);
-        return (await stat(res)).isDirectory() ? getFiles(res) : res;
-    }))
+        const _stat = await stat(res);
+        if (_stat.isDirectory()) {
+            await mkDirIfNotExists(res);
+            const children = await getFiles(res);
+            files.push(...children);
+        } else {
+            files.push(res);
+        }
+    }
+    // const files = await Promise.all(_dirs.map(async (_dir) => {
+    //     const res = path.resolve(dir, _dir);
+    //     const _stat = await
+    //     return (await stat(res)).isDirectory() ? getFiles(res) : res;
+    // }))
     return files.reduce((a, f) => a.concat(f), []);
 }
 
@@ -34,5 +65,5 @@ async function readFiles(src) {
 }
 
 
-await readFiles(path.resolve(process.cwd(), './src'));
+await readFiles(srcPath);
 

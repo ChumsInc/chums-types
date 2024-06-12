@@ -6,7 +6,7 @@
   "main": "",
   "types": "src/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run build-yaml",
     "build-yaml": "rimraf yaml && mkdir yaml && node build-yaml.js",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
