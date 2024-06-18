@@ -1,3 +1,10 @@
+export interface DLCodeWorkTemplate {
+    templateNo: string;
+    workCenter: string;
+    activityCode: string;
+    stdRate: number,
+}
+
 export interface DLCode {
     id: number;
     dlCode: string;
@@ -13,6 +20,7 @@ export interface DLCode {
     fixedCosts: number|string;
     directLaborCost: number|string;
     StdRatePiece: number|string;
+    templates?: DLCodeWorkTemplate[],
     timestamp: string;
 }
 
