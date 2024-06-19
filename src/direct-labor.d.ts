@@ -9,10 +9,10 @@ export interface DLCode {
     id: number;
     dlCode: string;
     workCenter: string;
-    WOWorkCenter: string; // temporary field to migrate to new Sage Production Management fields
-    WOOperationCode: string; // temporary field to migrate to new Sage Production Management fields
-    operationCode: string;  // to be removed
-    templateNo: string|null;
+    activityCode: string;
+    operationCode: string;  //@deprecated, to be removed
+    WOWorkCenter: string; //@deprecated,  temporary field to migrate to new Sage Production Management fields
+    WOOperationCode: string; //@deprecated,  temporary field to migrate to new Sage Production Management fields
     active: boolean;
     description: string;
     standardAllowedMinutes: number|string;
