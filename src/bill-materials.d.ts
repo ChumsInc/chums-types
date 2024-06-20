@@ -1,3 +1,4 @@
+import {GLAccount} from "./general-ledger.js";
 
 export type BillType = 'S' | 'K' | 'I' | 'P' | 'E' | 'M';
 
@@ -27,4 +28,28 @@ export interface BillOptionHeader {
     OptionPrice: number,
     DateUpdated: string,
     updatedByUser: string,
+}
+
+export interface BillDetail {
+    BillNo: string;
+    Revision: string;
+    LineKey: string;
+    LineSeqNo: string;
+    ItemType: string;
+    ComponentDesc: string|null;
+    WorkOrderStepNo?: string|null; //@deprecated
+    BillType: string;
+    CommentText: string|null;
+    MiscChargeGLAcct: GLAccount|null;
+    UnitOfMeasure: string|null;
+    QuantityPerBill: string|number;
+    StandardUnitCost: string|number;
+    ScrapPercent: string|number;
+    WorkTicketStepNo: string|null;
+}
+
+
+export interface BillOptionDetail extends Omit<BillDetail, 'WorkOrderStepNo' > {
+    BillOptionCategory: string;
+    BillOption: string;
 }

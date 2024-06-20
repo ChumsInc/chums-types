@@ -12,7 +12,7 @@ export type * as BarcodeTypes from './barcode.d.ts'
 export type {BarcodeCustomer, BarcodeCustomerSettings, BarcodeItem} from './barcode.d.ts';
 
 export type {BooleanLike, DBCompany, SageCompany} from './basic-types.d.ts';
-export type {BillType, BillHeader, BillOptionHeader} from './bill-materials.d.ts';
+export type {BillType, BillHeader, BillOptionHeader, BillOptionDetail, BillDetail} from './bill-materials.d.ts';
 export type {CustomerValidationResponse} from './customer.d.ts';
 
 export type * as DirectLaborTypes from './direct-labor.d.ts';
