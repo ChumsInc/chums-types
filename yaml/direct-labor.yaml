@@ -294,7 +294,7 @@ components:
           title: BasicDLEntry.Quantity
           type: number
         WorkCenter:
-          title: BasicDLEntry.WorkCenter
+          title: BasicDLEntry.WOWorkCenter
           type: string
         StepCode:
           title: BasicDLEntry.StepCode

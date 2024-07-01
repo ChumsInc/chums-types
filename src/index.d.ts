@@ -119,6 +119,14 @@ export type {
     PMManifestShipDate
 } from './production.d.ts';
 
+export type * as ProductionManagementTypes from './production-management.d.ts';
+export type {
+    ActivityCode,
+    WorkCenter,
+    WorkTemplate,
+    WorkTemplateStep,
+} from './production-management.d.ts'
+
 export type * as ReturnsTypes from './returns.d.ts'
 export type {RMASalesOrder, RMAUser, RMAOrderStatus, StatusEvent, RMAStatus, StatusKey} from './returns.d.ts';
 
@@ -244,7 +252,7 @@ export type {
     OperationCodeKey,
     RoutingDetail,
     RoutingHeader,
-    WorkCenter,
+    WOWorkCenter,
     WOManifestEntryItem,
     WOManifestEntry,
     WOManifestShipDate

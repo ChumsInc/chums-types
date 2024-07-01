@@ -85,7 +85,7 @@ components:
           nullable: true
           type: string
         WorkCenter:
-          title: WorkTicketDetail.WorkCenter
+          title: WorkTicketDetail.WOWorkCenter
           nullable: true
           type: string
         StepNo:

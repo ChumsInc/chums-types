@@ -12,35 +12,35 @@ components:
     WorkCenter:
       properties:
         Company:
-          title: WorkCenter.Company
+          title: WOWorkCenter.Company
           type: string
         WorkCenterCode:
-          title: WorkCenter.WorkCenterCode
+          title: WOWorkCenter.WorkCenterCode
           type: string
         Description:
-          title: WorkCenter.Description
+          title: WOWorkCenter.Description
           type: string
         CommentLine1:
-          title: WorkCenter.CommentLine1
+          title: WOWorkCenter.CommentLine1
           type: string
         CommentLine2:
-          title: WorkCenter.CommentLine2
+          title: WOWorkCenter.CommentLine2
           type: string
         ChrgAtEmpRate:
-          title: WorkCenter.ChrgAtEmpRate
+          title: WOWorkCenter.ChrgAtEmpRate
           type: boolean
         OutsideProcessing:
-          title: WorkCenter.OutsideProcessing
+          title: WOWorkCenter.OutsideProcessing
           type: boolean
         isStandardWC:
-          title: WorkCenter.isStandardWC
+          title: WOWorkCenter.isStandardWC
           type: boolean
         AverageHourlyRate:
-          title: WorkCenter.AverageHourlyRate
+          title: WOWorkCenter.AverageHourlyRate
           nullable: true
           type: number
         changed:
-          title: WorkCenter.changed
+          title: WOWorkCenter.changed
           type: boolean
       required:
         - Company
@@ -53,7 +53,7 @@ components:
         - isStandardWC
         - AverageHourlyRate
       additionalProperties: false
-      title: WorkCenter
+      title: WOWorkCenter
       type: object
     RoutingDetail:
       properties:
@@ -67,7 +67,7 @@ components:
           title: RoutingDetail.StepDescription
           type: string
         WorkCenter:
-          title: RoutingDetail.WorkCenter
+          title: RoutingDetail.WOWorkCenter
           type: string
         OperationCode:
           title: RoutingDetail.OperationCode
@@ -126,7 +126,7 @@ components:
     OperationCodeKey:
       properties:
         WorkCenter:
-          title: OperationCodeKey.WorkCenter
+          title: OperationCodeKey.WOWorkCenter
           type: string
         OperationCode:
           title: OperationCodeKey.OperationCode

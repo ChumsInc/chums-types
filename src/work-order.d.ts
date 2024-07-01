@@ -1,4 +1,4 @@
-export interface WorkCenter {
+export interface WOWorkCenter {
     Company: string,
     WorkCenterCode: string,
     Description: string,
