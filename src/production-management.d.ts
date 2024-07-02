@@ -19,6 +19,8 @@ export interface ActivityCode {
     SchedulingMethod: 'A' | 'F' | 'H';
     StandardCostPerHour: number | string;
     FixedOverheadAmt: number | string;
+    StepAvgCost?: number|string;
+    TemplateCount?: number;
     created: string;
     updated: string;
 }
