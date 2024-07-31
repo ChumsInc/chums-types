@@ -124,7 +124,11 @@ export type {
     ActivityCode,
     WorkCenter,
     WorkTemplate,
+    WorkTemplateHeader,
     WorkTemplateStep,
+    WorkTicket,
+    WorkTicketHeader,
+    WorkTicketDetail,
 } from './production-management.d.ts'
 
 export type * as ReturnsTypes from './returns.d.ts'
@@ -259,5 +263,5 @@ export type {
 } from './work-order.d.ts';
 
 export type * as WorkTicketTypes from './work-ticket.d.ts';
-export type {WorkTicket, WorkTicketDetail, WorkTicketHeader} from './work-ticket.d.ts'
+
 
