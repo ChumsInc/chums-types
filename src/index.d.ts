@@ -11,9 +11,32 @@ export type {B2BOrderHistory} from './b2b.d.ts';
 export type * as BarcodeTypes from './barcode.d.ts'
 export type {BarcodeCustomer, BarcodeCustomerSettings, BarcodeItem} from './barcode.d.ts';
 
-export type {BooleanLike, DBCompany, SageCompany} from './basic-types.d.ts';
-export type {BillType, BillHeader, BillOptionHeader, BillOptionDetail, BillDetail} from './bill-materials.d.ts';
-export type {CustomerValidationResponse} from './customer.d.ts';
+export type {
+    BooleanLike,
+    DBCompany,
+    SageCompany
+} from './basic-types.d.ts';
+
+export type {
+    BillType,
+    BillHeader,
+    BillOptionHeader,
+    BillOptionDetail,
+    BillDetail
+} from './production/bill-materials.d.ts';
+
+export type {
+    CustomerValidationResponse
+} from './customer.d.ts';
+
+export type {
+    CLIssue,
+    CLIssueEntry,
+    CLIssueResponse,
+    CLIssueSearchParams,
+    CLVendor,
+    CLVendorWeekTotal,
+} from './production/contract-labor.d.ts'
 
 export type * as DirectLaborTypes from './direct-labor.d.ts';
 export type {
@@ -29,8 +52,15 @@ export type {
     DLDepartmentKey
 } from './direct-labor.d.ts';
 
-export type {YesNo, Editable, LoadingStatus} from './generics.d.ts';
-export type {GLAccount} from './general-ledger.d.ts';
+export type {
+    YesNo,
+    Editable,
+    LoadingStatus
+} from './generics.d.ts';
+
+export type {
+    GLAccount
+} from './general-ledger.d.ts';
 
 export type * as InvoiceTypes from './invoice.d.ts';
 export type {
@@ -46,7 +76,10 @@ export type {
     PaperlessLogRow
 } from './invoice.d.ts';
 
-export type {Item, WarehouseItem} from './item.d.ts';
+export type {
+    Item,
+    WarehouseItem,
+} from './item.d.ts';
 
 export type * as PricingTypes from './pricing.d.ts';
 export type {
@@ -119,17 +152,14 @@ export type {
     PMManifestShipDate
 } from './production.d.ts';
 
-export type * as ProductionManagementTypes from './production-management.d.ts';
+export type * as ProductionManagementTypes from './production/production-management.d.ts';
 export type {
     ActivityCode,
     WorkCenter,
     WorkTemplate,
     WorkTemplateHeader,
-    WorkTemplateStep,
-    WorkTicket,
-    WorkTicketHeader,
-    WorkTicketDetail,
-} from './production-management.d.ts'
+    WorkTemplateStep
+} from './production/production-management.d.ts'
 
 export type * as ReturnsTypes from './returns.d.ts'
 export type {RMASalesOrder, RMAUser, RMAOrderStatus, StatusEvent, RMAStatus, StatusKey} from './returns.d.ts';
@@ -147,6 +177,10 @@ export type {
     SalesOrderType
 } from './sales-orders.d.ts';
 export type {Salesperson, SalespersonLookupResult} from './salesperson.d.ts';
+
+export type {
+    SearchItem,
+} from './search.d.ts'
 
 export type * as ShopifyIntegration from './shopify/index.d.ts'
 export type {
@@ -250,7 +284,14 @@ export type {
     TimeClockEmployee
 } from './user.d.ts';
 
-export type * as WorkOrderTypes from './work-order.d.ts';
+/**
+ * @deprecated
+ */
+export type * as WorkOrderTypes from './production/work-order.d.ts';
+
+/**
+ * @deprecated
+ */
 export type {
     OperationCode,
     OperationCodeKey,
@@ -260,8 +301,17 @@ export type {
     WOManifestEntryItem,
     WOManifestEntry,
     WOManifestShipDate
-} from './work-order.d.ts';
+} from './production/work-order.d.ts';
 
-export type * as WorkTicketTypes from './work-ticket.d.ts';
+export type * as WorkTicketTypes from './production/work-ticket.d.ts';
+export {
+    WorkTicket, WorkTicketHeader, WorkTicketDetail, WorkTicketScalingMethod, WorkTicketResponse, WorkTicketStatus,
+    WorkTicketType, WorkTicketStep,
+} from './production/work-ticket.d.ts'
 
+export {
+    WorkTicketStatusEntry,
+    WorkTicketStatusGroup,
+    WorkTicketWorkStatusItem
+} from './production/work-ticket-status.d.ts'
 

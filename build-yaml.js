@@ -1,23 +1,44 @@
 import {getOpenApiWriter, getTypeScriptReader, makeConverter,} from 'typeconv'
-import pkg from './package.json' with {type: 'json'};
 import path from 'node:path';
 import {readdir, readFile, stat, writeFile, mkdir} from 'node:fs/promises';
 
+const options = {
+    version: 'n/a',
+}
 
 const reader = getTypeScriptReader({});
-const writer = getOpenApiWriter({format: 'yaml', 'title': 'Chums Types', schemaVersion: '3.0.3', version: pkg.version});
+const writer = getOpenApiWriter({format: 'yaml', 'title': 'Chums Types', schemaVersion: '3.0.3', version: options.version});
 const {convert} = makeConverter(reader, writer);
 
 const srcPath = path.resolve(process.cwd(), './src');
 const outputPath = path.resolve(process.cwd(), './yaml');
 
+async function loadPackageVersion(){
+    try {
+        const pkg = await readFile(path.resolve(process.cwd(), 'package.json'));
+        const json = JSON.parse(pkg.toString());
+        options.version = json?.version ?? 'N/A';
+    } catch(err) {
+        if (err instanceof Error) {
+            console.debug("loadPackageVersion()", err.message);
+            return Promise.reject(err);
+        }
+        console.debug("loadPackageVersion()", err);
+        return Promise.reject(new Error('Error in loadPackageVersion()'));
+    }
+}
+
 async function mkDirIfNotExists(path) {
     try {
-        const dir = await stat(path);
-        if (dir.isDirectory()) {
-            return;
-        }
-        await mkdir(path);
+        const yamlPath = path.replace(srcPath, outputPath);
+        console.log('mkDirIfNotExists', yamlPath);
+        try {
+            const dir = await stat(yamlPath);
+            if (dir.isDirectory()) {
+                return;
+            }
+        } catch(err) {}
+        await mkdir(yamlPath);
     } catch(err) {
         if (err instanceof Error) {
             console.debug("mkDirIfNotExists()", err.message);
@@ -64,6 +85,7 @@ async function readFiles(src) {
     }
 }
 
-
+await loadPackageVersion();
+console.log(options)
 await readFiles(srcPath);
 

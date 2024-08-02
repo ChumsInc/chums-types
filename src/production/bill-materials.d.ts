@@ -1,4 +1,4 @@
-import {GLAccount} from "./general-ledger.js";
+import {GLAccount} from "../general-ledger.js";
 
 export type BillType = 'S' | 'K' | 'I' | 'P' | 'E' | 'M';
 
