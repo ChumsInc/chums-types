@@ -42,6 +42,7 @@ export type * as DirectLaborTypes from './production/direct-labor.d.ts';
 export type {
     DLCode,
     DLCodeStep,
+    DLCodeWorkTemplate,
     DLStep,
     DLBasicStep,
     StepTiming,

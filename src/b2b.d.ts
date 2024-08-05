@@ -5,6 +5,6 @@ export interface B2BOrderHistory {
     b2bStatus: string;
     b2bNotes: string|null;
     b2bName: string;
-    b2bAction: any;
+    b2bAction: unknown;
     timestamp: string;
 }
