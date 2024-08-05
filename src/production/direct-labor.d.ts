@@ -2,7 +2,9 @@ export interface DLCodeWorkTemplate {
     templateNo: string;
     workCenter: string;
     activityCode: string;
-    stdRate: number,
+    stdRate: number;
+    scalingFactorLabor: number;
+    budgetLaborCost: number;
 }
 
 export interface DLCode {

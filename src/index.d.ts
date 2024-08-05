@@ -38,7 +38,7 @@ export type {
     CLVendorWeekTotal,
 } from './production/contract-labor.d.ts'
 
-export type * as DirectLaborTypes from './direct-labor.d.ts';
+export type * as DirectLaborTypes from './production/direct-labor.d.ts';
 export type {
     DLCode,
     DLCodeStep,
@@ -50,7 +50,7 @@ export type {
     DLEntry,
     EmployeeDLEntryTotal,
     DLDepartmentKey
-} from './direct-labor.d.ts';
+} from './production/direct-labor.d.ts';
 
 export type {
     YesNo,
