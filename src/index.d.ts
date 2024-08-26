@@ -176,6 +176,7 @@ export type {
     SalesOrderStatus,
     InvoiceNoRecord,
     SalesOrderType,
+    OpenOrderStatusGroup,
     OpenOrderStatusCode,
     SalesOrderStatusRow,
     StatusHistoryRow

@@ -144,6 +144,8 @@ export interface ItemDistribution {
     QuantityShipped: number,
 }
 
+export type OpenOrderStatusGroup = 'shipping' | 'cs' | 'imp';
+
 export interface OpenOrderStatusCode {
     id: number;
     StatusCode: string;
