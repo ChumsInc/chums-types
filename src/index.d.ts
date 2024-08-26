@@ -175,7 +175,10 @@ export type {
     SalesOrderDetailLine,
     SalesOrderStatus,
     InvoiceNoRecord,
-    SalesOrderType
+    SalesOrderType,
+    OpenOrderStatusCode,
+    SalesOrderStatusRow,
+    StatusHistoryRow
 } from './sales-orders.d.ts';
 export type {Salesperson, SalespersonLookupResult} from './salesperson.d.ts';
 

@@ -143,3 +143,30 @@ export interface ItemDistribution {
     QuantityOrdered: number,
     QuantityShipped: number,
 }
+
+export interface OpenOrderStatusCode {
+    id: number;
+    StatusCode: string;
+    StatusDescription: string;
+    StatusType: OpenOrderStatusGroup;
+    colorCode: string;
+    priority: number;
+}
+
+export interface StatusHistoryRow {
+    StatusCode: string;
+    User: string;
+    timestamp: string;
+}
+
+export interface SalesOrderStatusRow {
+    id: number;
+    SalesOrderNo?: string;
+    StatusCode: string|null;
+    colorCode?: string|null;
+    Notes: string|null;
+    User: string|null;
+    StatusType?: string|null;
+    StatusHistory?: StatusHistoryRow[]|null;
+    timestamp: string|null;
+}
