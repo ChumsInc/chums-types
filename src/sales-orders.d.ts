@@ -1,13 +1,14 @@
+import {ItemType} from "./production.js";
+
 export type SalesOrderType = 'S'|'B'|'Q'|'M'|'R'|'P';
-export type SalesOrderStatus = 'N'|'O'|'C'|'H';
-export type SalesOrderItemType = '1'|'2'|'3'|'4'|'5';
+export type SalesOrderHeaderStatus = 'N'|'O'|'C'|'H';
 
 export interface SalesOrderHeader {
     Company: string;
     SalesOrderNo: string;
     OrderDate: string;
     OrderType: SalesOrderType
-    OrderStatus: SalesOrderStatus;
+    OrderStatus: SalesOrderHeaderStatus;
     ShipExpireDate: string;
     ARDivisionNo: string;
     CustomerNo: string;
@@ -70,7 +71,7 @@ export interface SalesOrderDetailLine {
     LineSeqNo: string;
     SequenceNo?: string;
     ItemCode: string;
-    ItemType: SalesOrderItemType;
+    ItemType: ItemType;
     ItemCodeDesc: string;
     WarehouseCode: string;
     PriceLevel: string;
@@ -155,13 +156,13 @@ export interface OpenOrderStatusCode {
     priority: number;
 }
 
-export interface StatusHistoryRow {
+export interface StatusHistory {
     StatusCode: string;
     User: string;
     timestamp: string;
 }
 
-export interface SalesOrderStatusRow {
+export interface SalesOrderStatus {
     id: number;
     SalesOrderNo?: string;
     StatusCode: string|null;
@@ -169,6 +170,25 @@ export interface SalesOrderStatusRow {
     Notes: string|null;
     User: string|null;
     StatusType?: string|null;
-    StatusHistory?: StatusHistoryRow[]|null;
+    StatusHistory?: StatusHistory[]|null;
     timestamp: string|null;
+}
+
+
+export interface SalesOrderWithStatus extends Pick<SalesOrderHeader, 'ARDivisionNo' | 'CustomerNo' | 'SalesOrderNo'
+    | 'OrderDate' | 'OrderStatus' | 'OrderType' | 'BillToName' | 'ShipExpireDate' | 'ShipVia' | 'Comment'
+    | 'UDF_IMPRINTED' | 'CancelReasonCode' | 'CurrentInvoiceNo'> {
+    CancelDate: string|null;
+    UserLogon: string;
+    DateCreated: string;
+    TimeCreated: string;
+    DateUpdated: string;
+    TimeUpdated: string;
+    UpdatedByUser: string;
+    OrderAmt: number|string;
+    isEDI: boolean;
+    isB2B: boolean;
+    isWebsite: boolean;
+    CustomerName: string;
+    status: SalesOrderStatus|null;
 }

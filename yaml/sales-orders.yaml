@@ -25,7 +25,7 @@ components:
         - O
         - C
         - H
-      title: SalesOrderStatus
+      title: SalesOrderHeaderStatus
       type: string
     SalesOrderItemType:
       enum:
