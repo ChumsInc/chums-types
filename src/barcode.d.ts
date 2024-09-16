@@ -1,7 +1,6 @@
 import type {ProductType} from "./products.d.ts";
 
 export interface BarcodeCustomer {
-    Company: string;
     ARDivisionNo: string;
     CustomerNo: string;
     CustomerName: string;
@@ -36,7 +35,6 @@ export interface BarcodeCustomerSettings extends BarcodeCustomer {
 export interface BarcodeItem {
     ID: number,
     CustomerID?: number,
-    Company: string,
     ItemCode: string,
     AltItemCode: string,
     ItemDescription: string,
