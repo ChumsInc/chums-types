@@ -56,7 +56,7 @@ export interface WorkTemplate {
     TemplateNo: string;
     RevisionNo: string;
     CurrentRevision: 'Y' | 'N';
-    TemplateDesc: string;
+    TemplateDesc: string|null;
     Steps: WorkTemplateStep[],
     TemplateCost: string | number;
     updated: string | null;
