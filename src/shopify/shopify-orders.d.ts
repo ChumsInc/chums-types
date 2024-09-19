@@ -190,6 +190,7 @@ export type SagePaymentType = 'WEBCC' | 'PAYPA';
 
 export interface SavedOrder {
     id: number | string;
+    gid: string;
     import_result: SageImportResponse|null;
     sage_Company: 'chums';
     sage_SalesOrderNo: string;
