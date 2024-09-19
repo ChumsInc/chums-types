@@ -163,7 +163,7 @@ export interface ShopifyOrder {
     shipping_address: ShopifyAddress;
     shipping_lines: ShopifyShippingLine[],
     risks?: ShopifyRisk[];
-    risk?: OrderRiskSummary;
+    risk?: OrderRiskSummary|null;
 }
 
 
