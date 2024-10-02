@@ -43,6 +43,7 @@ export interface UserRecord {
     accountType: UserAccountType;
     active: BooleanLike;
     notes: string;
+    primaryCustomerNo: string|null;
     created: string;
     pwd_change_required: BooleanLike;
     primaryAccount: string[];
