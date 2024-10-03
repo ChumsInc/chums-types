@@ -96,20 +96,25 @@ export interface LoadSessionUserProps {
     pass?: string|null;
 }
 
-export interface UserAccount {
-    id: number;
+export interface BaseUserAccount {
+    id?: number;
     userid: number;
     Company: string;
     ARDivisionNo: string;
     CustomerNo: string;
     ShipToCode?: string|null
-    ShipToName?: string|null;
-    isRepAccount: BooleanLike;
+    isRepAccount: boolean;
     SalespersonDivisionNo: string|null;
     SalespersonNo: string|null;
+    primaryAccount: boolean;
+    timestamp?: string;
+}
+
+export interface UserAccount extends BaseUserAccount {
+    id: number;
+    ShipToName: string|null;
     CustomerName: string|null;
     SalespersonName: string|null;
-    primaryAccount: boolean;
     customers: number;
     shipToCustomers: number;
     timestamp: string;

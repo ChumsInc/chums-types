@@ -270,6 +270,7 @@ export type * as UserTypes from './user.d.ts';
 export type {
     UserAccountType,
     User,
+    BaseUserAccount,
     UserAccount,
     UserProfile,
     APIUserProfile,
