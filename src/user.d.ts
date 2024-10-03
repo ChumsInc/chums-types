@@ -131,6 +131,11 @@ export interface UserRole {
     role: string;
 }
 
+export interface ExtendedUserRole extends UserRole {
+    description: string|null;
+    timestamp: string;
+}
+
 export interface PasswordValidationResponse {
     id: number;
     email: string;

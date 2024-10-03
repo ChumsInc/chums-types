@@ -279,6 +279,7 @@ export type {
     BaseJWTToken,
     AccessRole,
     UserRole,
+    ExtendedUserRole,
     CustomerUser,
     BasicCustomerUser,
     ExtendedUser,
