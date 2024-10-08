@@ -153,7 +153,7 @@ export interface TimeClockEmployee {
 export interface ValidatedUserProfile {
     user: UserProfile;
     accounts: UserAccount[];
-    roles: string[]|UserRole[];
+    roles: string[];
     picture?: string|null;
 }
 
