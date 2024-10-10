@@ -83,7 +83,7 @@ export type {
 } from './item.d.ts';
 
 export type * as MenuItemTypes from './ui/menu.d.ts'
-export type {MenuItem, MenuItemEntry} from './ui/menu.d.ts';
+export type {MenuItem, MenuItemEntry, UserFavorite} from './ui/menu.d.ts';
 
 export type * as PricingTypes from './pricing.d.ts';
 export type {
