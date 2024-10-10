@@ -11,6 +11,6 @@ export interface MenuItemEntry extends Omit<MenuItem, 'children'> {
     parent_menu: number;
     priority: number;
     active: boolean;
-    group: string;
+    required_role: string;
     timestamp: string;
 }
