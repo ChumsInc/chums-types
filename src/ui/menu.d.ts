@@ -14,3 +14,9 @@ export interface MenuItemEntry extends Omit<MenuItem, 'children'> {
     required_role: string;
     timestamp: string;
 }
+
+export interface UserFavorite {
+    id: number;
+    path: string;
+    name: string;
+}
