@@ -5,6 +5,7 @@ export enum UserAccountType {
     UserAccountNone = 0,
     UserAccountEmployee = 1,
     UserAccountRep = 2,
+    UserAccountAPI = 3,
     UserAccountCustomer = 4,
 }
 
