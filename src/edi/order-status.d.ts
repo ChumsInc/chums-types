@@ -32,3 +32,10 @@ export interface EDIOrder extends Pick<SalesOrderHeader, 'ARDivisionNo'|'Custome
     selected?: boolean,
     saving?: boolean;
 }
+
+export interface EDICustomer {
+    ARDivisionNo: string;
+    CustomerNo: string;
+    CustomerName: stirng;
+    isMAPADOC: boolean;
+}
