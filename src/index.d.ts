@@ -55,6 +55,7 @@ export type {
 
 export type * as EDIOrderStatusTypes from './edi/order-status.d.ts';
 export type {
+    EDICustomer,
     EDIOrder,
     EDIOrderStatus,
     EDIOrderStatusField,
