@@ -53,6 +53,14 @@ export type {
     DLDepartmentKey
 } from './production/direct-labor.d.ts';
 
+export type * as EDIOrderStatusTypes from './edi/order-status.d.ts';
+export type {
+    EDIOrder,
+    EDIOrderStatus,
+    EDIOrderStatusField,
+    EDIOrderStatusGroup,
+} from './edi/order-status.d.ts';
+
 export type {
     YesNo,
     Editable,

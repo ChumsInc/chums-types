@@ -1,7 +1,7 @@
 import {ItemType} from "./production.js";
 
 export type SalesOrderType = 'S'|'B'|'Q'|'M'|'R'|'P';
-export type SalesOrderHeaderStatus = 'N'|'O'|'C'|'H';
+export type SalesOrderHeaderStatus = 'A'|'N'|'O'|'C'|'H'|'X'|'Q'|'Z';
 
 export interface SalesOrderHeader {
     Company: string;
