@@ -54,6 +54,7 @@ export interface SalesOrderHeader {
     TaxSchedule: string;
     FreightAmt: string|number;
     DepositAmt: string|number;
+    DateCreated: string;
     UserCreatedKey: string;
     UDF_CANCEL_DATE: string|null;
     UDF_IMPRINTED: 'Y'|'N';
