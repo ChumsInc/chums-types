@@ -1,6 +1,6 @@
 import type {MoneyString, PriceSet} from "./shopify-generics.d.ts";
 import type {SageItem} from "./chums/shopify-chums-types.d.ts";
-import {OrderRiskSummary} from "./graphql/order-risk.js";
+import {OrderRiskSummary} from "./graphql/index.js";
 
 export interface ShopifyDiscountCode {
     type: string;
