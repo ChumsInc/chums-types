@@ -81,6 +81,4 @@ export type {
     ChangedVariant, ShopifyProductVariant, ShopifyProductsResponse, ShopifyProduct,
 } from './shopify-products.d.ts';
 
-export type {
-    OrderRiskSummary, OrderRiskAssessment, RiskAssessmentResult, RiskFact, RiskFactSentiment, OrderRiskRecommendationResult,
-} from './graphql/order-risk.d.ts';
+export * from './graphql/index.d.ts';
