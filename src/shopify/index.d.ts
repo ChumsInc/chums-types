@@ -3,9 +3,8 @@ export type {
     PriceMoney, MoneyString, PriceSet, ShopifyListResult, ShopifyObject, StoreName, StoreNames,
 } from './shopify-generics.d.ts';
 
-export type * as ShopifyChumsTypes from './shopify-chums-types.d.ts';
+export type * as ShopifyChumsTypes from './chums/shopify-chums-types.d.ts';
 export type {
-    ItemValidation,
     SageFulfillmentItem,
     SageFulfillmentInfo,
     SageFulfillmentTracking,
@@ -15,7 +14,7 @@ export type {
     SageOrderDetailLine,
     SavedProduct,
     SavedVariant,
-} from './shopify-chums-types.d.ts';
+} from './chums/shopify-chums-types.d.ts';
 
 export type {
     DeprecatedShopifyFulfillmentBody,
@@ -81,4 +80,71 @@ export type {
     ChangedVariant, ShopifyProductVariant, ShopifyProductsResponse, ShopifyProduct,
 } from './shopify-products.d.ts';
 
-export * from './graphql/index.d.ts';
+export {
+    PageInfo,
+    ProductImage,
+    OrderRiskSummary,
+    OrderRiskAssessment,
+    Order,
+    Image,
+    RiskAssessmentResult,
+    Collection,
+    CollectionNode,
+    CollectionEdge,
+    ProductCollectionEdge,
+    ProductCollectionsConnection,
+    FileEdge,
+    ImageEdge,
+    InventoryItemEdge,
+    InventoryItemMeasurement,
+    InventoryItemsResponse,
+    InventoryChange,
+    InventoryLevel,
+    InventoryAdjustmentGroup,
+    InventoryItem,
+    InventoryLevelChanges,
+    InventoryLevelMutationResponse,
+    InventoryQuantity,
+    InventoryQuantityInput,
+    ItemValidation,
+    MediaImage,
+    MediaResponse,
+    GraphQLResponse,
+    PagedCollectionResponse,
+    PagedProductResponse,
+    ProductEdge,
+    PagedFileResponse,
+    ProductImagesResponse,
+    ProductImageInfo,
+    ProductStatusResponse,
+    OrderRiskRecommendationResult,
+    RiskFact,
+    RiskFactSentiment,
+    ProductCollectionNode,
+    ProductNode,
+    ProductVariantNode,
+    ProductStatus,
+    ProductResponse,
+    ProductVariantPriceBody,
+    ProductVariantsConnection,
+    VariantPriceChange,
+    SelectedOption,
+    Weight,
+    ShopifyFileNode,
+    ShopifyGraphQLError,
+    UserError,
+    VariantPriceMutationResponse,
+    NextCursorFunction,
+    Count,
+    GraphQLImage,
+    GraphQLCollection,
+    GraphQLInventory,
+    GraphQLMedia,
+    GraphQLOrders,
+    GraphQLProduct,
+    GraphQLVariant,
+    GraphQLOrderRisk,
+    GraphQLPageInfo,
+    GraphQLGenerics
+} from './graphql/index.d.ts'
+export * as ShopifyGraphQL from './graphql/index.d.ts';

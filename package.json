@@ -21,20 +21,22 @@
   },
   "homepage": "https://github.com/ChumsInc/chums-types#readme",
   "devDependencies": {
-    "@eslint/js": "^9.8.0",
+    "@eslint/js": "^9.16.0",
     "@tsconfig/node18": "^18.2.0",
     "auto-changelog": "^2.4.0",
-    "eslint": "^9.8.0",
-    "globals": "^15.9.0",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
     "rimraf": "^5.0.7",
     "typeconv": "^2.3.1",
     "typescript": "^5.1.6",
-    "typescript-eslint": "^8.0.0"
+    "typescript-eslint": "^8.18.0"
   },
   "auto-changelog": {
     "template": "keepachangelog",
     "unreleased": true,
     "commitLimit": false
   },
-  "overrides": { "eslint": "^9.8.0" }
+  "overrides": {
+    "eslint": "^9.8.0"
+  }
 }

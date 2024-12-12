@@ -1,4 +1,4 @@
-import type {StoreName} from "./shopify-generics.d.ts";
+import type {StoreName} from "../shopify-generics.d.ts";
 
 export interface SageItem {
     ItemType?: string,
@@ -68,29 +68,4 @@ export interface SavedVariant {
     sku: string;
     barcode: string | null;
     grams: number | null;
-}
-
-export interface ItemValidation extends SavedProduct {
-    variant_id: number;
-    title: string,
-    sku: string;
-    grams: number;
-    ShipWeight: string | number;
-    barcode: string;
-    UPC: string;
-    available: number;
-    ItemCode: string;
-    ItemCodeDesc: "#The Band 20mm Black ECommerce",
-    InactiveItem: string;
-    ProductType: string;
-    QuantityAvailable: number;
-    country_code_of_origin: string;
-    UDF_COUNTRY_ORIGIN: string;
-    harmonized_system_code: string;
-    UDF_HTSCODE: string;
-    compare_at_price: string | number;
-    price: string | number;
-    SuggestedRetailPrice: string | number;
-    updated_at: string;
-
 }
