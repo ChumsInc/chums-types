@@ -19,22 +19,17 @@ components:
         - P
       title: SalesOrderType
       type: string
-    SalesOrderStatus:
+    SalesOrderHeaderStatus:
       enum:
+        - A
         - 'N'
         - O
         - C
         - H
+        - X
+        - Q
+        - Z
       title: SalesOrderHeaderStatus
-      type: string
-    SalesOrderItemType:
-      enum:
-        - '1'
-        - '2'
-        - '3'
-        - '4'
-        - '5'
-      title: SalesOrderItemType
       type: string
     SalesOrderHeader:
       properties:
@@ -51,7 +46,7 @@ components:
           $ref: '#/components/schemas/SalesOrderType'
           title: SalesOrderHeader.OrderType
         OrderStatus:
-          $ref: '#/components/schemas/SalesOrderStatus'
+          $ref: '#/components/schemas/SalesOrderHeaderStatus'
           title: SalesOrderHeader.OrderStatus
         ShipExpireDate:
           title: SalesOrderHeader.ShipExpireDate
@@ -235,6 +230,9 @@ components:
           anyOf:
             - type: string
             - type: number
+        DateCreated:
+          title: SalesOrderHeader.DateCreated
+          type: string
         UserCreatedKey:
           title: SalesOrderHeader.UserCreatedKey
           type: string
@@ -325,6 +323,7 @@ components:
         - TaxSchedule
         - FreightAmt
         - DepositAmt
+        - DateCreated
         - UserCreatedKey
         - UDF_CANCEL_DATE
         - UDF_IMPRINTED
@@ -353,7 +352,6 @@ components:
           title: SalesOrderDetailLine.ItemCode
           type: string
         ItemType:
-          $ref: '#/components/schemas/SalesOrderItemType'
           title: SalesOrderDetailLine.ItemType
         ItemCodeDesc:
           title: SalesOrderDetailLine.ItemCodeDesc
@@ -674,4 +672,175 @@ components:
         - QuantityShipped
       additionalProperties: false
       title: ItemDistribution
+      type: object
+    OpenOrderStatusGroup:
+      enum:
+        - shipping
+        - cs
+        - imp
+      title: OpenOrderStatusGroup
+      type: string
+    OpenOrderStatusCode:
+      properties:
+        id:
+          title: OpenOrderStatusCode.id
+          type: number
+        StatusCode:
+          title: OpenOrderStatusCode.StatusCode
+          type: string
+        StatusDescription:
+          title: OpenOrderStatusCode.StatusDescription
+          type: string
+        StatusType:
+          $ref: '#/components/schemas/OpenOrderStatusGroup'
+          title: OpenOrderStatusCode.StatusType
+        colorCode:
+          title: OpenOrderStatusCode.colorCode
+          type: string
+        priority:
+          title: OpenOrderStatusCode.priority
+          type: number
+      required:
+        - id
+        - StatusCode
+        - StatusDescription
+        - StatusType
+        - colorCode
+        - priority
+      additionalProperties: false
+      title: OpenOrderStatusCode
+      type: object
+    StatusHistory:
+      properties:
+        StatusCode:
+          title: StatusHistory.StatusCode
+          type: string
+        User:
+          title: StatusHistory.User
+          type: string
+        timestamp:
+          title: StatusHistory.timestamp
+          type: string
+      required:
+        - StatusCode
+        - User
+        - timestamp
+      additionalProperties: false
+      title: StatusHistory
+      type: object
+    SalesOrderStatus:
+      properties:
+        id:
+          title: SalesOrderStatus.id
+          type: number
+        SalesOrderNo:
+          title: SalesOrderStatus.SalesOrderNo
+          type: string
+        StatusCode:
+          title: SalesOrderStatus.StatusCode
+          nullable: true
+          type: string
+        colorCode:
+          title: SalesOrderStatus.colorCode
+          nullable: true
+          type: string
+        Notes:
+          title: SalesOrderStatus.Notes
+          nullable: true
+          type: string
+        User:
+          title: SalesOrderStatus.User
+          nullable: true
+          type: string
+        StatusType:
+          title: SalesOrderStatus.StatusType
+          nullable: true
+          type: string
+        StatusHistory:
+          anyOf:
+            - items:
+                $ref: '#/components/schemas/StatusHistory'
+                title: SalesOrderStatus.StatusHistory.[]
+              title: SalesOrderStatus.StatusHistory.[]
+              type: array
+            - title: SalesOrderStatus.StatusHistory
+              nullable: true
+          title: SalesOrderStatus.StatusHistory
+        timestamp:
+          title: SalesOrderStatus.timestamp
+          nullable: true
+          type: string
+      required:
+        - id
+        - StatusCode
+        - Notes
+        - User
+        - timestamp
+      additionalProperties: false
+      title: SalesOrderStatus
+      type: object
+    SalesOrderWithStatus:
+      properties:
+        CancelDate:
+          title: SalesOrderWithStatus.CancelDate
+          nullable: true
+          type: string
+        UserLogon:
+          title: SalesOrderWithStatus.UserLogon
+          type: string
+        DateCreated:
+          title: SalesOrderWithStatus.DateCreated
+          type: string
+        TimeCreated:
+          title: SalesOrderWithStatus.TimeCreated
+          type: string
+        DateUpdated:
+          title: SalesOrderWithStatus.DateUpdated
+          type: string
+        TimeUpdated:
+          title: SalesOrderWithStatus.TimeUpdated
+          type: string
+        UpdatedByUser:
+          title: SalesOrderWithStatus.UpdatedByUser
+          type: string
+        OrderAmt:
+          title: SalesOrderWithStatus.OrderAmt
+          anyOf:
+            - type: number
+            - type: string
+        isEDI:
+          title: SalesOrderWithStatus.isEDI
+          type: boolean
+        isB2B:
+          title: SalesOrderWithStatus.isB2B
+          type: boolean
+        isWebsite:
+          title: SalesOrderWithStatus.isWebsite
+          type: boolean
+        CustomerName:
+          title: SalesOrderWithStatus.CustomerName
+          type: string
+        status:
+          anyOf:
+            - $ref: '#/components/schemas/SalesOrderStatus'
+              title: SalesOrderWithStatus.status
+            - title: SalesOrderWithStatus.status
+              nullable: true
+          title: SalesOrderWithStatus.status
+      required:
+        - CancelDate
+        - UserLogon
+        - DateCreated
+        - TimeCreated
+        - DateUpdated
+        - TimeUpdated
+        - UpdatedByUser
+        - OrderAmt
+        - isEDI
+        - isB2B
+        - isWebsite
+        - CustomerName
+        - status
+      additionalProperties: false
+      title: SalesOrderWithStatus
       type: object

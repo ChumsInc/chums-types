@@ -23,11 +23,19 @@ components:
         stdRate:
           title: DLCodeWorkTemplate.stdRate
           type: number
+        scalingFactorLabor:
+          title: DLCodeWorkTemplate.scalingFactorLabor
+          type: number
+        budgetLaborCost:
+          title: DLCodeWorkTemplate.budgetLaborCost
+          type: number
       required:
         - templateNo
         - workCenter
         - activityCode
         - stdRate
+        - scalingFactorLabor
+        - budgetLaborCost
       additionalProperties: false
       title: DLCodeWorkTemplate
       type: object

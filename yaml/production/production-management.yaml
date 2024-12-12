@@ -254,6 +254,7 @@ components:
           type: string
         TemplateDesc:
           title: WorkTemplate.TemplateDesc
+          nullable: true
           type: string
         Steps:
           items:

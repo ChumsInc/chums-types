@@ -118,6 +118,10 @@ components:
         notes:
           title: UserRecord.notes
           type: string
+        primaryCustomerNo:
+          title: UserRecord.primaryCustomerNo
+          nullable: true
+          type: string
         created:
           title: UserRecord.created
           type: string
@@ -163,6 +167,7 @@ components:
         - accountType
         - active
         - notes
+        - primaryCustomerNo
         - created
         - pwd_change_required
         - primaryAccount
@@ -312,63 +317,45 @@ components:
       additionalProperties: false
       title: LoadSessionUserProps
       type: object
-    UserAccount:
+    BaseUserAccount:
       properties:
         id:
-          title: UserAccount.id
+          title: BaseUserAccount.id
           type: number
         userid:
-          title: UserAccount.userid
+          title: BaseUserAccount.userid
           type: number
         Company:
-          title: UserAccount.Company
+          title: BaseUserAccount.Company
           type: string
         ARDivisionNo:
-          title: UserAccount.ARDivisionNo
+          title: BaseUserAccount.ARDivisionNo
           type: string
         CustomerNo:
-          title: UserAccount.CustomerNo
+          title: BaseUserAccount.CustomerNo
           type: string
         ShipToCode:
-          title: UserAccount.ShipToCode
-          nullable: true
-          type: string
-        ShipToName:
-          title: UserAccount.ShipToName
+          title: BaseUserAccount.ShipToCode
           nullable: true
           type: string
         isRepAccount:
-          title: UserAccount.isRepAccount
+          title: BaseUserAccount.isRepAccount
+          type: boolean
         SalespersonDivisionNo:
-          title: UserAccount.SalespersonDivisionNo
+          title: BaseUserAccount.SalespersonDivisionNo
           nullable: true
           type: string
         SalespersonNo:
-          title: UserAccount.SalespersonNo
-          nullable: true
-          type: string
-        CustomerName:
-          title: UserAccount.CustomerName
-          nullable: true
-          type: string
-        SalespersonName:
-          title: UserAccount.SalespersonName
+          title: BaseUserAccount.SalespersonNo
           nullable: true
           type: string
         primaryAccount:
-          title: UserAccount.primaryAccount
+          title: BaseUserAccount.primaryAccount
           type: boolean
-        customers:
-          title: UserAccount.customers
-          type: number
-        shipToCustomers:
-          title: UserAccount.shipToCustomers
-          type: number
         timestamp:
-          title: UserAccount.timestamp
+          title: BaseUserAccount.timestamp
           type: string
       required:
-        - id
         - userid
         - Company
         - ARDivisionNo
@@ -376,15 +363,49 @@ components:
         - isRepAccount
         - SalespersonDivisionNo
         - SalespersonNo
-        - CustomerName
-        - SalespersonName
         - primaryAccount
-        - customers
-        - shipToCustomers
-        - timestamp
       additionalProperties: false
-      title: UserAccount
+      title: BaseUserAccount
       type: object
+    UserAccount:
+      allOf:
+        - $ref: '#/components/schemas/BaseUserAccount'
+        - properties:
+            id:
+              title: UserAccount.id
+              type: number
+            ShipToName:
+              title: UserAccount.ShipToName
+              nullable: true
+              type: string
+            CustomerName:
+              title: UserAccount.CustomerName
+              nullable: true
+              type: string
+            SalespersonName:
+              title: UserAccount.SalespersonName
+              nullable: true
+              type: string
+            customers:
+              title: UserAccount.customers
+              type: number
+            shipToCustomers:
+              title: UserAccount.shipToCustomers
+              type: number
+            timestamp:
+              title: UserAccount.timestamp
+              type: string
+          required:
+            - id
+            - ShipToName
+            - CustomerName
+            - SalespersonName
+            - customers
+            - shipToCustomers
+            - timestamp
+          additionalProperties: false
+          type: object
+      title: UserAccount
     AccessRole:
       properties:
         id:
@@ -417,6 +438,23 @@ components:
       additionalProperties: false
       title: UserRole
       type: object
+    ExtendedUserRole:
+      allOf:
+        - $ref: '#/components/schemas/UserRole'
+        - properties:
+            description:
+              title: ExtendedUserRole.description
+              nullable: true
+              type: string
+            timestamp:
+              title: ExtendedUserRole.timestamp
+              type: string
+          required:
+            - description
+            - timestamp
+          additionalProperties: false
+          type: object
+      title: ExtendedUserRole
     PasswordValidationResponse:
       properties:
         id:
@@ -460,7 +498,11 @@ components:
     ValidatedUserProfile:
       properties:
         user:
-          $ref: '#/components/schemas/UserProfile'
+          anyOf:
+            - $ref: '#/components/schemas/UserProfile'
+              title: ValidatedUserProfile.user
+            - $ref: '#/components/schemas/User'
+              title: ValidatedUserProfile.user
           title: ValidatedUserProfile.user
         accounts:
           items:
@@ -469,18 +511,11 @@ components:
           title: ValidatedUserProfile.accounts
           type: array
         roles:
-          anyOf:
-            - items:
-                title: ValidatedUserProfile.roles.[]
-                type: string
-              title: ValidatedUserProfile.roles.[]
-              type: array
-            - items:
-                $ref: '#/components/schemas/UserRole'
-                title: ValidatedUserProfile.roles.[]
-              title: ValidatedUserProfile.roles.[]
-              type: array
+          items:
+            title: ValidatedUserProfile.roles.[]
+            type: string
           title: ValidatedUserProfile.roles
+          type: array
         picture:
           title: ValidatedUserProfile.picture
           nullable: true

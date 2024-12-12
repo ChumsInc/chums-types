@@ -11,9 +11,6 @@ components:
   schemas:
     BarcodeCustomer:
       properties:
-        Company:
-          title: BarcodeCustomer.Company
-          type: string
         ARDivisionNo:
           title: BarcodeCustomer.ARDivisionNo
           type: string
@@ -36,7 +33,6 @@ components:
           title: BarcodeCustomer.Notes
           type: string
       required:
-        - Company
         - ARDivisionNo
         - CustomerNo
         - CustomerName
@@ -135,9 +131,6 @@ components:
         CustomerID:
           title: BarcodeItem.CustomerID
           type: number
-        Company:
-          title: BarcodeItem.Company
-          type: string
         ItemCode:
           title: BarcodeItem.ItemCode
           type: string
@@ -217,7 +210,6 @@ components:
           type: boolean
       required:
         - ID
-        - Company
         - ItemCode
         - AltItemCode
         - ItemDescription

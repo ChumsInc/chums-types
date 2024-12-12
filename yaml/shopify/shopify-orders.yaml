@@ -581,6 +581,9 @@ components:
             title: ShopifyOrder.risks.[]
           title: ShopifyOrder.risks
           type: array
+        risk:
+          title: ShopifyOrder.risk
+          nullable: true
       required:
         - id
         - admin_graphql_api_id
@@ -643,7 +646,6 @@ components:
         - refunds
         - shipping_address
         - shipping_lines
-        - risks
       additionalProperties: false
       title: ShopifyOrder
       type: object
@@ -715,6 +717,9 @@ components:
           anyOf:
             - type: number
             - type: string
+        gid:
+          title: SavedOrder.gid
+          type: string
         import_result:
           anyOf:
             - $ref: '#/components/schemas/SageImportResponse'
@@ -749,6 +754,7 @@ components:
           title: SavedOrder.shopify_order
       required:
         - id
+        - gid
         - import_result
         - sage_Company
         - sage_SalesOrderNo
