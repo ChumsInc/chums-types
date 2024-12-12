@@ -135,16 +135,6 @@ export {
     UserError,
     VariantPriceMutationResponse,
     NextCursorFunction,
-    Count,
-    GraphQLImage,
-    GraphQLCollection,
-    GraphQLInventory,
-    GraphQLMedia,
-    GraphQLOrders,
-    GraphQLProduct,
-    GraphQLVariant,
-    GraphQLOrderRisk,
-    GraphQLPageInfo,
-    GraphQLGenerics
+    Count
 } from './graphql/index.d.ts'
 export * as ShopifyGraphQL from './graphql/index.d.ts';
