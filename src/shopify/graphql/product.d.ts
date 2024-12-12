@@ -1,5 +1,6 @@
 import type {PageInfo} from "./page-info.js";
 import {ImageEdge} from "./image.js";
+import {ProductVariantsConnection} from "./variant.js";
 
 
 export interface ProductEdge<T> {
@@ -31,7 +32,7 @@ export interface ProductNode {
     status: string;
     hasOnlyDefaultVariant: boolean;
     collections: ProductCollectionsConnection;
-    variants: ProductVariantsConnection
+    variants: ProductVariantsConnection;
 }
 
 export interface ProductCollectionsConnection {
