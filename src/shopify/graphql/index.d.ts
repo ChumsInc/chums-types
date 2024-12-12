@@ -2,7 +2,7 @@ export * from './generics.js'
 export * from './collection.js';
 export * from './image.js'
 export * from './inventory.js'
-export * from './media.js.js'
+export * from './media.js'
 export * from './order-risk.js'
 export * from './orders.js'
 export * from './page-info.js'
