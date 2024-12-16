@@ -20,7 +20,7 @@ export interface Edge<T> {
 }
 
 export interface Connection<T> {
-    edges: Edge<T>;
+    edges: Edge<T>[];
     nodes:T[];
     pageInfo: PageInfo;
 }
