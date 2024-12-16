@@ -13,3 +13,14 @@ export interface UserError {
     field: string[];
     message: string;
 }
+
+export interface Edge<T> {
+    node: T;
+    cursor: string;
+}
+
+export interface Connection<T> {
+    edges: Edge<T>;
+    nodes:T[];
+    pageInfo: PageInfo;
+}

@@ -1,30 +1,22 @@
-import type {PageInfo} from "./page-info.js";
 import {Image} from "./image.js";
+import {Connection} from "./generics.js";
 
-export interface FileEdge<T> {
-    node: T;
-}
 
-export interface PagedFileResponse<T> {
-    files: {
-        edges: FileEdge<T>[];
-        pageInfo: PageInfo;
-    }
-}
-
-export interface ShopifyFileNode {
+export interface Media {
     id: string;
-    updatedAt:string;
-    preview: {
-        image: Image
-    }
+    alt: string;
+    mediaContentType: string;
+    preview: MediaPreview;
+    status: MediaStatus;
 }
 
-export interface MediaImage extends Omit<Image, 'id'>{
-    gid: string;
-    source_id: string;
-    updated_at: string;
+export interface MediaPreview {
+    image: Image;
+    status: MediaStatus;
 }
 
+export type MediaStatus = 'FAILED' | 'PROCESSING' | 'READY' | 'UPLOADED';
 
-export type MediaResponse = PagedFileResponse<ShopifyFileNode>
+export type MediaConnection = Connection<Media>;
+
+

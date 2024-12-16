@@ -1,6 +1,7 @@
 import type {PageInfo} from "./page-info.js";
 import {ImageEdge} from "./image.js";
 import {ProductVariantsConnection} from "./variant.js";
+import {Edge} from "./generics.js";
 
 
 export interface ProductEdge<T> {
@@ -9,7 +10,7 @@ export interface ProductEdge<T> {
 
 export interface PagedProductResponse<T> {
     products: {
-        edges: ProductEdge<T>[];
+        edges: Edge<T>[];
         pageInfo: PageInfo;
     }
 }
