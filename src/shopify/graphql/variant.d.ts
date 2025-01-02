@@ -1,4 +1,4 @@
-import {ProductNode, ProductVariantNode} from "./product.js";
+import {ProductNode} from "./product.js";
 import {Edge, UserError} from "./generics.js";
 import {InventoryItem} from "./inventory.js";
 
