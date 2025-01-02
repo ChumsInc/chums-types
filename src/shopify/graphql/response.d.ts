@@ -2,7 +2,7 @@ import type {PageInfo} from "./page-info.d.ts";
 
 
 export interface GraphQLResponse<T> {
-    errors: ShopifyGraphQLError[]|string;
+    errors: ShopifyError|string;
     data: T;
     extensions?: {
         cost?: {
@@ -13,6 +13,12 @@ export interface GraphQLResponse<T> {
             }
         }
     }
+}
+
+export interface ShopifyError {
+    networkStatusCode: number;
+    message?: string;
+    graphQLErrors?: ShopifyGraphQLError;
 }
 
 export interface ShopifyGraphQLError {
