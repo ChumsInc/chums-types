@@ -1,6 +1,6 @@
 import type {PageInfo} from "./page-info.js";
 import {ImageEdge} from "./image.js";
-import {ProductVariantsConnection} from "./variant.js";
+import {ProductVariant, ProductVariantsConnection} from "./variant.js";
 import {Edge} from "./generics.js";
 
 
@@ -61,3 +61,8 @@ export interface ProductImageInfo {
 }
 
 export type ProductImagesResponse = PagedProductResponse<ProductImageInfo>;
+
+export interface Product extends Omit<ProductNode, 'collections'|'variants'> {
+    collections: string[];
+    variants: ProductVariant[]
+}
