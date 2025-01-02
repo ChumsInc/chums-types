@@ -1,7 +1,7 @@
 import {ProductNode} from "./product.js";
 import {Edge, UserError} from "./generics.js";
 import {InventoryItem} from "./inventory.js";
-import {MediaConnection} from "./media.js";
+import {Media, MediaConnection} from "./media.js";
 
 export interface VariantsConnection<T> {
     edges: Edge<T>[];
@@ -40,7 +40,7 @@ export interface ProductVariant extends Omit<ProductVariantNode, 'media'> {
     compareAtPrice: string;
     sku: string;
     barcode: string;
-    media: string[];
+    media: Pick<Media, 'id'>[];
     selectedOptions: SelectedOption[];
     inventoryItem: Pick<InventoryItem, 'id' | 'measurement' | 'provinceCodeOfOrigin' | 'harmonizedSystemCode' | 'inventoryLevel'>;
     createdAt: string;
