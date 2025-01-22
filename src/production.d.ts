@@ -67,6 +67,7 @@ export interface PMManifestEntry {
 export interface PMManifestEntryItem extends PMManifestEntry {
     ItemCodeDesc?: string|null;
     PackDate: string;
+    ProductionDueDate: string|null;
     BoxNo: number|null;
     QuantityOrdered: number|null;
     QuantityComplete?: number|null;
