@@ -335,3 +335,5 @@ export {
     WorkTicketWorkStatusItem
 } from './production/work-ticket-status.d.ts'
 
+export type * as TimeclockTypes from './timeclock.d.ts';
+export type {BannerImage, PayPeriod} from './timeclock.d.ts'
