@@ -1,7 +1,7 @@
 export interface BannerImage {
     id: number;
     filename?: string;
-    altText?: string;
+    altText?: string|null;
     overlay: string;
     active: boolean | 1 | 0;
     timestamp?: string;
