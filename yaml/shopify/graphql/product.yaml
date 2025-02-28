@@ -144,3 +144,21 @@ components:
       type: object
     ProductImagesResponse:
       title: ProductImagesResponse
+    Product:
+      properties:
+        collections:
+          items:
+            title: Product.collections.[]
+            type: string
+          title: Product.collections
+          type: array
+        variants:
+          items: {}
+          title: Product.variants
+          type: array
+      required:
+        - collections
+        - variants
+      additionalProperties: false
+      title: Product
+      type: object

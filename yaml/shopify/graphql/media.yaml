@@ -9,47 +9,52 @@ info:
 paths: {}
 components:
   schemas:
-    ShopifyFileNode:
+    Media:
       properties:
         id:
-          title: ShopifyFileNode.id
+          title: Media.id
           type: string
-        updatedAt:
-          title: ShopifyFileNode.updatedAt
+        alt:
+          title: Media.alt
+          type: string
+        mediaContentType:
+          title: Media.mediaContentType
           type: string
         preview:
-          properties:
-            image:
-              title: ShopifyFileNode.preview.image
-          required:
-            - image
-          additionalProperties: false
-          title: ShopifyFileNode.preview
-          type: object
+          $ref: '#/components/schemas/MediaPreview'
+          title: Media.preview
+        status:
+          $ref: '#/components/schemas/MediaStatus'
+          title: Media.status
       required:
         - id
-        - updatedAt
+        - alt
+        - mediaContentType
         - preview
+        - status
       additionalProperties: false
-      title: ShopifyFileNode
+      title: Media
       type: object
-    MediaImage:
+    MediaPreview:
       properties:
-        gid:
-          title: MediaImage.gid
-          type: string
-        source_id:
-          title: MediaImage.source_id
-          type: string
-        updated_at:
-          title: MediaImage.updated_at
-          type: string
+        image:
+          title: MediaPreview.image
+        status:
+          $ref: '#/components/schemas/MediaStatus'
+          title: MediaPreview.status
       required:
-        - gid
-        - source_id
-        - updated_at
+        - image
+        - status
       additionalProperties: false
-      title: MediaImage
+      title: MediaPreview
       type: object
-    MediaResponse:
-      title: MediaResponse
+    MediaStatus:
+      enum:
+        - FAILED
+        - PROCESSING
+        - READY
+        - UPLOADED
+      title: MediaStatus
+      type: string
+    MediaConnection:
+      title: MediaConnection

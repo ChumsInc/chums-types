@@ -9,6 +9,22 @@ info:
 paths: {}
 components:
   schemas:
+    ShopifyError:
+      properties:
+        networkStatusCode:
+          title: ShopifyError.networkStatusCode
+          type: number
+        message:
+          title: ShopifyError.message
+          type: string
+        graphQLErrors:
+          $ref: '#/components/schemas/ShopifyGraphQLError'
+          title: ShopifyError.graphQLErrors
+      required:
+        - networkStatusCode
+      additionalProperties: false
+      title: ShopifyError
+      type: object
     ShopifyGraphQLError:
       properties:
         message:
