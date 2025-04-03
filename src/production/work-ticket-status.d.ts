@@ -32,3 +32,5 @@ export interface WorkTicketGroupItem {
     groupId: number;
     ItemCode: string;
 }
+
+export type WorkTicketWorkStatusDetail = Pick<WorkTicketWorkStatusItem, 'WorkTicketKey'|'StatusJSON'>;
