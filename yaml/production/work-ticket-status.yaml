@@ -31,7 +31,7 @@ components:
       title: WorkTicketStatusEntry
       type: object
     WorkTicketStatusGroup:
-      title: WorkTicketStatusGroup
+      title: WorkTicketStatusSet
     WorkTicketWorkStatusItem:
       properties:
         PlannedHours:

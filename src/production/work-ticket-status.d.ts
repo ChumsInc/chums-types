@@ -7,7 +7,7 @@ export interface WorkTicketStatusEntry {
     text?: string;
 }
 
-export type WorkTicketStatusGroup = Record<string, WorkTicketStatusEntry>
+export type WorkTicketStatusSet = Record<string, WorkTicketStatusEntry>
 
 export interface WorkTicketWorkStatusItem extends Pick<WorkTicketHeader,
     'WorkTicketKey'|'WorkTicketNo'|'ParentItemCode'|'WorkTicketDate'|'ProductionDueDate'|
@@ -16,5 +16,19 @@ export interface WorkTicketWorkStatusItem extends Pick<WorkTicketHeader,
     PlannedHours: string|number|null;
     reportId: number|null;
     MakeFor: string;
-    StatusJSON: WorkTicketStatusGroup;
+    StatusJSON: WorkTicketStatusSet;
+}
+
+
+export interface WorkTicketGroup {
+    id: number;
+    name: string;
+    location: string;
+    timestamp?: string;
+}
+
+export interface WorkTicketGroupItem {
+    id: number;
+    groupId: number;
+    ItemCode: string;
 }
