@@ -17,6 +17,8 @@ export interface WorkTicketWorkStatusItem extends Pick<WorkTicketHeader,
     reportId: number|null;
     MakeFor: string;
     StatusJSON: WorkTicketStatusSet;
+    WorkCenters: string[];
+    isRush: boolean;
 }
 
 
