@@ -339,3 +339,4 @@ export {
 
 export type * as TimeclockTypes from './timeclock.d.ts';
 export type {BannerImage, PayPeriod} from './timeclock.d.ts'
+export type {MailerReportObject, MailerReportContent} from './mailer.d.ts'
