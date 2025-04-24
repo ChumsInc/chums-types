@@ -48,6 +48,8 @@ export interface CLIssue {
     QuantityIssued: string | number;
     CostIssued: string | number;
     DateIssued: string;
+    QuantityDue?: string | number;
+    CostDue?: string | number;
     DateDue: string;
     UserIssued: string;
     UserReceived: string | null;
