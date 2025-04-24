@@ -79,7 +79,7 @@ export interface CLIssueDetail {
     QuantityAdjusted: number | string | null;
 }
 
-export interface CLIssueEntry extends Pick<CLIssue, 'id' | 'VendorNo' | 'WorkTicketNo' | 'TemplateNo' | 'WarehouseCode' | 'ItemCode' | 'ItemCodeDesc' | 'QuantityIssued' | 'DateIssued' | 'DateDue'> {
+export interface CLIssueEntry extends Pick<CLIssue, 'id' | 'VendorNo' | 'WorkTicketNo' | 'TemplateNo' | 'WarehouseCode' | 'ItemCode' | 'ItemCodeDesc' | 'QuantityIssued' | 'CostIssued' | 'DateIssued' | 'DateDue' | 'UnitCost'> {
     id: number | null;
     VendorNo: string | null;
     WorkTicketNo: string | null;
