@@ -346,6 +346,8 @@ export {
     WorkTicketGroupItem,
     WorkTicketWorkStatusDetail,
     WorkTicketWorkStatusGroup,
+    WorkTicketWorkStatusKey,
+    WorkTicketStatusGroup,
 } from './production/work-ticket-status.d.ts'
 
 export type * as TimeclockTypes from './timeclock.d.ts';

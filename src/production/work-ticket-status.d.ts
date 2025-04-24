@@ -41,3 +41,7 @@ export interface WorkTicketWorkStatusGroup {
 }
 
 export type WorkTicketWorkStatusDetail = Pick<WorkTicketWorkStatusItem, 'WorkTicketKey'|'StatusJSON'>;
+
+export type WorkTicketWorkStatusKey = 'comment'|'rush'|'cut'|'cl'|'mold'|'prd'|'card';
+
+export type WorkTicketStatusGroup = Record<WorkTicketWorkStatusKey, WorkTicketStatusEntry|undefined>
