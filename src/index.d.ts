@@ -36,6 +36,13 @@ export type {
     CLIssueSearchParams,
     CLVendor,
     CLVendorWeekTotal,
+    CLIssueDetail,
+    CLIssueEntryDetailPost,
+    CLIssueEntryDetail,
+    CLIssueSearchId,
+    CLIssueSearchOptions,
+    CLIssueSearchWorkTicket,
+    IssueDateType,
 } from './production/contract-labor.d.ts'
 
 export type * as DirectLaborTypes from './production/direct-labor.d.ts';
@@ -50,7 +57,8 @@ export type {
     BasicDLEntry,
     DLEntry,
     EmployeeDLEntryTotal,
-    DLDepartmentKey
+    DLDepartmentKey,
+
 } from './production/direct-labor.d.ts';
 
 export type * as EDIOrderStatusTypes from './edi/order-status.d.ts';
@@ -83,7 +91,7 @@ export type {
     InvoicePaymentRecord,
     InvoiceTrackingRecord,
     InvoiceType,
-    PaperlessLogRow
+    PaperlessLogRow,
 } from './invoice.d.ts';
 
 export type {
@@ -106,7 +114,7 @@ export type {
     CustomerPriceCode,
     PriceCodeUser,
     PricingMethod,
-    PriceCodeItem
+    PriceCodeItem,
 } from './pricing.d.ts';
 
 export * as ProductImageTypes from './product-image.d.ts'
@@ -122,7 +130,7 @@ export type {
     ImageSizePath,
     ColorSpaceList,
     ProductAltItem,
-    ProductAltItemKey
+    ProductAltItemKey,
 } from './product-image.d.ts';
 
 export type * as ProductTypes from './products.d.ts'
@@ -151,7 +159,7 @@ export type {
     ProductSearchItem,
     Warehouse,
     SKUGroup,
-    BinLocation
+    BinLocation,
 } from './products.d.ts';
 
 export type * as ProductionTypes from './production.d.ts';
@@ -162,7 +170,8 @@ export type {
     WorkOrderStatus,
     WorkOrderOperationStatus,
     WorkOrderStatusCode,
-    PMManifestShipDate
+    PMManifestShipDate,
+    ItemType
 } from './production.d.ts';
 
 export type * as ProductionManagementTypes from './production/production-management.d.ts';
@@ -171,7 +180,7 @@ export type {
     WorkCenter,
     WorkTemplate,
     WorkTemplateHeader,
-    WorkTemplateStep
+    WorkTemplateStep,
 } from './production/production-management.d.ts'
 
 export type * as ReturnsTypes from './returns.d.ts'
@@ -192,13 +201,13 @@ export type {
     OpenOrderStatusCode,
     SalesOrderStatus,
     StatusHistory,
-    SalesOrderWithStatus
+    SalesOrderWithStatus,
 } from './sales-orders.d.ts';
 export type {Salesperson, SalespersonLookupResult} from './salesperson.d.ts';
 
 export type {
     SearchItem,
-} from './search.d.ts'
+} from './search.d.ts';
 
 export type * as ShopifyIntegration from './shopify/index.d.ts'
 export type {
@@ -271,7 +280,7 @@ export type {
     ShopifyOrders,
     ShopifyInventory,
     ShopifyPayments,
-    ShopifyProducts
+    ShopifyProducts,
 } from './shopify/index.d.ts'
 
 export type {SortProps} from './sort.d.ts';
@@ -301,7 +310,7 @@ export type {
     PasswordValidationResponse,
     UserValidationResponse,
     UserJWTToken,
-    TimeClockEmployee
+    TimeClockEmployee,
 } from './user.d.ts';
 
 /**
@@ -320,7 +329,7 @@ export type {
     WOWorkCenter,
     WOManifestEntryItem,
     WOManifestEntry,
-    WOManifestShipDate
+    WOManifestShipDate,
 } from './production/work-order.d.ts';
 
 export type * as WorkTicketTypes from './production/work-ticket.d.ts';
@@ -334,9 +343,10 @@ export {
     WorkTicketStatusSet,
     WorkTicketWorkStatusItem,
     WorkTicketGroup,
-    WorkTicketGroupItem
+    WorkTicketGroupItem,
+    WorkTicketWorkStatusDetail
 } from './production/work-ticket-status.d.ts'
 
 export type * as TimeclockTypes from './timeclock.d.ts';
-export type {BannerImage, PayPeriod} from './timeclock.d.ts'
-export type {MailerReportObject, MailerReportContent} from './mailer.d.ts'
+export type {BannerImage, PayPeriod, } from './timeclock.d.ts'
+export type {MailerReportObject, MailerReportContent, MailerMultiPartContent} from './mailer.d.ts'
