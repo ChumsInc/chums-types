@@ -1,3 +1,5 @@
+import {PageInfo} from "./page-info.js";
+
 export interface Count {
     count: number;
     precision: 'AT_LEAST'|'EXACT';

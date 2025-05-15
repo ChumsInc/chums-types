@@ -1,5 +1,6 @@
 import type {PageInfo} from "./page-info.js";
 import {UserError, Weight} from "./generics.js";
+import {ProductVariantNode} from "./variant.js";
 
 export interface InventoryItemsResponse {
     inventoryItems: {
