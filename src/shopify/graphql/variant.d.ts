@@ -16,7 +16,7 @@ export interface SelectedOption {
 
 export interface ProductVariantNode {
     id: string;
-    product: Pick<ProductNode, 'id'>;
+    product: Pick<ProductNode, 'id'|'status'>;
     legacyResourceId: string;
     title: string;
     price: string;
