@@ -30,7 +30,7 @@ components:
       additionalProperties: false
       title: WorkTicketStatusEntry
       type: object
-    WorkTicketStatusGroup:
+    WorkTicketStatusSet:
       title: WorkTicketStatusSet
     WorkTicketWorkStatusItem:
       properties:
@@ -48,13 +48,100 @@ components:
           title: WorkTicketWorkStatusItem.MakeFor
           type: string
         StatusJSON:
-          $ref: '#/components/schemas/WorkTicketStatusGroup'
+          $ref: '#/components/schemas/WorkTicketStatusSet'
           title: WorkTicketWorkStatusItem.StatusJSON
+        WorkCenters:
+          items:
+            title: WorkTicketWorkStatusItem.WorkCenters.[]
+            type: string
+          title: WorkTicketWorkStatusItem.WorkCenters
+          type: array
+        isRush:
+          title: WorkTicketWorkStatusItem.isRush
+          type: boolean
       required:
         - PlannedHours
         - reportId
         - MakeFor
         - StatusJSON
+        - WorkCenters
+        - isRush
       additionalProperties: false
       title: WorkTicketWorkStatusItem
       type: object
+    WorkTicketGroup:
+      properties:
+        id:
+          title: WorkTicketGroup.id
+          type: number
+        name:
+          title: WorkTicketGroup.name
+          type: string
+        location:
+          title: WorkTicketGroup.location
+          type: string
+        timestamp:
+          title: WorkTicketGroup.timestamp
+          type: string
+      required:
+        - id
+        - name
+        - location
+      additionalProperties: false
+      title: WorkTicketGroup
+      type: object
+    WorkTicketGroupItem:
+      properties:
+        id:
+          title: WorkTicketGroupItem.id
+          type: number
+        groupId:
+          title: WorkTicketGroupItem.groupId
+          type: number
+        ItemCode:
+          title: WorkTicketGroupItem.ItemCode
+          type: string
+      required:
+        - id
+        - groupId
+        - ItemCode
+      additionalProperties: false
+      title: WorkTicketGroupItem
+      type: object
+    WorkTicketWorkStatusGroup:
+      properties:
+        id:
+          title: WorkTicketWorkStatusGroup.id
+          type: number
+        name:
+          title: WorkTicketWorkStatusGroup.name
+          type: string
+      required:
+        - id
+        - name
+      additionalProperties: false
+      title: WorkTicketWorkStatusGroup
+      type: object
+    WorkTicketWorkStatusDetail:
+      properties:
+        StatusJSON:
+          $ref: '#/components/schemas/WorkTicketStatusSet'
+          title: WorkTicketWorkStatusItem.StatusJSON
+      required:
+        - StatusJSON
+      additionalProperties: false
+      title: WorkTicketWorkStatusDetail
+      type: object
+    WorkTicketWorkStatusKey:
+      enum:
+        - comment
+        - rush
+        - cut
+        - cl
+        - mold
+        - prd
+        - card
+      title: WorkTicketWorkStatusKey
+      type: string
+    WorkTicketStatusGroup:
+      title: WorkTicketStatusGroup

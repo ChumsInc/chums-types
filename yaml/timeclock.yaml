@@ -19,6 +19,7 @@ components:
           type: string
         altText:
           title: BannerImage.altText
+          nullable: true
           type: string
         overlay:
           title: BannerImage.overlay

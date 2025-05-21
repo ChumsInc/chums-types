@@ -221,6 +221,16 @@ components:
         DateIssued:
           title: CLIssue.DateIssued
           type: string
+        QuantityDue:
+          title: CLIssue.QuantityDue
+          anyOf:
+            - type: string
+            - type: number
+        CostDue:
+          title: CLIssue.CostDue
+          anyOf:
+            - type: string
+            - type: number
         DateDue:
           title: CLIssue.DateDue
           type: string
@@ -578,7 +588,7 @@ components:
       title: WorkTicketStatusEntry
       type: object
     WorkTicketStatusGroup:
-      title: WorkTicketStatusSet
+      title: WorkTicketStatusGroup
     WorkTicketWorkStatusItem:
       properties:
         StatusJSON:

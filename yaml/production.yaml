@@ -263,6 +263,10 @@ components:
             PackDate:
               title: PMManifestEntryItem.PackDate
               type: string
+            ProductionDueDate:
+              title: PMManifestEntryItem.ProductionDueDate
+              nullable: true
+              type: string
             BoxNo:
               title: PMManifestEntryItem.BoxNo
               nullable: true
@@ -288,6 +292,7 @@ components:
               type: string
           required:
             - PackDate
+            - ProductionDueDate
             - BoxNo
             - QuantityOrdered
             - Status

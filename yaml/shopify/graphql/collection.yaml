@@ -17,6 +17,9 @@ components:
         handle:
           title: CollectionNode.handle
           type: string
+        title:
+          title: CollectionNode.title
+          type: string
         updatedAt:
           title: CollectionNode.updatedAt
           type: string
@@ -30,6 +33,7 @@ components:
       required:
         - id
         - handle
+        - title
         - updatedAt
         - legacyResourceId
         - productsCount
@@ -81,6 +85,9 @@ components:
         handle:
           title: Collection.handle
           type: string
+        title:
+          title: Collection.title
+          type: string
         updatedAt:
           title: Collection.updatedAt
           type: string
@@ -94,6 +101,7 @@ components:
         - gid
         - id
         - handle
+        - title
         - updatedAt
         - productsCount
         - publicationsCount
