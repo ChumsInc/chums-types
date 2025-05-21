@@ -4,6 +4,7 @@ import type {PageInfo} from "./page-info.js";
 export interface CollectionNode {
     id: string;
     handle: string;
+    title: string;
     updatedAt: string;
     legacyResourceId: string;
     productsCount: Count;
@@ -25,6 +26,7 @@ export interface Collection {
     gid: string;
     id: string;
     handle: string;
+    title: string;
     updatedAt: string;
     productsCount: number;
     publicationsCount: number
