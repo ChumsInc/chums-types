@@ -8,6 +8,7 @@ export interface Media {
     mediaContentType: string;
     preview: MediaPreview;
     status: MediaStatus;
+    position?: number;
 }
 
 export interface MediaPreview {
