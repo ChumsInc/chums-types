@@ -4,7 +4,7 @@
   "description": "CHUMS common types",
   "type": "module",
   "main": "",
-  "types": "src/index.d.ts",
+  "types": "./src/index.d.ts",
   "scripts": {
     "build": "tsc && npm run build-yaml",
     "build-yaml": "rimraf yaml && mkdir yaml && node build-yaml.js",
@@ -34,17 +34,15 @@
     "commitLimit": false
   },
   "exports": {
-    "./package.json": "./package.json",
     ".": {
-      "shopify": {
-        "types": "./src/shopify/index.d.ts"
-      },
-      "production": {
-        "types": "./src/production/index.d.ts"
-      },
-      "default": {
-        "types": "./src/index.d.ts"
-      }
-    }
+      "types": "./src/index.d.ts"
+    },
+    "./package.json": "./package.json",
+    "./shopify": {
+      "types": "./src/shopify/index.d.ts"
+    },
+    "./production": {
+      "types": "./src/production/index.d.ts"
+    },
   }
 }
