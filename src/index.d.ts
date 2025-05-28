@@ -160,19 +160,8 @@ export type {
     Warehouse,
     SKUGroup,
     BinLocation,
+    ItemType,
 } from './products.d.ts';
-
-export type * as ProductionTypes from './production.d.ts';
-export type {
-    PMManifestEntry,
-    PMManifestEntryItem,
-    ShortageRow,
-    WorkOrderStatus,
-    WorkOrderOperationStatus,
-    WorkOrderStatusCode,
-    PMManifestShipDate,
-    ItemType
-} from './production.d.ts';
 
 export type * as ProductionManagementTypes from './production/production-management.d.ts';
 export type {
@@ -351,5 +340,5 @@ export {
 } from './production/work-ticket-status.d.ts'
 
 export type * as TimeclockTypes from './timeclock.d.ts';
-export type {BannerImage, PayPeriod, } from './timeclock.d.ts'
+export type {BannerImage, PayPeriod,} from './timeclock.d.ts'
 export type {MailerReportObject, MailerReportContent, MailerMultiPartContent} from './mailer.d.ts'

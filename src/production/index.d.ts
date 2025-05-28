@@ -1,5 +1,11 @@
 export type * as BillMaterials from './bill-materials.js';
-export type {BillType, BillDetail, BillOptionDetail, BillOptionHeader, BillHeader} from './bill-materials.js'
+export type {
+    BillType,
+    BillDetail,
+    BillOptionDetail,
+    BillOptionHeader,
+    BillHeader
+} from './bill-materials.js'
 
 export * as ContractLabor from './contract-labor.js';
 export type {
@@ -62,6 +68,13 @@ export type {
     UnconvertedEntry,
 } from './physical-inventory.js';
 
+export * as ProductStatusTypes from './product-status.js'
+export type {
+    ItemStatusHistory,
+    ItemStatusRecord,
+    ProductStatusRecord
+} from './product-status.js';
+
 export type * as ProductionManagement from './production-management.js';
 export type {
     WorkTemplate,
@@ -71,9 +84,26 @@ export type {
     ActivityCode,
 } from './production-management.js';
 
+export * as ShortageTypes from './shortage.js';
+export type {
+    ShortageITStatusItem,
+    ShortagePlanner,
+    ShortageProductLine,
+    ShortageWorkTicketItem,
+    ShortageVendor,
+    ShortageBuyer,
+    ShortageItem,
+    ShortageSettings,
+    ShortageStatus,
+    ShortageWarehouse,
+} from './shortage.js';
+
 
 export * as WorkTicketTypes from './work-ticket.js';
 export type {
+    PMManifestEntry,
+    PMManifestEntryItem,
+    PMManifestShipDate,
     WorkTicket,
     WorkTicketHeader,
     WorkTicketDetail,

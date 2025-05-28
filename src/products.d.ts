@@ -5,6 +5,7 @@
 import {YesNo} from "./generics.d.ts";
 
 export type ProductType = 'F'|'K'|'R'|'D';
+export type ItemType = '1'|'2'|'3'|'4'|'5';
 
 export interface Warehouse {
     WarehouseCode:string,
