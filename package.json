@@ -43,6 +43,6 @@
     },
     "./production": {
       "types": "./src/production/index.d.ts"
-    },
+    }
   }
 }
