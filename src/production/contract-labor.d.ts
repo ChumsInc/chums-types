@@ -128,29 +128,6 @@ export interface CLIssueSearchId {
 export type CLIssueSearchParams = CLIssueSearchOptions | CLIssueSearchWorkTicket | CLIssueSearchId;
 
 
-export type WorkTicketWorkStatusKey = 'comment' | 'rush' | 'cut' | 'cl' | 'mold' | 'prd' | 'card';
-
-export interface WorkTicketStatusEntry {
-    user: number;
-    style: number;
-    date: string;
-    text?: string;
-}
-
-export type WorkTicketStatusGroup = Record<WorkTicketWorkStatusKey, WorkTicketStatusEntry | undefined>
-
-export interface WorkTicketWorkStatusItem extends Pick<WorkTicketHeader,
-    'WorkTicketKey' | 'WorkTicketNo' | 'ParentItemCode' | 'ParentWarehouseCode' | 'ProductionDueDate' |
-    'QuantityOrdered' | 'QuantityCompleted' | 'ParentItemCodeDesc' | 'MakeForWorkTicketNo' | 'MakeForSalesOrderNo'
-> {
-    StatusJSON: WorkTicketStatusGroup
-}
-
-export interface WorkTicketWorkStatusGroup {
-    id: number;
-    name: string;
-}
-
 export interface SearchItem {
     ItemCode: string;
     ItemCodeDesc: string;

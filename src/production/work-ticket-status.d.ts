@@ -10,11 +10,11 @@ export interface WorkTicketStatusEntry {
 export type WorkTicketStatusSet = Record<string, WorkTicketStatusEntry>
 
 export interface WorkTicketWorkStatusItem extends Pick<WorkTicketHeader,
-    'WorkTicketKey'|'WorkTicketNo'|'ParentItemCode'|'WorkTicketDate'|'ProductionDueDate'|
-    'QuantityOrdered'|'QuantityCompleted'|'ParentItemCodeDesc'|'ParentWarehouseCode'|
-    'MakeForSalesOrderNo'|'MakeForWorkTicketNo'> {
-    PlannedHours: string|number|null;
-    reportId: number|null;
+    'WorkTicketKey' | 'WorkTicketNo' | 'ParentItemCode' | 'WorkTicketDate' | 'ProductionDueDate' |
+    'QuantityOrdered' | 'QuantityCompleted' | 'ParentItemCodeDesc' | 'ParentWarehouseCode' |
+    'MakeForSalesOrderNo' | 'MakeForWorkTicketNo'> {
+    PlannedHours: string | number | null;
+    reportId: number | null;
     MakeFor: string;
     StatusJSON: WorkTicketStatusSet;
     WorkCenters: string[];
@@ -40,8 +40,8 @@ export interface WorkTicketWorkStatusGroup {
     name: string;
 }
 
-export type WorkTicketWorkStatusDetail = Pick<WorkTicketWorkStatusItem, 'WorkTicketKey'|'StatusJSON'>;
+export type WorkTicketWorkStatusDetail = Pick<WorkTicketWorkStatusItem, 'WorkTicketKey' | 'StatusJSON'>;
 
-export type WorkTicketWorkStatusKey = 'comment'|'rush'|'cut'|'cl'|'mold'|'prd'|'card';
+export type WorkTicketWorkStatusKey = 'comment' | 'rush' | 'cut' | 'cl' | 'mold' | 'prd' | 'card';
 
-export type WorkTicketStatusGroup = Record<WorkTicketWorkStatusKey, WorkTicketStatusEntry|undefined>
+export type WorkTicketStatusGroup = Record<WorkTicketWorkStatusKey, WorkTicketStatusEntry | undefined>
