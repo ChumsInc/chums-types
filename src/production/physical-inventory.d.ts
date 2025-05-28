@@ -229,3 +229,4 @@ export interface ConversionResponse {
     variance: ConvertedVariance[];
 }
 
+export type PhysInvMissingLinesResponse = Record<string, number[]>

@@ -49,6 +49,7 @@ export type {
     PhysInvImportValidation,
     PhysInvInvalidEntry,
     PhysInvItemHistory,
+    PhysInvMissingLinesResponse,
     PhysInvMissingSheetsResponse,
     PhysInvRecountEntry,
     PhysInvRecountStatus,
