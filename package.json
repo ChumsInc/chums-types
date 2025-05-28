@@ -32,5 +32,19 @@
     "template": "keepachangelog",
     "unreleased": true,
     "commitLimit": false
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "shopify": {
+        "types": "./src/shopify/index.d.ts"
+      },
+      "production": {
+        "types": "./src/production/index.d.ts"
+      },
+      "default": {
+        "types": "./src/index.d.ts"
+      }
+    }
   }
 }
