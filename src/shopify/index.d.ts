@@ -1,9 +1,9 @@
-export type * as ShopifyGenerics from './shopify-generics.d.ts';
+export type * as ShopifyGenerics from './shopify-generics.js';
 export type {
     PriceMoney, MoneyString, PriceSet, ShopifyListResult, ShopifyObject, StoreName, StoreNames,
-} from './shopify-generics.d.ts';
+} from './shopify-generics.js';
 
-export type * as ShopifyChumsTypes from './chums/shopify-chums-types.d.ts';
+export type * as ShopifyChumsTypes from './chums/shopify-chums-types.js';
 export type {
     SageFulfillmentItem,
     SageFulfillmentInfo,
@@ -14,25 +14,25 @@ export type {
     SageOrderDetailLine,
     SavedProduct,
     SavedVariant,
-} from './chums/shopify-chums-types.d.ts';
+} from './chums/shopify-chums-types.js';
 
 export type {
     DeprecatedShopifyFulfillmentBody,
-} from './shopify-deprecated.d.ts';
+} from './shopify-deprecated.js';
 
-export type * as ShopifyFulfillment from './shopify-fulfillment.d.ts';
+export type * as ShopifyFulfillment from './shopify-fulfillment.js';
 export type {
     Fulfillment, FulfillmentResponse
-} from './shopify-fulfillment.d.ts';
+} from './shopify-fulfillment.js';
 
-export type * as ShopifyFulfilmentOrders from './shopify-fulfillment-orders.d.ts';
+export type * as ShopifyFulfilmentOrders from './shopify-fulfillment-orders.js';
 export type {
     ShopifyFulfillmentOrder,
     ShopifyFulfillmentOrdersList,
     ShopifyFulfillmentOrderLineItem,
-} from './shopify-fulfillment-orders.d.ts';
+} from './shopify-fulfillment-orders.js';
 
-export type * as ShopifyInventory from './shopify-inventory.d.ts';
+export type * as ShopifyInventory from './shopify-inventory.js';
 export type {
     InventoryLevelChange,
     SavedInventoryLevel,
@@ -42,9 +42,9 @@ export type {
     ShopifyInventoryItemsResponse,
     ShopifyInventoryLevel,
     ShopifyInventoryLevelResponse,
-} from './shopify-inventory.d.ts';
+} from './shopify-inventory.js';
 
-export type * as ShopifyOrders from './shopify-orders.d.ts';
+export type * as ShopifyOrders from './shopify-orders.js';
 export type {
     ExtendedSavedOrder,
     ExtendedSavedOrderRow,
@@ -68,17 +68,17 @@ export type {
     ItemLocation,
     ShopifyCustomer,
     ShopifyOrderPaymentDetails
-} from './shopify-orders.d.ts';
+} from './shopify-orders.js';
 
-export type * as ShopifyPayments from './shopify-payments.d.ts';
+export type * as ShopifyPayments from './shopify-payments.js';
 export type {
     SavedPayment, ShopifyPayment, ShopifyPaymentResponse, ShopifyPaymentTransaction, ShopifyPaymentTransactionsResponse,
-} from './shopify-payments.d.ts';
+} from './shopify-payments.js';
 
-export type * as ShopifyProducts from './shopify-products.d.ts'
+export type * as ShopifyProducts from './shopify-products.js'
 export type {
     ChangedVariant, ShopifyProductVariant, ShopifyProductsResponse, ShopifyProduct,
-} from './shopify-products.d.ts';
+} from './shopify-products.js';
 
-export type * from './graphql/index.d.ts'
-export * as ShopifyGraphQL from './graphql/index.d.ts';
+export type * from './graphql/index.js'
+export * as ShopifyGraphQL from './graphql/index.js';

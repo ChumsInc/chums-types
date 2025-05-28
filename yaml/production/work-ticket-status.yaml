@@ -134,13 +134,17 @@ components:
       type: object
     WorkTicketWorkStatusKey:
       enum:
-        - comment
-        - rush
-        - cut
-        - cl
-        - mold
-        - prd
+        - bead
         - card
+        - cl
+        - cut
+        - comment
+        - delete_wo
+        - mold
+        - plan
+        - prd
+        - pull
+        - rush
       title: WorkTicketWorkStatusKey
       type: string
     WorkTicketStatusGroup:

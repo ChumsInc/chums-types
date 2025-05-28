@@ -26,6 +26,9 @@ components:
         status:
           $ref: '#/components/schemas/MediaStatus'
           title: Media.status
+        position:
+          title: Media.position
+          type: number
       required:
         - id
         - alt

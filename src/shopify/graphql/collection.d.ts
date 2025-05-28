@@ -1,5 +1,5 @@
-import {Count} from "./generics.js";
-import type {PageInfo} from "./page-info.js";
+import {Count, PageInfo} from "./generics.js";
+
 
 export interface CollectionNode {
     id: string;

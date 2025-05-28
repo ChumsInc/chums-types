@@ -1,7 +1,6 @@
-import type {PageInfo} from "./page-info.js";
 import {ImageEdge} from "./image.js";
 import {ProductVariant, ProductVariantsConnection} from "./variant.js";
-import {Edge} from "./generics.js";
+import {Edge, PageInfo} from "./generics.js";
 
 
 export interface ProductEdge<T> {

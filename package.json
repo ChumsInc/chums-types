@@ -38,11 +38,17 @@
       "types": "./src/index.d.ts"
     },
     "./package.json": "./package.json",
-    "./shopify": {
-      "types": "./src/shopify/index.d.ts"
+    "./edi": {
+      "types": "./src/edi/index.d.ts"
     },
     "./production": {
       "types": "./src/production/index.d.ts"
+    },
+    "./shopify": {
+      "types": "./src/shopify/index.d.ts"
+    },
+    "./ui": {
+      "types": "./src/ui/index.d.ts"
     }
   }
 }

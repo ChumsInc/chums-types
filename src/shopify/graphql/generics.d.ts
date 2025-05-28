@@ -1,5 +1,3 @@
-import {PageInfo} from "./page-info.js";
-
 export interface Count {
     count: number;
     precision: 'AT_LEAST'|'EXACT';
@@ -19,6 +17,11 @@ export interface UserError {
 export interface Edge<T> {
     node: T;
     cursor: string;
+}
+
+export interface PageInfo {
+    endCursor: string|null;
+    hasNextPage: boolean;
 }
 
 export interface Connection<T> {

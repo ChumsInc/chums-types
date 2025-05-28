@@ -1,6 +1,5 @@
-import type {PageInfo} from "./page-info.js";
-import {UserError, Weight} from "./generics.js";
-import {ProductVariantNode} from "./variant.js";
+import type {UserError, Weight, PageInfo} from "./generics.js";
+import type {ProductVariantNode} from "./variant.js";
 
 export interface InventoryItemsResponse {
     inventoryItems: {

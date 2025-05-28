@@ -17,6 +17,15 @@ components:
         - D
       title: ProductType
       type: string
+    ItemType:
+      enum:
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+      title: ItemType
+      type: string
     Warehouse:
       properties:
         WarehouseCode:

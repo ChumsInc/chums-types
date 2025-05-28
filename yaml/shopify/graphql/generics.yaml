@@ -61,3 +61,18 @@ components:
       additionalProperties: false
       title: UserError
       type: object
+    PageInfo:
+      properties:
+        endCursor:
+          title: PageInfo.endCursor
+          nullable: true
+          type: string
+        hasNextPage:
+          title: PageInfo.hasNextPage
+          type: boolean
+      required:
+        - endCursor
+        - hasNextPage
+      additionalProperties: false
+      title: PageInfo
+      type: object

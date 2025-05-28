@@ -314,3 +314,101 @@ components:
       additionalProperties: false
       title: WorkTicketResponse
       type: object
+    PMManifestEntry:
+      properties:
+        id:
+          title: PMManifestEntry.id
+          type: number
+        Company:
+          enum:
+            - chums
+            - bc
+          title: PMManifestEntry.Company
+          type: string
+        WorkTicketNo:
+          title: PMManifestEntry.WorkTicketNo
+          nullable: true
+          type: string
+        ItemCode:
+          title: PMManifestEntry.ItemCode
+          nullable: true
+          type: string
+        WarehouseCode:
+          title: PMManifestEntry.WarehouseCode
+          nullable: true
+          type: string
+        QuantityShipped:
+          title: PMManifestEntry.QuantityShipped
+          type: number
+        ShipDate:
+          title: PMManifestEntry.ShipDate
+          type: string
+        Comment:
+          title: PMManifestEntry.Comment
+          type: string
+      required:
+        - id
+        - Company
+        - WorkTicketNo
+        - QuantityShipped
+        - ShipDate
+      additionalProperties: false
+      title: PMManifestEntry
+      type: object
+    PMManifestEntryItem:
+      allOf:
+        - $ref: '#/components/schemas/PMManifestEntry'
+        - properties:
+            ItemCodeDesc:
+              title: PMManifestEntryItem.ItemCodeDesc
+              nullable: true
+              type: string
+            PackDate:
+              title: PMManifestEntryItem.PackDate
+              type: string
+            ProductionDueDate:
+              title: PMManifestEntryItem.ProductionDueDate
+              nullable: true
+              type: string
+            BoxNo:
+              title: PMManifestEntryItem.BoxNo
+              nullable: true
+              type: number
+            QuantityOrdered:
+              title: PMManifestEntryItem.QuantityOrdered
+              nullable: true
+              type: number
+            QuantityComplete:
+              title: PMManifestEntryItem.QuantityComplete
+              nullable: true
+              type: number
+            MakeFor:
+              title: PMManifestEntryItem.MakeFor
+              type: string
+            BinLocation:
+              title: PMManifestEntryItem.BinLocation
+              nullable: true
+              type: string
+            Status:
+              title: PMManifestEntryItem.Status
+              nullable: true
+              type: string
+          required:
+            - PackDate
+            - ProductionDueDate
+            - BoxNo
+            - QuantityOrdered
+            - Status
+          additionalProperties: false
+          type: object
+      title: PMManifestEntryItem
+    PMManifestShipDate:
+      properties:
+        ShipDate:
+          title: PMManifestShipDate.ShipDate
+          type: string
+      required:
+        - ShipDate
+      additionalProperties: false
+      title: PMManifestShipDate
+      type: object
