@@ -44,6 +44,9 @@
     "./production": {
       "types": "./src/production/index.d.ts"
     },
+    "./sales": {
+      "types": "./src/sales/index.d.ts"
+    },
     "./shopify": {
       "types": "./src/shopify/index.d.ts"
     },
