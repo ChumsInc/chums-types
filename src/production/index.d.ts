@@ -62,6 +62,7 @@ export type {
     PhysInvSearchItem,
     PhysInvSheetTotal,
     PhysInvStatusEntry,
+    PhysInvUser,
     PhysInvUsers,
     PhysInvVariance,
     PhysInvWarehouse,
