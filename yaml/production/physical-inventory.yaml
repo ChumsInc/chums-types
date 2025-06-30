@@ -283,24 +283,27 @@ components:
       additionalProperties: false
       title: PhysInvSheetTotal
       type: object
-    PhysInvUsers:
+    PhysInvUser:
       properties:
         idCountInstance:
-          title: PhysInvUsers.idCountInstance
+          title: PhysInvUser.idCountInstance
           type: number
         id:
-          title: PhysInvUsers.id
+          title: PhysInvUser.id
           type: number
         name:
-          title: PhysInvUsers.name
+          title: PhysInvUser.name
           type: string
       required:
         - idCountInstance
         - id
         - name
       additionalProperties: false
-      title: PhysInvUsers
+      title: PhysInvUser
       type: object
+    PhysInvUsers:
+      $ref: '#/components/schemas/PhysInvUser'
+      title: PhysInvUsers
     PhysInvInvalidEntry:
       allOf:
         - $ref: '#/components/schemas/PhysInvEntry'

@@ -80,11 +80,16 @@ export interface PhysInvSheetTotal {
     LineCount: number;
 }
 
-export interface PhysInvUsers {
+export interface PhysInvUser {
     idCountInstance: number;
     id: number;
     name: string;
 }
+
+/**
+ * @deprecated
+ */
+export type PhysInvUsers = PhysInvUser;
 
 
 export interface PhysInvInvalidEntry extends PhysInvEntry {
