@@ -59,6 +59,7 @@ export interface PhysInvEntryRecord extends PhysInvEntry {
     ItemCodeDesc: string | null;
     isWip?: string;
     UserName: string;
+    name?: string|null;
     UserID: number;
     timestamp: string;
     ProductType: string | null;
