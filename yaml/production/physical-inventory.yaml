@@ -210,6 +210,10 @@ components:
             UserName:
               title: PhysInvEntryRecord.UserName
               type: string
+            name:
+              title: PhysInvEntryRecord.name
+              nullable: true
+              type: string
             UserID:
               title: PhysInvEntryRecord.UserID
               type: number
@@ -499,6 +503,9 @@ components:
           anyOf:
             - type: number
             - type: string
+        TransactionCode:
+          title: PhysInvItemHistory.TransactionCode
+          type: string
         TransactionQty:
           title: PhysInvItemHistory.TransactionQty
           anyOf:
@@ -518,6 +525,7 @@ components:
         - ItemCode
         - WarehouseCode
         - FiscalCalYear
+        - TransactionCode
         - TransactionQty
         - ExtendedCost
         - TransactionCount

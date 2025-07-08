@@ -145,6 +145,7 @@ export interface PhysInvItemHistory {
     ItemCode: string;
     WarehouseCode: string;
     FiscalCalYear: number | string;
+    TransactionCode: string;
     TransactionQty: number | string;
     ExtendedCost: number | string;
     TransactionCount: number | string;
