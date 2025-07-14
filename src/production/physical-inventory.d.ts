@@ -51,6 +51,7 @@ export interface PhysInvEntry {
     SheetLine: number;
     Location: string;
     ItemCode: string;
+    ItemCodeDesc?: string|null;
     CountedQty: number;
     UnitOfMeasure: string;
 }
@@ -98,7 +99,6 @@ export interface PhysInvInvalidEntry extends PhysInvEntry {
     ProductType: string;
     InactiveItem: string;
     ItemCodeDesc: string;
-    WarehouseCode: string;
     name: string;
     timestamp: string;
 }
@@ -191,28 +191,12 @@ export interface ConversionProblems {
     invalidUM: InvalidUMEntry[];
 }
 
-export interface UnconvertedEntry {
-    id: number;
-    idCountInstance: number;
-    WarehouseCode: string;
-    Sheet: string;
-    SheetLine: string;
-    ItemCode: string;
-    CountedQty: number;
-    UnitOfMeasure: string;
-    HasHangTag: number;
+export interface UnconvertedEntry extends Omit<PhysInvEntry, 'Location'> {
     UserName: string;
     timestamp: string;
 }
 
-export interface InvalidUMEntry {
-    id: number;
-    idCountInstance: number;
-    WarehouseCode: string;
-    Sheet: string;
-    SheetLine: string;
-    ItemCode: string;
-    CountedQty: number;
+export interface InvalidUMEntry extends Omit<PhysInvEntry, 'Location'> {
     CountedUnitOfMeasure: string;
     StandardUnitOfMeasure: string;
     ConversionMethod: string;
