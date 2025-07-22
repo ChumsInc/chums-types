@@ -177,6 +177,10 @@ components:
         ItemCode:
           title: PhysInvEntry.ItemCode
           type: string
+        ItemCodeDesc:
+          title: PhysInvEntry.ItemCodeDesc
+          nullable: true
+          type: string
         CountedQty:
           title: PhysInvEntry.CountedQty
           type: number
@@ -324,9 +328,6 @@ components:
             ItemCodeDesc:
               title: PhysInvInvalidEntry.ItemCodeDesc
               type: string
-            WarehouseCode:
-              title: PhysInvInvalidEntry.WarehouseCode
-              type: string
             name:
               title: PhysInvInvalidEntry.name
               type: string
@@ -338,7 +339,6 @@ components:
             - ProductType
             - InactiveItem
             - ItemCodeDesc
-            - WarehouseCode
             - name
             - timestamp
           additionalProperties: false
@@ -669,33 +669,6 @@ components:
       type: object
     UnconvertedEntry:
       properties:
-        id:
-          title: UnconvertedEntry.id
-          type: number
-        idCountInstance:
-          title: UnconvertedEntry.idCountInstance
-          type: number
-        WarehouseCode:
-          title: UnconvertedEntry.WarehouseCode
-          type: string
-        Sheet:
-          title: UnconvertedEntry.Sheet
-          type: string
-        SheetLine:
-          title: UnconvertedEntry.SheetLine
-          type: string
-        ItemCode:
-          title: UnconvertedEntry.ItemCode
-          type: string
-        CountedQty:
-          title: UnconvertedEntry.CountedQty
-          type: number
-        UnitOfMeasure:
-          title: UnconvertedEntry.UnitOfMeasure
-          type: string
-        HasHangTag:
-          title: UnconvertedEntry.HasHangTag
-          type: number
         UserName:
           title: UnconvertedEntry.UserName
           type: string
@@ -703,15 +676,6 @@ components:
           title: UnconvertedEntry.timestamp
           type: string
       required:
-        - id
-        - idCountInstance
-        - WarehouseCode
-        - Sheet
-        - SheetLine
-        - ItemCode
-        - CountedQty
-        - UnitOfMeasure
-        - HasHangTag
         - UserName
         - timestamp
       additionalProperties: false
@@ -719,27 +683,6 @@ components:
       type: object
     InvalidUMEntry:
       properties:
-        id:
-          title: InvalidUMEntry.id
-          type: number
-        idCountInstance:
-          title: InvalidUMEntry.idCountInstance
-          type: number
-        WarehouseCode:
-          title: InvalidUMEntry.WarehouseCode
-          type: string
-        Sheet:
-          title: InvalidUMEntry.Sheet
-          type: string
-        SheetLine:
-          title: InvalidUMEntry.SheetLine
-          type: string
-        ItemCode:
-          title: InvalidUMEntry.ItemCode
-          type: string
-        CountedQty:
-          title: InvalidUMEntry.CountedQty
-          type: number
         CountedUnitOfMeasure:
           title: InvalidUMEntry.CountedUnitOfMeasure
           type: string
@@ -750,13 +693,6 @@ components:
           title: InvalidUMEntry.ConversionMethod
           type: string
       required:
-        - id
-        - idCountInstance
-        - WarehouseCode
-        - Sheet
-        - SheetLine
-        - ItemCode
-        - CountedQty
         - CountedUnitOfMeasure
         - StandardUnitOfMeasure
         - ConversionMethod

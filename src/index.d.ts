@@ -272,7 +272,7 @@ export type {
     ShopifyProducts,
 } from './shopify/index.js'
 
-export type {SortProps} from './sort.js';
+export type {SortProps} from './ui/sort.js';
 export type {StoreMapCustomer} from './store-map.js';
 export type {Tab} from './ui/tabs.js';
 

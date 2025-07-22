@@ -7,3 +7,8 @@ export type {
 
 export * as TabTypes from './tabs.js';
 export type {Tab} from './tabs.js';
+export type {
+    ObjectSortFunction,
+    SortFunction,
+    SortProps
+} from './sort.js'
