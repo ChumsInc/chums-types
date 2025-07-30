@@ -173,3 +173,18 @@ export interface BaseJWTToken {
 }
 
 export interface UserJWTToken extends ValidatedUserProfile, BaseJWTToken {}
+
+/**
+ * This definition is used for type definitions for express/Response
+ * typical usage: const endpoint = (req: Request, res: Response<unknown, ValidatedUser>, next:NextFunction) => {}
+ */
+export interface ValidatedUser {
+    profile: ValidatedUserProfile,
+    auth: {
+        valid: boolean;
+        status: 'OK' | string;
+        profile: ValidatedUserProfile;
+    }
+}
+
+

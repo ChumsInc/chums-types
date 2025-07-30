@@ -568,3 +568,37 @@ components:
         - additionalProperties: false
           type: object
       title: UserJWTToken
+    ValidatedUser:
+      properties:
+        profile:
+          $ref: '#/components/schemas/ValidatedUserProfile'
+          title: ValidatedUser.profile
+        auth:
+          properties:
+            valid:
+              title: ValidatedUser.auth.valid
+              type: boolean
+            status:
+              title: ValidatedUser.auth.status
+              type: string
+            profile:
+              $ref: '#/components/schemas/ValidatedUserProfile'
+              title: ValidatedUser.auth.profile
+          required:
+            - valid
+            - status
+            - profile
+          additionalProperties: false
+          title: ValidatedUser.auth
+          type: object
+      required:
+        - profile
+        - auth
+      additionalProperties: false
+      title: ValidatedUser
+      description: >-
+        This definition is used for type definitions for express/Response
+
+        typical usage: const endpoint = (req: Request, res: Response<unknown,
+        ValidatedUser>, next:NextFunction) => {}
+      type: object

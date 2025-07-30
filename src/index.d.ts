@@ -300,6 +300,7 @@ export type {
     UserValidationResponse,
     UserJWTToken,
     TimeClockEmployee,
+    ValidatedUser
 } from './user.js';
 
 /**
