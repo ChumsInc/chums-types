@@ -11,4 +11,5 @@ export interface SearchItem {
     filename: string | null;
     b2bItem: string | null;
     ProductStatus: string | null;
+    TemplateNo: string|null;
 }

@@ -14,7 +14,6 @@ export type {
     CLIssueSearchOptions,
     CLIssueSearchId,
     CLIssueSearchWorkTicket,
-    SearchItem,
     IssueDateType,
     CLVendor,
     CLVendorWeekTotal,
@@ -127,3 +126,16 @@ export type {
     WorkTicketStatusSet,
     WorkTicketWorkStatusDetail,
 } from './work-ticket-status.js'
+
+export type * as SearchTypes from './search.js';
+export type {
+    SearchItem,
+    BaseSKURecord,
+    CategoryRecord,
+    CollectionRecord,
+    CountryOfOriginRecord,
+    PrimaryVendorRecord,
+    ProductLineRecord,
+    WarehouseRecord,
+    ProductType,
+} from './search.js';

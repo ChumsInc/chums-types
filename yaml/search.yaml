@@ -52,6 +52,10 @@ components:
           title: SearchItem.ProductStatus
           nullable: true
           type: string
+        TemplateNo:
+          title: SearchItem.TemplateNo
+          nullable: true
+          type: string
       required:
         - ItemCode
         - ItemCodeDesc
@@ -64,6 +68,7 @@ components:
         - filename
         - b2bItem
         - ProductStatus
+        - TemplateNo
       additionalProperties: false
       title: SearchItem
       type: object

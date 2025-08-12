@@ -71,3 +71,4 @@ export interface WarehouseItem {
     TimeUpdated: string;
     UserUpdatedKey: string;
 }
+
