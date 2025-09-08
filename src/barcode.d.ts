@@ -29,7 +29,7 @@ export interface BarcodeCustomerSettings extends BarcodeCustomer {
     itemStickerAll?: boolean;
     bagStickerAll?: boolean;
     caseStickerAll?: boolean;
-    stickerVersion?: number;
+    includeQtyInSticker?: boolean;
     timestamp?: string;
 }
 
