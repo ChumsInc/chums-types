@@ -46,6 +46,7 @@ export interface LineItem {
     name: string;
     quantity: number;
     currentQuantity: number;
+    originalUnitPriceSet: MoneyBag;
     discountedTotalSet: MoneyBag;
     originalTotalSet: MoneyBag;
     discountAllocations: DiscountAllocation[];
