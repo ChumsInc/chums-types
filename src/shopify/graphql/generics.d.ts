@@ -1,6 +1,6 @@
 export interface Count {
     count: number;
-    precision: 'AT_LEAST'|'EXACT';
+    precision: 'AT_LEAST' | 'EXACT';
 }
 
 export interface Weight {
@@ -20,13 +20,13 @@ export interface Edge<T> {
 }
 
 export interface PageInfo {
-    endCursor: string|null;
+    endCursor: string | null;
     hasNextPage: boolean;
 }
 
 export interface Connection<T> {
     edges: Edge<T>[];
-    nodes:T[];
+    nodes: T[];
     pageInfo: PageInfo;
 }
 
