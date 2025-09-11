@@ -12,6 +12,7 @@ export interface Order {
     shippingAddress: OrderAddress;
     shippingLines: Connection<ShippingLine>
     lineItems: Connection<LineItem>;
+    discountApplications: Connection<DiscountApplication>;
     paymentGatewayNames: string[];
     discountCodes: string[];
     totalDiscountSet: MoneyBag;
@@ -55,4 +56,8 @@ export interface TaxLine {
     title: string;
     ratePercentage: number;
     priceSet: MoneyBag;
+}
+
+export interface DiscountApplication {
+    targetType: string;
 }
