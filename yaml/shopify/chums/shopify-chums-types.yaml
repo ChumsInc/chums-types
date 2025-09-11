@@ -255,68 +255,69 @@ components:
       additionalProperties: false
       title: SavedVariant
       type: object
-    SavedOrder:
+    SavedOrderV2:
       properties:
         id:
-          title: SavedOrder.id
+          title: SavedOrderV2.id
           anyOf:
             - type: number
             - type: string
         gid:
-          title: SavedOrder.gid
+          title: SavedOrderV2.gid
           type: string
         salesOrderNo:
-          title: SavedOrder.salesOrderNo
+          title: SavedOrderV2.salesOrderNo
           nullable: true
           type: string
         importStatus:
-          title: SavedOrder.importStatus
+          title: SavedOrderV2.importStatus
           nullable: true
           type: string
         dataType:
-          title: SavedOrder.dataType
+          title: SavedOrderV2.dataType
           type: string
         shopifyOrder:
           anyOf: []
-          title: SavedOrder.shopifyOrder
+          title: SavedOrderV2.shopifyOrder
         importResult:
-          title: SavedOrder.importResult
+          title: SavedOrderV2.importResult
+          nullable: true
         createdAt:
-          title: SavedOrder.createdAt
+          title: SavedOrderV2.createdAt
           type: string
         updatedAt:
-          title: SavedOrder.updatedAt
+          title: SavedOrderV2.updatedAt
           type: string
         arDivisionNo:
-          title: SavedOrder.arDivisionNo
+          title: SavedOrderV2.arDivisionNo
           nullable: true
           type: string
         customerNo:
-          title: SavedOrder.customerNo
+          title: SavedOrderV2.customerNo
           nullable: true
           type: string
         billToName:
-          title: SavedOrder.billToName
+          title: SavedOrderV2.billToName
           nullable: true
           type: string
         orderStatus:
-          title: SavedOrder.orderStatus
+          title: SavedOrderV2.orderStatus
           nullable: true
           type: string
         cancelReasonCode:
-          title: SavedOrder.cancelReasonCode
+          title: SavedOrderV2.cancelReasonCode
           nullable: true
           type: string
         shipVia:
-          title: SavedOrder.shipVia
+          title: SavedOrderV2.shipVia
           nullable: true
           type: string
         invoiceNo:
-          title: SavedOrder.invoiceNo
+          title: SavedOrderV2.invoiceNo
           nullable: true
           type: string
         invoiceBalance:
-          title: SavedOrder.invoiceBalance
+          title: SavedOrderV2.invoiceBalance
           nullable: true
           anyOf:
             - type: string
@@ -340,5 +341,5 @@ components:
         - invoiceNo
         - invoiceBalance
       additionalProperties: false
-      title: SavedOrder
+      title: SavedOrderV2
       type: object

@@ -1,5 +1,5 @@
 import type {StoreName} from "../shopify-generics.d.ts";
-import {ShopifyOrder} from "../shopify-orders.js";
+import {SageImportResponse, ShopifyOrder} from "../shopify-orders.js";
 import {Order} from "../graphql/index.js";
 
 export interface SageItem {
@@ -73,14 +73,14 @@ export interface SavedVariant {
     grams: number | null;
 }
 
-export interface SavedOrder {
+export interface SavedOrderV2 {
     id: number | string;
     gid: string;
     salesOrderNo: string|null;
     importStatus: string|null;
     dataType: string;
     shopifyOrder: Order|ShopifyOrder;
-    importResult: unknown;
+    importResult: SageImportResponse|null;
     createdAt: string;
     updatedAt: string;
     arDivisionNo: string|null;
