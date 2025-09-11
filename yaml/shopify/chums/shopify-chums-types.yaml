@@ -29,6 +29,9 @@ components:
         lineDiscount:
           title: SageItem.lineDiscount
           type: number
+        commentText:
+          title: SageItem.commentText
+          type: string
       required:
         - ItemCode
         - ItemCodeDesc
@@ -251,4 +254,91 @@ components:
         - grams
       additionalProperties: false
       title: SavedVariant
+      type: object
+    SavedOrder:
+      properties:
+        id:
+          title: SavedOrder.id
+          anyOf:
+            - type: number
+            - type: string
+        gid:
+          title: SavedOrder.gid
+          type: string
+        salesOrderNo:
+          title: SavedOrder.salesOrderNo
+          nullable: true
+          type: string
+        importStatus:
+          title: SavedOrder.importStatus
+          nullable: true
+          type: string
+        dataType:
+          title: SavedOrder.dataType
+          type: string
+        shopifyOrder:
+          anyOf: []
+          title: SavedOrder.shopifyOrder
+        importResult:
+          title: SavedOrder.importResult
+        createdAt:
+          title: SavedOrder.createdAt
+          type: string
+        updatedAt:
+          title: SavedOrder.updatedAt
+          type: string
+        arDivisionNo:
+          title: SavedOrder.arDivisionNo
+          nullable: true
+          type: string
+        customerNo:
+          title: SavedOrder.customerNo
+          nullable: true
+          type: string
+        billToName:
+          title: SavedOrder.billToName
+          nullable: true
+          type: string
+        orderStatus:
+          title: SavedOrder.orderStatus
+          nullable: true
+          type: string
+        cancelReasonCode:
+          title: SavedOrder.cancelReasonCode
+          nullable: true
+          type: string
+        shipVia:
+          title: SavedOrder.shipVia
+          nullable: true
+          type: string
+        invoiceNo:
+          title: SavedOrder.invoiceNo
+          nullable: true
+          type: string
+        invoiceBalance:
+          title: SavedOrder.invoiceBalance
+          nullable: true
+          anyOf:
+            - type: string
+            - type: number
+      required:
+        - id
+        - gid
+        - salesOrderNo
+        - importStatus
+        - dataType
+        - shopifyOrder
+        - importResult
+        - createdAt
+        - updatedAt
+        - arDivisionNo
+        - customerNo
+        - billToName
+        - orderStatus
+        - cancelReasonCode
+        - shipVia
+        - invoiceNo
+        - invoiceBalance
+      additionalProperties: false
+      title: SavedOrder
       type: object

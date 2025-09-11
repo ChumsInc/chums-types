@@ -76,3 +76,31 @@ components:
       additionalProperties: false
       title: PageInfo
       type: object
+    MoneyV2:
+      properties:
+        amount:
+          title: MoneyV2.amount
+          type: string
+        currencyCode:
+          title: MoneyV2.currencyCode
+          type: string
+      required:
+        - amount
+        - currencyCode
+      additionalProperties: false
+      title: MoneyV2
+      type: object
+    MoneyBag:
+      properties:
+        presentmentMoney:
+          $ref: '#/components/schemas/MoneyV2'
+          title: MoneyBag.presentmentMoney
+        shopMoney:
+          $ref: '#/components/schemas/MoneyV2'
+          title: MoneyBag.shopMoney
+      required:
+        - presentmentMoney
+        - shopMoney
+      additionalProperties: false
+      title: MoneyBag
+      type: object

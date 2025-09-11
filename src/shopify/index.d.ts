@@ -4,17 +4,7 @@ export type {
 } from './shopify-generics.js';
 
 export type * as ShopifyChumsTypes from './chums/shopify-chums-types.js';
-export type {
-    SageFulfillmentItem,
-    SageFulfillmentInfo,
-    SageFulfillmentTracking,
-    SageTrackingResponse,
-    SageTrackingWithId,
-    SageItem,
-    SageOrderDetailLine,
-    SavedProduct,
-    SavedVariant,
-} from './chums/shopify-chums-types.js';
+export type * from './chums/shopify-chums-types.js';
 
 export type {
     DeprecatedShopifyFulfillmentBody,

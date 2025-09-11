@@ -101,6 +101,9 @@ components:
             caseStickerAll:
               title: BarcodeCustomerSettings.caseStickerAll
               type: boolean
+            includeQtyInSticker:
+              title: BarcodeCustomerSettings.includeQtyInSticker
+              type: boolean
             timestamp:
               title: BarcodeCustomerSettings.timestamp
               type: string
