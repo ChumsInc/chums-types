@@ -29,3 +29,13 @@ export interface Connection<T> {
     nodes:T[];
     pageInfo: PageInfo;
 }
+
+export interface MoneyV2 {
+    amount: string;
+    currencyCode: string;
+}
+
+export interface MoneyBag {
+    presentmentMoney: MoneyV2;
+    shopMoney: MoneyV2;
+}
