@@ -1,12 +1,13 @@
 import type {StoreName} from "../shopify-generics.d.ts";
 
 export interface SageItem {
-    ItemType?: string,
-    ItemCode: string,
-    ItemCodeDesc: string,
-    QuantityOrdered: number,
-    UnitPrice: number,
-    lineDiscount: number,
+    ItemType?: string;
+    ItemCode: string;
+    ItemCodeDesc: string;
+    QuantityOrdered: number;
+    UnitPrice: number;
+    lineDiscount: number;
+    commentText?: string;
 }
 
 export interface SageOrderDetailLine {
