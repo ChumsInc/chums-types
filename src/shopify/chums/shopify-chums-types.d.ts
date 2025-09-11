@@ -1,4 +1,6 @@
 import type {StoreName} from "../shopify-generics.d.ts";
+import {ShopifyOrder} from "../shopify-orders.js";
+import {Order} from "../graphql/index.js";
 
 export interface SageItem {
     ItemType?: string;
@@ -69,4 +71,24 @@ export interface SavedVariant {
     sku: string;
     barcode: string | null;
     grams: number | null;
+}
+
+export interface SavedOrder {
+    id: number | string;
+    gid: string;
+    salesOrderNo: string|null;
+    importStatus: string|null;
+    dataType: string;
+    shopifyOrder: Order|ShopifyOrder;
+    importResult: unknown;
+    createdAt: string;
+    updatedAt: string;
+    arDivisionNo: string|null;
+    customerNo: string|null;
+    billToName: string|null;
+    orderStatus: string|null;
+    cancelReasonCode: string|null;
+    shipVia: string|null;
+    invoiceNo: string|null;
+    invoiceBalance: string|number|null;
 }
