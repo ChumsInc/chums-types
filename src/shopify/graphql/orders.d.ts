@@ -1,5 +1,5 @@
 import type {OrderRiskSummary} from "./order-risk.d.ts";
-import {MoneyBag} from "./generics.js";
+import {Connection, MoneyBag} from "./generics.js";
 
 export interface Order {
     id: string;
