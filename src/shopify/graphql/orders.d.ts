@@ -44,6 +44,7 @@ export interface LineItem {
     requiresShipping: boolean;
     sku: string;
     name: string;
+    title: string;
     quantity: number;
     currentQuantity: number;
     originalUnitPriceSet: MoneyBag;
