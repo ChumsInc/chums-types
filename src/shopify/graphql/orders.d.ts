@@ -5,6 +5,7 @@ export interface Order {
     id: string;
     legacyResourceId: string;
     name:string;
+    email:string;
     displayFulfillmentStatus: string;
     risk: OrderRiskSummary;
     billingAddress: OrderAddress;
