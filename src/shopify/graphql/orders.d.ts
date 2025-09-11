@@ -12,13 +12,15 @@ export interface Order {
     shippingAddress: OrderAddress;
     shippingLines: Connection<ShippingLine>
     lineItems: Connection<LineItem>;
-    discountApplications: Connection<DiscountApplication>;
-    paymentGatewayNames: string[];
     discountCodes: string[];
+    discountApplications: Connection<DiscountApplication>;
     totalDiscountSet: MoneyBag;
+    paymentGatewayNames: string[];
     netPaymentSet: MoneyBag;
-    totalShippingPriceSet: MoneyBag;
-    subtotalPriceSet: MoneyBag;
+    currentShippingPriceSet: MoneyBag;
+    currentTotalTaxSet: MoneyBag;
+    currentSubtotalPriceSet: MoneyBag;
+    currentTotalPriceSet: MoneyBag;
     taxLines: TaxLine[];
 }
 
@@ -43,6 +45,7 @@ export interface LineItem {
     sku: string;
     name: string;
     quantity: number;
+    currentQuantity: number;
     discountedTotalSet: MoneyBag;
     originalTotalSet: MoneyBag;
     discountAllocations: DiscountAllocation[];
