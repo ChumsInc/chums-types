@@ -7,6 +7,12 @@ export interface Order {
     name:string;
     email:string;
     displayFulfillmentStatus: string;
+    displayFinancialStatus: string|null;
+    createdAt: string;
+    cancelledAt: string|null;
+    cancelReason: string|null;
+    closed: boolean;
+    closedAt: string|null;
     risk: OrderRiskSummary;
     billingAddress: OrderAddress;
     shippingAddress: OrderAddress;
