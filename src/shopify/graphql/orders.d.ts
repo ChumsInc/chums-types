@@ -7,7 +7,7 @@ export interface Order {
     name:string;
     email:string;
     displayFulfillmentStatus: string;
-    displayFinancialStatus: string|null;
+    displayFinancialStatus: DisplayFulfillmentStatus|null;
     createdAt: string;
     cancelledAt: string|null;
     cancelReason: string|null;
@@ -73,3 +73,5 @@ export interface TaxLine {
 export interface DiscountApplication {
     targetType: string;
 }
+
+export type DisplayFulfillmentStatus = 'FULFILLED'|'IN_PROGRESS'|'ON_HOLD'|'OPEN'|'PARTIALLY_FULFILLED'|'PENDING_FULFILLMENT'|'REQUEST_DECLINED'|'RESTOCKED'|'SCHEDULED'|'UNFULFILLED';
