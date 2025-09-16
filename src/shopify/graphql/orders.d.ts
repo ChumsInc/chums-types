@@ -6,8 +6,8 @@ export interface Order {
     legacyResourceId: string;
     name:string;
     email:string;
-    displayFulfillmentStatus: string;
-    displayFinancialStatus: DisplayFulfillmentStatus|null;
+    displayFulfillmentStatus: DisplayFulfillmentStatus;
+    displayFinancialStatus: string|null;
     createdAt: string;
     cancelledAt: string|null;
     cancelReason: string|null;
