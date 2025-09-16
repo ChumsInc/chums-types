@@ -13,6 +13,7 @@ export interface Order {
     cancelReason: string|null;
     closed: boolean;
     closedAt: string|null;
+    tags: string[];
     risk: OrderRiskSummary;
     billingAddress: OrderAddress;
     shippingAddress: OrderAddress;
