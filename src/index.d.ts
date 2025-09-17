@@ -343,3 +343,11 @@ export {
 export type * as TimeclockTypes from './timeclock.js';
 export type {BannerImage, PayPeriod,} from './timeclock.js'
 export type {MailerReportObject, MailerReportContent, MailerMultiPartContent} from './mailer.js'
+
+export type * as CookieConsentTypes from './cookie-consent.js';
+export type {
+    CookieConsentChange,
+    CookieConsentSettings,
+    CookieConsentRecord,
+    CookieConsentSection,
+} from './cookie-consent.js';
