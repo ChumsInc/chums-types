@@ -18,7 +18,7 @@ export interface CookieConsentSettings {
 
 export interface CookieConsentRecord {
     uuid: string;
-    userId: number|null;
+    userId: string|number|null;
     ipAddress: string;
     url: string;
     preferences: CookieConsentSettings;

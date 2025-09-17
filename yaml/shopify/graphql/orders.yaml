@@ -24,8 +24,36 @@ components:
           title: Order.email
           type: string
         displayFulfillmentStatus:
+          $ref: '#/components/schemas/DisplayFulfillmentStatus'
           title: Order.displayFulfillmentStatus
+        displayFinancialStatus:
+          title: Order.displayFinancialStatus
+          nullable: true
           type: string
+        createdAt:
+          title: Order.createdAt
+          type: string
+        cancelledAt:
+          title: Order.cancelledAt
+          nullable: true
+          type: string
+        cancelReason:
+          title: Order.cancelReason
+          nullable: true
+          type: string
+        closed:
+          title: Order.closed
+          type: boolean
+        closedAt:
+          title: Order.closedAt
+          nullable: true
+          type: string
+        tags:
+          items:
+            title: Order.tags.[]
+            type: string
+          title: Order.tags
+          type: array
         risk:
           title: Order.risk
         billingAddress:
@@ -76,6 +104,13 @@ components:
         - name
         - email
         - displayFulfillmentStatus
+        - displayFinancialStatus
+        - createdAt
+        - cancelledAt
+        - cancelReason
+        - closed
+        - closedAt
+        - tags
         - risk
         - billingAddress
         - shippingAddress
@@ -229,3 +264,17 @@ components:
       additionalProperties: false
       title: DiscountApplication
       type: object
+    DisplayFulfillmentStatus:
+      enum:
+        - FULFILLED
+        - IN_PROGRESS
+        - ON_HOLD
+        - OPEN
+        - PARTIALLY_FULFILLED
+        - PENDING_FULFILLMENT
+        - REQUEST_DECLINED
+        - RESTOCKED
+        - SCHEDULED
+        - UNFULFILLED
+      title: DisplayFulfillmentStatus
+      type: string
