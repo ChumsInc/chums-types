@@ -30,4 +30,5 @@ export interface CookieConsentRecord {
     status: CookieConsentStatus;
     dateCreated: string;
     dateUpdated: string;
+    dateExpires: string;
 }
