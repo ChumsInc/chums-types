@@ -1,6 +1,12 @@
 export type CookieConsentSection = 'functional'|'preferences' | 'analytics' | 'marketing';
 export type CookieConsentStatus = 'accepted' | 'partial' | 'declined' | 'pending';
 
+export interface CookieConsentBody {
+    uuid: string|null;
+    accepted: CookieConsentSection[];
+    rejected: CookieConsentSection[];
+}
+
 export interface CookieConsentChange {
     section: CookieConsentSection[];
     newValue: boolean;
