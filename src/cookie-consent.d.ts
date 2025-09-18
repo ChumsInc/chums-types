@@ -24,6 +24,7 @@ export interface CookieConsentRecord {
     ipAddress: string;
     url: string;
     preferences: CookieConsentSettings;
+    gpc: boolean;
     changes: CookieConsentChange[];
     status: CookieConsentStatus;
     dateCreated: string;
