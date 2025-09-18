@@ -2,16 +2,13 @@ export type CookieConsentSection = 'functional'|'preferences' | 'analytics' | 'm
 export type CookieConsentStatus = 'accepted' | 'partial' | 'declined' | 'pending';
 
 export interface CookieConsentBody {
-    uuid: string|null;
     accepted: CookieConsentSection[];
     rejected: CookieConsentSection[];
 }
 
-export interface CookieConsentChange {
-    section: CookieConsentSection[];
-    newValue: boolean;
+export interface CookieConsentChange extends CookieConsentBody {
     timestamp: string;
-    method: string;
+    url: string;
 }
 
 export interface CookieConsentSettings {
@@ -19,7 +16,6 @@ export interface CookieConsentSettings {
     preferences: boolean;
     analytics: boolean;
     marketing: boolean;
-    changes: CookieConsentChange[];
 }
 
 export interface CookieConsentRecord {
@@ -28,6 +24,7 @@ export interface CookieConsentRecord {
     ipAddress: string;
     url: string;
     preferences: CookieConsentSettings;
+    changes: CookieConsentChange[];
     status: CookieConsentStatus;
     dateCreated: string;
     dateUpdated: string;
