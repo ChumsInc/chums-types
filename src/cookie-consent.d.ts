@@ -9,6 +9,7 @@ export interface CookieConsentBody {
 export interface CookieConsentChange extends CookieConsentBody {
     timestamp: string;
     url: string;
+    method: string;
 }
 
 export interface CookieConsentSettings {
