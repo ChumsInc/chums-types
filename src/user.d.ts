@@ -179,11 +179,11 @@ export interface UserJWTToken extends ValidatedUserProfile, BaseJWTToken {}
  * typical usage: const endpoint = (req: Request, res: Response<unknown, ValidatedUser>, next:NextFunction) => {}
  */
 export interface ValidatedUser {
-    profile: ValidatedUserProfile,
+    profile: ValidatedUserProfile|null;
     auth: {
         valid: boolean;
         status: 'OK' | string;
-        profile: ValidatedUserProfile;
+        profile: ValidatedUserProfile|null;
     }
 }
 
