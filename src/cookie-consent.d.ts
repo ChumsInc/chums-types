@@ -23,7 +23,7 @@ export interface CookieConsentRecord {
     uuid: string;
     userId: string|number|null;
     ipAddress: string;
-    consent: boolean;
+    ack: boolean;
     url: string;
     preferences: CookieConsentSettings;
     gpc: boolean;
