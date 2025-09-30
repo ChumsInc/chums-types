@@ -353,5 +353,7 @@ export type {
     CookieConsentRecord,
     CookieConsentSection,
     CookieConsentStatus,
-    CookieConsentBody
+    CookieConsentBody,
+    CookieConsentInfo,
+    CookieConsentSectionInfo,
 } from './cookie-consent.js';
