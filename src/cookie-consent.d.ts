@@ -33,3 +33,12 @@ export interface CookieConsentRecord {
     dateUpdated: string;
     dateExpires: string;
 }
+
+export interface CookieConsentSectionInfo {
+    title: string;
+    required: boolean;
+    description: string;
+    cookies?: string[];
+}
+
+export type CookieConsentInfo = Record<CookieConsentSection, CookieConsentSectionInfo>;
