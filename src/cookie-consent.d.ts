@@ -42,3 +42,8 @@ export interface CookieConsentSectionInfo {
 }
 
 export type CookieConsentInfo = Record<CookieConsentSection, CookieConsentSectionInfo>;
+
+export interface CookieConsentHistoryRecord extends CookieConsentRecord {
+    email: string|null;
+    name: string|null;
+}
