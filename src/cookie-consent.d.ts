@@ -46,4 +46,5 @@ export type CookieConsentInfo = Record<CookieConsentSection, CookieConsentSectio
 export interface CookieConsentHistoryRecord extends CookieConsentRecord {
     email: string|null;
     name: string|null;
+    accountType: number|null;
 }
