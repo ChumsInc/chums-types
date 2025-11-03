@@ -358,3 +358,5 @@ export type {
     CookieConsentSectionInfo,
     CookieConsentHistoryRecord
 } from './cookie-consent.js';
+
+export type * as B2BTypes from './b2b/index.js';

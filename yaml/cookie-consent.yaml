@@ -25,31 +25,46 @@ components:
         - pending
       title: CookieConsentStatus
       type: string
-    CookieConsentChange:
+    CookieConsentBody:
       properties:
-        section:
+        accepted:
           items:
             $ref: '#/components/schemas/CookieConsentSection'
-            title: CookieConsentChange.section.[]
-          title: CookieConsentChange.section
+            title: CookieConsentBody.accepted.[]
+          title: CookieConsentBody.accepted
           type: array
-        newValue:
-          title: CookieConsentChange.newValue
-          type: boolean
-        timestamp:
-          title: CookieConsentChange.timestamp
-          type: string
-        method:
-          title: CookieConsentChange.method
-          type: string
+        rejected:
+          items:
+            $ref: '#/components/schemas/CookieConsentSection'
+            title: CookieConsentBody.rejected.[]
+          title: CookieConsentBody.rejected
+          type: array
       required:
-        - section
-        - newValue
-        - timestamp
-        - method
+        - accepted
+        - rejected
       additionalProperties: false
-      title: CookieConsentChange
+      title: CookieConsentBody
       type: object
+    CookieConsentChange:
+      allOf:
+        - $ref: '#/components/schemas/CookieConsentBody'
+        - properties:
+            timestamp:
+              title: CookieConsentChange.timestamp
+              type: string
+            url:
+              title: CookieConsentChange.url
+              type: string
+            method:
+              title: CookieConsentChange.method
+              type: string
+          required:
+            - timestamp
+            - url
+            - method
+          additionalProperties: false
+          type: object
+      title: CookieConsentChange
     CookieConsentSettings:
       properties:
         functional:
@@ -64,18 +79,11 @@ components:
         marketing:
           title: CookieConsentSettings.marketing
           type: boolean
-        changes:
-          items:
-            $ref: '#/components/schemas/CookieConsentChange'
-            title: CookieConsentSettings.changes.[]
-          title: CookieConsentSettings.changes
-          type: array
       required:
         - functional
         - preferences
         - analytics
         - marketing
-        - changes
       additionalProperties: false
       title: CookieConsentSettings
       type: object
@@ -93,12 +101,24 @@ components:
         ipAddress:
           title: CookieConsentRecord.ipAddress
           type: string
+        ack:
+          title: CookieConsentRecord.ack
+          type: boolean
         url:
           title: CookieConsentRecord.url
           type: string
         preferences:
           $ref: '#/components/schemas/CookieConsentSettings'
           title: CookieConsentRecord.preferences
+        gpc:
+          title: CookieConsentRecord.gpc
+          type: boolean
+        changes:
+          items:
+            $ref: '#/components/schemas/CookieConsentChange'
+            title: CookieConsentRecord.changes.[]
+          title: CookieConsentRecord.changes
+          type: array
         status:
           $ref: '#/components/schemas/CookieConsentStatus'
           title: CookieConsentRecord.status
@@ -108,15 +128,71 @@ components:
         dateUpdated:
           title: CookieConsentRecord.dateUpdated
           type: string
+        dateExpires:
+          title: CookieConsentRecord.dateExpires
+          type: string
       required:
         - uuid
         - userId
         - ipAddress
+        - ack
         - url
         - preferences
+        - gpc
+        - changes
         - status
         - dateCreated
         - dateUpdated
+        - dateExpires
       additionalProperties: false
       title: CookieConsentRecord
       type: object
+    CookieConsentSectionInfo:
+      properties:
+        title:
+          title: CookieConsentSectionInfo.title
+          type: string
+        required:
+          title: CookieConsentSectionInfo.required
+          type: boolean
+        description:
+          title: CookieConsentSectionInfo.description
+          type: string
+        cookies:
+          items:
+            title: CookieConsentSectionInfo.cookies.[]
+            type: string
+          title: CookieConsentSectionInfo.cookies
+          type: array
+      required:
+        - title
+        - required
+        - description
+      additionalProperties: false
+      title: CookieConsentSectionInfo
+      type: object
+    CookieConsentInfo:
+      title: CookieConsentInfo
+    CookieConsentHistoryRecord:
+      allOf:
+        - $ref: '#/components/schemas/CookieConsentRecord'
+        - properties:
+            email:
+              title: CookieConsentHistoryRecord.email
+              nullable: true
+              type: string
+            name:
+              title: CookieConsentHistoryRecord.name
+              nullable: true
+              type: string
+            accountType:
+              title: CookieConsentHistoryRecord.accountType
+              nullable: true
+              type: number
+          required:
+            - email
+            - name
+            - accountType
+          additionalProperties: false
+          type: object
+      title: CookieConsentHistoryRecord

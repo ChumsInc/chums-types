@@ -568,10 +568,66 @@ components:
         - additionalProperties: false
           type: object
       title: UserJWTToken
+    APIProfile:
+      properties:
+        id:
+          title: APIProfile.id
+          type: number
+        name:
+          title: APIProfile.name
+          type: string
+        active:
+          title: APIProfile.active
+          type: boolean
+        clientId:
+          title: APIProfile.clientId
+          type: number
+        userId:
+          title: APIProfile.userId
+          type: number
+      required:
+        - id
+        - name
+        - active
+        - clientId
+        - userId
+      additionalProperties: false
+      title: APIProfile
+      type: object
+    ValidatedAPIProfile:
+      properties:
+        user:
+          $ref: '#/components/schemas/APIProfile'
+          title: ValidatedAPIProfile.user
+        roles:
+          items:
+            title: ValidatedAPIProfile.roles.[]
+            type: string
+          title: ValidatedAPIProfile.roles
+          type: array
+        accounts:
+          items:
+            $ref: '#/components/schemas/UserAccount'
+            title: ValidatedAPIProfile.accounts.[]
+          title: ValidatedAPIProfile.accounts
+          type: array
+      required:
+        - user
+        - roles
+        - accounts
+      additionalProperties: false
+      title: ValidatedAPIProfile
+      type: object
     ValidatedUser:
       properties:
         profile:
-          $ref: '#/components/schemas/ValidatedUserProfile'
+          anyOf:
+            - $ref: '#/components/schemas/ValidatedUserProfile'
+              title: ValidatedUser.profile
+            - $ref: '#/components/schemas/ValidatedAPIProfile'
+              title: ValidatedUser.profile
+            - title: ValidatedUser.profile
+              nullable: true
           title: ValidatedUser.profile
         auth:
           properties:
@@ -582,7 +638,13 @@ components:
               title: ValidatedUser.auth.status
               type: string
             profile:
-              $ref: '#/components/schemas/ValidatedUserProfile'
+              anyOf:
+                - $ref: '#/components/schemas/ValidatedUserProfile'
+                  title: ValidatedUser.auth.profile
+                - $ref: '#/components/schemas/ValidatedAPIProfile'
+                  title: ValidatedUser.auth.profile
+                - title: ValidatedUser.auth.profile
+                  nullable: true
               title: ValidatedUser.auth.profile
           required:
             - valid

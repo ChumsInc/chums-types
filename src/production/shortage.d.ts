@@ -1,5 +1,6 @@
 import {WorkTicketStatusGroup} from "./work-ticket-status.js";
 import {Warehouse} from "../products.js";
+import {ProductStatusRecord} from "./product-status.js";
 
 export interface ShortageItem {
     ItemCode: string;

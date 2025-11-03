@@ -41,6 +41,9 @@
       "types": "./src/index.d.ts"
     },
     "./package.json": "./package.json",
+    "./b2b": {
+      "types": "./src/b2b/index.d.ts"
+    },
     "./edi": {
       "types": "./src/edi/index.d.ts"
     },
