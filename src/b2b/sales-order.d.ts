@@ -1,4 +1,4 @@
-import {BillToAddress, ShipToAddress} from "./customer";
+import type {BillToAddress, ShipToAddress} from "./customer.d.ts";
 
 export type SalesOrderHeader_OrderStatus = 'N'|'O'|'C'|'H';
 export type SalesOrderHistoryHeader_OrderStatus = 'A'|'C'|'X'|'Q'|'Z';

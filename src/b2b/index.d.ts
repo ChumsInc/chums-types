@@ -176,6 +176,9 @@ export type {BannersState} from './state/banners-state';
 export type {CategoryState} from './state/category-state';
 export type {CookieConsentState} from './state/cookie-consent-state';
 export type {KeywordsState} from './state/keywords-state';
+export type {MenuState} from './state/menu-state'
+export type {MessagesState} from './state/messages-state'
+export type {PageState} from './state/page-state'
 export type {ProductsState} from './state/products-state'
 export type {VersionState} from './state/version-state'
 export type {PreloadedState} from './state/preloaded-state'

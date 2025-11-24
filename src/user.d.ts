@@ -32,6 +32,7 @@ export interface CustomerUser extends BasicCustomerUser {
 
 export interface UserRecord {
     id: number;
+    uuid: string|null;
     name: string;
     email:string;
     phone: string;
@@ -203,3 +204,14 @@ export interface ValidatedUser {
 }
 
 
+
+export interface UserStats {
+    user_id: number;
+    intranet_last_login: string|null;
+    intranet_logins: number;
+    intranet_hits: number;
+    b2b_last_login: string|null;
+    b2b_logins: number;
+    b2b_hits: number;
+    timestamp: string;
+}
