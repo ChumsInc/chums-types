@@ -1,4 +1,4 @@
-import {CookieConsentInfo, CookieConsentRecord} from "../../cookie-consent.js";
+import {CookieConsentInfo, CookieConsentRecord} from "../../cookie-consent.d.ts";
 
 export interface CookieConsentState {
     status: 'idle' | 'loading' | 'saving' | 'rejected';

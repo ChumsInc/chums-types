@@ -1,5 +1,5 @@
-import type {CartProduct, Product, ProductImage} from "../products";
-import type {CustomerPriceRecord} from "../customer";
+import type {CartProduct, Product, ProductImage} from "../products.d.ts";
+import type {CustomerPriceRecord} from "../customer.d.ts";
 
 export interface ProductsState {
     keyword: string | null;

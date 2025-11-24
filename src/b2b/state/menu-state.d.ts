@@ -1,4 +1,4 @@
-import type {Menu} from "../ui-features";
+import type {Menu} from "../ui-features.d.ts";
 
 export interface MenuState {
     productMenu: Menu | null;

@@ -1,4 +1,4 @@
-import type {InvoiceHistoryDetail, InvoiceOrderType, InvoiceType} from "../invoice.js";
+import type {InvoiceHistoryDetail, InvoiceOrderType, InvoiceType} from "../invoice.d.ts";
 
 export type {
     InvoiceType,
@@ -10,7 +10,7 @@ export type {
     InvoiceTrackingRecord,
     InvoicePaymentRecord,
     ExtendedInvoice
-} from '../invoice.js';
+} from '../invoice.d.ts';
 
 
 export interface InvoiceKey {

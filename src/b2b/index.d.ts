@@ -4,12 +4,12 @@ export type {
     CartProgress_Delivery,
     CartProgress_Payment,
     CartProgress_Cart,
-} from './cart';
+} from './cart.d.ts';
 
 export type {
     CartItemColorProps,
     CartItemDetailProps,
-} from './cart-item'
+} from './cart-item.d.ts'
 
 export type {
     BasicCustomer,
@@ -32,11 +32,11 @@ export type {
     ShipToCustomer,
     AccountCustomerUser,
     ParentCustomer,
-} from './customer';
+} from './customer.d.ts';
 
 export type {
-    EmailResponse
-} from './email-response';
+    EmailResponse,
+} from './email-response.d.ts';
 
 export type {
     LayoutAttributes,
@@ -52,7 +52,7 @@ export type {
     YesNo,
     WhereUsed,
     BooleanLike,
-} from './generic';
+} from './generic.d.ts';
 
 export type {
     InvoicePaperless,
@@ -71,11 +71,11 @@ export type {
     AccountInvoice,
     InvoiceHistoryDetail,
     PaperlessLogRow,
-} from './invoice';
+} from './invoice.d.ts';
 
 export type {
-    Keyword
-} from './keyword';
+    Keyword,
+} from './keyword.d.ts';
 
 export type {
     ProductType,
@@ -119,13 +119,13 @@ export type {
     SellAsVariantsProduct,
     ProductMixVariant,
     ProductImage,
-} from './products';
+} from './products.d.ts';
 
 export type {
     PromoCode,
     PromoCodeRequirements,
     PromoCodeActions,
-} from './promo-code';
+} from './promo-code.d.ts';
 
 export type {
     SalesOrder,
@@ -136,7 +136,7 @@ export type {
     SalesOrderItemType,
     SalesOrderStatus,
     SalesOrderType,
-} from './sales-order';
+} from './sales-order.d.ts';
 
 export type {
     BannerImageOverlay,
@@ -150,7 +150,7 @@ export type {
     Slide,
     BannerImageType,
     SearchResult,
-} from './ui-features';
+} from './ui-features.d.ts';
 
 export type {
     RecentCustomer,
@@ -158,7 +158,7 @@ export type {
     UserRole,
     UserProfile,
     UserAccessType,
-} from './user';
+} from './user.d.ts';
 
 export {
     CookieConsentSection,
@@ -171,15 +171,15 @@ export {
     CookieConsentSectionInfo
 } from 'chums-types'
 
-export type {AppState} from './state/app-state';
-export type {BannersState} from './state/banners-state';
-export type {CategoryState} from './state/category-state';
-export type {CookieConsentState} from './state/cookie-consent-state';
-export type {KeywordsState} from './state/keywords-state';
-export type {MenuState} from './state/menu-state'
-export type {MessagesState} from './state/messages-state'
-export type {PageState} from './state/page-state'
-export type {ProductsState} from './state/products-state'
-export type {VersionState} from './state/version-state'
-export type {PreloadedState} from './state/preloaded-state'
+export type {AppState} from './state/app-state.d.ts';
+export type {BannersState} from './state/banners-state.d.ts';
+export type {CategoryState} from './state/category-state.d.ts';
+export type {CookieConsentState} from './state/cookie-consent-state.d.ts';
+export type {KeywordsState} from './state/keywords-state.d.ts';
+export type {MenuState} from './state/menu-state.d.ts'
+export type {MessagesState} from './state/messages-state.d.ts'
+export type {PageState} from './state/page-state.d.ts'
+export type {ProductsState} from './state/products-state.d.ts'
+export type {VersionState} from './state/version-state.d.ts'
+export type {PreloadedState} from './state/preloaded-state.d.ts'
 

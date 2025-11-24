@@ -1,5 +1,5 @@
-import type {Keyword} from "../keyword";
-import type {ContentPage} from "../ui-features";
+import type {Keyword} from "../keyword.d.ts";
+import type {ContentPage} from "../ui-features.d.ts";
 
 export interface PageState {
     list: Keyword[],

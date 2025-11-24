@@ -1,4 +1,4 @@
-import {BooleanLike} from "./generic.js";
+import {BooleanLike} from "./generic.d.ts";
 
 export interface Keyword {
     id: number;

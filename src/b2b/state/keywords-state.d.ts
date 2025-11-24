@@ -1,4 +1,4 @@
-import type {Keyword} from "../keyword";
+import type {Keyword} from "../keyword.d.ts";
 
 export interface KeywordsState {
     list: Keyword[],

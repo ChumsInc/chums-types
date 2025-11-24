@@ -1,4 +1,4 @@
-import type {Banner} from "../ui-features";
+import type {Banner} from "../ui-features.d.ts";
 
 export interface BannersState {
     list: Banner[];
