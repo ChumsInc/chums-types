@@ -4,6 +4,8 @@ export type {
     CartProgress_Delivery,
     CartProgress_Payment,
     CartProgress_Cart,
+    B2BCart,
+    CartStatusProp,
 } from './cart.d.ts';
 
 export type {
@@ -183,3 +185,56 @@ export type {ProductsState} from './state/products-state.d.ts'
 export type {VersionState} from './state/version-state.d.ts'
 export type {PreloadedState} from './state/preloaded-state.d.ts'
 
+export type {
+    AddToCartBody,
+    AddToCartProps,
+    AddToNewCartProps,
+    CartActionBody,
+    CartActionProps,
+    CartActionBase,
+    CartAppendBody,
+    CartDetailBody,
+    DeleteCartBody,
+    CartAppendCommentBody,
+    CartDeleteItemBody,
+    CartItemActionProps,
+    ApplyPromoCodeBody,
+    CartAction,
+    DuplicateSalesOrderBody,
+    LoadCartDetailProps,
+    LoadCartItemProps,
+    LoadCartProps,
+    LoadCartsProps,
+    NewCartActionProps,
+    NewCartBody,
+    PromoteCartBody,
+    SyncSalesOrderBody,
+    UpdateCartBody,
+    UpdateCartHeaderBody,
+    UpdateCartItemBody,
+    UpdateCartItemProps,
+    UpdateCartItemsBody,
+    UpdateCartProps
+} from './cart-action-props.d.ts'
+
+export type {
+    B2BCartDetail,
+    B2BCartLine,
+    SalesOrderDetail,
+    B2BCartLine_Deleted,
+    B2BCartLine_Imported,
+    B2BCartLine_New,
+    B2BCartLine_Updated,
+    B2BCartPricing,
+    B2BCartProduct,
+    B2BCartLineStatus,
+    B2BCartSeason,
+    EmailDetailLine
+} from './cart-detail.d.ts'
+
+export type {
+    B2BCartHeader,
+    B2BUserInfo,
+    CartPrintStatus,
+    CartType
+} from './cart-header.d.ts'

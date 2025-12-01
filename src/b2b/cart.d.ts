@@ -4,3 +4,14 @@ export type CartProgress_Payment = 2;
 export type CartProgress_Confirm = 3;
 
 export type CartProgress = CartProgress_Cart | CartProgress_Delivery | CartProgress_Payment | CartProgress_Confirm;
+
+export interface B2BCart {
+    header: B2BCartHeader;
+    detail: B2BCartDetail[];
+}
+
+/**
+ * C - Cart
+ * O - Open Order
+ */
+export type CartStatusProp = 'C'|'O';
