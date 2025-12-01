@@ -1,4 +1,5 @@
-import {SalesOrderHeader} from "../sales-orders.js";
+import {SalesOrderHeader, SalesOrderStatus, SalesOrderType} from "../sales-orders.js";
+import {UserProfile} from "../user.js";
 
 export type CartType = SalesOrderType | '_';
 
