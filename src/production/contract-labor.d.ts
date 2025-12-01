@@ -1,4 +1,4 @@
-import {WorkTicketScalingMethod} from "./work-ticket.js";
+import type {WorkTicketScalingMethod} from "./work-ticket.d.ts";
 
 export interface CLVendor {
     id: number;

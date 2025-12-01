@@ -1,4 +1,4 @@
-import {WorkTicketHeader} from "./work-ticket.js";
+import type {WorkTicketHeader} from "./work-ticket.d.ts";
 
 export interface WorkTicketStatusEntry {
     user: number;

@@ -1,4 +1,4 @@
-import {Warehouse} from "chums-types";
+import type {Warehouse} from "../products.d.ts";
 
 export interface PhysInvCountInstance {
     id: number;

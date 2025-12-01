@@ -1,5 +1,5 @@
-import {BooleanLike, LayoutAttributes} from "./generic.d.ts";
-import {CustomerPriceRecord} from "./customer.d.ts";
+import type {BooleanLike, LayoutAttributes} from "./generic.d.ts";
+import type {CustomerPriceRecord} from "./customer.d.ts";
 
 export type ProductSellAsVariants = 0;
 export type ProductSellAsSelf = 1;

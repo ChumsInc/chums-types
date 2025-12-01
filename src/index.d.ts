@@ -3,19 +3,19 @@
  *  @author Steve Montgomery <https://github.com/UtahGooner>
  */
 
-export type * as FBATypes from './amazon-fba.js';
-export type {FBAItem, FBAItemMap} from './amazon-fba.js';
+export type * as FBATypes from './amazon-fba.d.ts';
+export type {FBAItem, FBAItemMap} from './amazon-fba.d.ts';
 
-export type {B2BOrderHistory} from './b2b.js';
+export type {B2BOrderHistory} from './b2b.d.ts';
 
-export type * as BarcodeTypes from './barcode.js'
-export type {BarcodeCustomer, BarcodeCustomerSettings, BarcodeItem} from './barcode.js';
+export type * as BarcodeTypes from './barcode.d.ts'
+export type {BarcodeCustomer, BarcodeCustomerSettings, BarcodeItem} from './barcode.d.ts';
 
 export type {
     BooleanLike,
     DBCompany,
     SageCompany
-} from './basic-types.js';
+} from './basic-types.d.ts';
 
 export type {
     BillType,
@@ -23,11 +23,17 @@ export type {
     BillOptionHeader,
     BillOptionDetail,
     BillDetail
-} from './production/bill-materials.js';
+} from './production/bill-materials.d.ts';
 
 export type {
-    CustomerValidationResponse
-} from './customer.js';
+    CustomerValidationResponse,
+    ARDivision,
+    CountryCodeRecord,
+    CustomerSearchResult,
+    CustomerType,
+    CustomerShipToSearchRecord,
+    StateCodeRecord,
+} from './customer.d.ts';
 
 export type {
     CLIssue,
@@ -43,9 +49,9 @@ export type {
     CLIssueSearchOptions,
     CLIssueSearchWorkTicket,
     IssueDateType,
-} from './production/contract-labor.js'
+} from './production/contract-labor.d.ts'
 
-export type * as DirectLaborTypes from './production/direct-labor.js';
+export type * as DirectLaborTypes from './production/direct-labor.d.ts';
 export type {
     DLCode,
     DLCodeStep,
@@ -59,28 +65,28 @@ export type {
     EmployeeDLEntryTotal,
     DLDepartmentKey,
 
-} from './production/direct-labor.js';
+} from './production/direct-labor.d.ts';
 
-export type * as EDIOrderStatusTypes from './edi/order-status.js';
+export type * as EDIOrderStatusTypes from './edi/order-status.d.ts';
 export type {
     EDICustomer,
     EDIOrder,
     EDIOrderStatus,
     EDIOrderStatusField,
     EDIOrderStatusGroup,
-} from './edi/order-status.js';
+} from './edi/order-status.d.ts';
 
 export type {
     YesNo,
     Editable,
     LoadingStatus
-} from './generics.js';
+} from './generics.d.ts';
 
 export type {
     GLAccount
-} from './general-ledger.js';
+} from './general-ledger.d.ts';
 
-export type * as InvoiceTypes from './invoice.js';
+export type * as InvoiceTypes from './invoice.d.ts';
 export type {
     AccountInvoice,
     ExtendedInvoice,
@@ -92,17 +98,17 @@ export type {
     InvoiceTrackingRecord,
     InvoiceType,
     PaperlessLogRow,
-} from './invoice.js';
+} from './invoice.d.ts';
 
 export type {
     Item,
     WarehouseItem,
-} from './item.js';
+} from './item.d.ts';
 
-export type * as MenuItemTypes from './ui/menu.js'
-export type {MenuItem, MenuItemEntry, UserFavorite} from './ui/menu.js';
+export type * as MenuItemTypes from './ui/menu.d.ts'
+export type {MenuItem, MenuItemEntry, UserFavorite} from './ui/menu.d.ts';
 
-export type * as PricingTypes from './pricing.js';
+export type * as PricingTypes from './pricing.d.ts';
 export type {
     BasePriceCode,
     CustomerPriceLevelPriceCode,
@@ -115,9 +121,9 @@ export type {
     PriceCodeUser,
     PricingMethod,
     PriceCodeItem,
-} from './pricing.js';
+} from './pricing.d.ts';
 
-export * as ProductImageTypes from './product-image.js'
+export * as ProductImageTypes from './product-image.d.ts'
 export type {
     GenericImage,
     ImageSize,
@@ -131,9 +137,9 @@ export type {
     ColorSpaceList,
     ProductAltItem,
     ProductAltItemKey,
-} from './product-image.js';
+} from './product-image.d.ts';
 
-export type * as ProductTypes from './products.js'
+export type * as ProductTypes from './products.d.ts'
 export type {
     ProductType,
     BaseSKU,
@@ -161,21 +167,21 @@ export type {
     SKUGroup,
     BinLocation,
     ItemType,
-} from './products.js';
+} from './products.d.ts';
 
-export type * as ProductionManagementTypes from './production/production-management.js';
+export type * as ProductionManagementTypes from './production/production-management.d.ts';
 export type {
     ActivityCode,
     WorkCenter,
     WorkTemplate,
     WorkTemplateHeader,
     WorkTemplateStep,
-} from './production/production-management.js'
+} from './production/production-management.d.ts'
 
-export type * as ReturnsTypes from './returns.js'
-export type {RMASalesOrder, RMAUser, RMAOrderStatus, StatusEvent, RMAStatus, StatusKey} from './returns.js';
+export type * as ReturnsTypes from './returns.d.ts'
+export type {RMASalesOrder, RMAUser, RMAOrderStatus, StatusEvent, RMAStatus, StatusKey} from './returns.d.ts';
 
-export type * as SalesOrderTypes from './sales-orders.js';
+export type * as SalesOrderTypes from './sales-orders.d.ts';
 export type {
     SalesOrderItemType,
     ItemDistribution,
@@ -191,14 +197,14 @@ export type {
     SalesOrderStatus,
     StatusHistory,
     SalesOrderWithStatus,
-} from './sales-orders.js';
-export type {Salesperson, SalespersonLookupResult} from './salesperson.js';
+} from './sales-orders.d.ts';
+export type {Salesperson, SalespersonLookupResult} from './salesperson.d.ts';
 
 export type {
     SearchItem,
-} from './search.js';
+} from './search.d.ts';
 
-export type * as ShopifyIntegration from './shopify/index.js'
+export type * as ShopifyIntegration from './shopify/index.d.ts'
 export type {
     ExtendedSavedOrder,
     SageItem,
@@ -270,13 +276,13 @@ export type {
     ShopifyInventory,
     ShopifyPayments,
     ShopifyProducts,
-} from './shopify/index.js'
+} from './shopify/index.d.ts'
 
-export type {SortProps} from './ui/sort.js';
-export type {StoreMapCustomer} from './store-map.js';
-export type {Tab} from './ui/tabs.js';
+export type {SortProps} from './ui/sort.d.ts';
+export type {StoreMapCustomer} from './store-map.d.ts';
+export type {Tab} from './ui/tabs.d.ts';
 
-export type * as UserTypes from './user.js';
+export type * as UserTypes from './user.d.ts';
 export type {
     UserAccountType,
     User,
@@ -303,12 +309,13 @@ export type {
     ValidatedUser,
     ValidatedAPIProfile,
     APIProfile,
-} from './user.js';
+    UserStats
+} from './user.d.ts';
 
 /**
  * @deprecated
  */
-export type * as WorkOrderTypes from './production/work-order.js';
+export type * as WorkOrderTypes from './production/work-order.d.ts';
 
 /**
  * @deprecated
@@ -322,13 +329,13 @@ export type {
     WOManifestEntryItem,
     WOManifestEntry,
     WOManifestShipDate,
-} from './production/work-order.js';
+} from './production/work-order.d.ts';
 
-export type * as WorkTicketTypes from './production/work-ticket.js';
+export type * as WorkTicketTypes from './production/work-ticket.d.ts';
 export {
     WorkTicket, WorkTicketHeader, WorkTicketDetail, WorkTicketScalingMethod, WorkTicketResponse, WorkTicketStatus,
     WorkTicketType, WorkTicketStep,
-} from './production/work-ticket.js'
+} from './production/work-ticket.d.ts'
 
 export {
     WorkTicketStatusEntry,
@@ -340,13 +347,13 @@ export {
     WorkTicketWorkStatusGroup,
     WorkTicketWorkStatusKey,
     WorkTicketStatusGroup,
-} from './production/work-ticket-status.js'
+} from './production/work-ticket-status.d.ts'
 
-export type * as TimeclockTypes from './timeclock.js';
-export type {BannerImage, PayPeriod,} from './timeclock.js'
-export type {MailerReportObject, MailerReportContent, MailerMultiPartContent} from './mailer.js'
+export type * as TimeclockTypes from './timeclock.d.ts';
+export type {BannerImage, PayPeriod,} from './timeclock.d.ts'
+export type {MailerReportObject, MailerReportContent, MailerMultiPartContent} from './mailer.d.ts'
 
-export type * as CookieConsentTypes from './cookie-consent.js';
+export type * as CookieConsentTypes from './cookie-consent.d.ts';
 export type {
     CookieConsentChange,
     CookieConsentSettings,
@@ -357,6 +364,6 @@ export type {
     CookieConsentInfo,
     CookieConsentSectionInfo,
     CookieConsentHistoryRecord
-} from './cookie-consent.js';
+} from './cookie-consent.d.ts';
 
-export type * as B2BTypes from './b2b/index.js';
+export type * as B2BTypes from './b2b/index.d.ts';

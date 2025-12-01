@@ -1,4 +1,4 @@
-import {ItemType} from "./production.js";
+import type {ItemType} from "./production.d.ts";
 
 export type SalesOrderType = 'S'|'B'|'Q'|'M'|'R'|'P';
 export type SalesOrderHeaderStatus = 'A'|'N'|'O'|'C'|'H'|'X'|'Q'|'Z';

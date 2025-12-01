@@ -1,3 +1,6 @@
+import type {B2BCartHeader} from "./cart-header.d.ts";
+import type {B2BCartDetail} from "./cart-detail.d.ts";
+
 export type CartProgress_Cart = 0;
 export type CartProgress_Delivery = 1;
 export type CartProgress_Payment = 2;

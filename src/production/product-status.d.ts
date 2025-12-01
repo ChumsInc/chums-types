@@ -1,3 +1,5 @@
+import type {ProductType} from "../products.d.ts";
+
 export interface ProductStatusRecord {
     id: number;
     code: string;

@@ -1,4 +1,4 @@
-import {CartProduct} from "./products.d.ts";
+import type {CartProduct} from "./products.d.ts";
 
 export type CartItemDetailProps = Pick<CartProduct, 'itemCode' | 'quantity' | 'salesUM' | 'stdUM' | 'salesUMFactor'
     | 'msrp' | 'priceLevel' | 'quantityAvailable'>

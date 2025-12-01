@@ -1,6 +1,6 @@
-import {WorkTicketStatusGroup} from "./work-ticket-status.js";
-import {Warehouse} from "../products.js";
-import {ProductStatusRecord} from "./product-status.js";
+import type {WorkTicketStatusGroup} from "./work-ticket-status.d.ts";
+import type {Warehouse} from "../products.d.ts";
+import type {ProductStatusRecord} from "./product-status.d.ts";
 
 export interface ShortageItem {
     ItemCode: string;

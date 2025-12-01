@@ -1,4 +1,4 @@
-import {GLAccount} from "../general-ledger.js";
+import type {GLAccount} from "../general-ledger.d.ts";
 
 export interface WorkCenter {
     id: number|null;

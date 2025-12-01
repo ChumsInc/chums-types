@@ -1,10 +1,11 @@
 {
-  "extends": "@tsconfig/node18/tsconfig.json",
+  "extends": "@tsconfig/node20/tsconfig.json",
   "include": ["src/**/*"],
   "compilerOptions": {
     "declaration": true,
     "emitDeclarationOnly": false,
     "module": "Node16",
+    "verbatimModuleSyntax": true,
   },
   "exclude": [
     "node_modules"

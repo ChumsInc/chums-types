@@ -1,6 +1,6 @@
 import type {StoreName} from "../shopify-generics.d.ts";
-import {SageImportResponse, ShopifyOrder} from "../shopify-orders.js";
-import {Order} from "../graphql/index.js";
+import type {SageImportResponse, ShopifyOrder} from "../shopify-orders.d.ts";
+import type {Order} from "../graphql/index.d.ts";
 
 export interface SageItem {
     ItemType?: string;

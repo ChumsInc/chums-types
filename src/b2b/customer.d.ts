@@ -1,5 +1,5 @@
-import {YesNo} from "./generic.d.ts";
-import {UserAccessType} from "./user.d.ts";
+import type {YesNo} from "./generic.d.ts";
+import type {UserAccessType} from "./user.d.ts";
 
 export interface CustomerAddress {
     CustomerName: string;

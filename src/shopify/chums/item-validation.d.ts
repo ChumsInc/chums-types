@@ -1,4 +1,4 @@
-import {Weight} from "../graphql/generics.js";
+import type {Weight} from "../graphql/generics.d.ts";
 
 export interface ItemValidation {
     productId: string;

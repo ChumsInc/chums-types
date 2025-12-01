@@ -1,13 +1,13 @@
-export type * as BillMaterials from './bill-materials.js';
+export type * as BillMaterials from './bill-materials.d.ts';
 export type {
     BillType,
     BillDetail,
     BillOptionDetail,
     BillOptionHeader,
     BillHeader
-} from './bill-materials.js'
+} from './bill-materials.d.ts'
 
-export * as ContractLabor from './contract-labor.js';
+export * as ContractLabor from './contract-labor.d.ts';
 export type {
     CLIssue,
     CLIssueSearchParams,
@@ -22,9 +22,9 @@ export type {
     CLIssueResponse,
     CLIssueEntry,
     CLIssueDetail,
-} from './contract-labor.js';
+} from './contract-labor.d.ts';
 
-export * as DirectLabor from './direct-labor.js';
+export * as DirectLabor from './direct-labor.d.ts';
 export type {
     DLCode,
     DLEntry,
@@ -37,9 +37,9 @@ export type {
     DLEmployee,
     DLCodeWorkTemplate,
     DLDepartmentKey,
-} from './direct-labor.js'
+} from './direct-labor.d.ts'
 
-export * as PhysicalInventory from './physical-inventory.js';
+export * as PhysicalInventory from './physical-inventory.d.ts';
 export type {
     ConversionInstance,
     ConversionProblems,
@@ -66,25 +66,25 @@ export type {
     PhysInvVariance,
     PhysInvWarehouse,
     UnconvertedEntry,
-} from './physical-inventory.js';
+} from './physical-inventory.d.ts';
 
-export * as ProductStatusTypes from './product-status.js'
+export * as ProductStatusTypes from './product-status.d.ts'
 export type {
     ItemStatusHistory,
     ItemStatusRecord,
     ProductStatusRecord
-} from './product-status.js';
+} from './product-status.d.ts';
 
-export type * as ProductionManagement from './production-management.js';
+export type * as ProductionManagement from './production-management.d.ts';
 export type {
     WorkTemplate,
     WorkTemplateHeader,
     WorkTemplateStep,
     WorkCenter,
     ActivityCode,
-} from './production-management.js';
+} from './production-management.d.ts';
 
-export * as ShortageTypes from './shortage.js';
+export * as ShortageTypes from './shortage.d.ts';
 export type {
     ShortageITStatusItem,
     ShortagePlanner,
@@ -96,10 +96,10 @@ export type {
     ShortageSettings,
     ShortageStatus,
     ShortageWarehouse,
-} from './shortage.js';
+} from './shortage.d.ts';
 
 
-export * as WorkTicketTypes from './work-ticket.js';
+export * as WorkTicketTypes from './work-ticket.d.ts';
 export type {
     PMManifestEntry,
     PMManifestEntryItem,
@@ -112,9 +112,9 @@ export type {
     WorkTicketStatus,
     WorkTicketType,
     WorkTicketStep,
-} from './work-ticket.js'
+} from './work-ticket.d.ts'
 
-export type * as WorkTicketStatusTypes from './work-ticket-status.js'
+export type * as WorkTicketStatusTypes from './work-ticket-status.d.ts'
 export type {
     WorkTicketWorkStatusKey,
     WorkTicketStatusEntry,
@@ -125,9 +125,9 @@ export type {
     WorkTicketGroupItem,
     WorkTicketStatusSet,
     WorkTicketWorkStatusDetail,
-} from './work-ticket-status.js'
+} from './work-ticket-status.d.ts'
 
-export type * as SearchTypes from './search.js';
+export type * as SearchTypes from './search.d.ts';
 export type {
     SearchItem,
     BaseSKURecord,
@@ -138,4 +138,4 @@ export type {
     ProductLineRecord,
     WarehouseRecord,
     ProductType,
-} from './search.js';
+} from './search.d.ts';

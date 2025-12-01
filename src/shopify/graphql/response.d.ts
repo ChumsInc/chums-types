@@ -1,4 +1,4 @@
-import type {PageInfo} from "./generics.js";
+import type {PageInfo} from "./generics.d.ts";
 
 
 export interface GraphQLResponse<T> {

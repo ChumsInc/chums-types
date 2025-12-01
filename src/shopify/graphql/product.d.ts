@@ -1,6 +1,6 @@
-import {ImageEdge} from "./image.js";
-import {ProductVariant, ProductVariantsConnection} from "./variant.js";
-import {Edge, PageInfo} from "./generics.js";
+import type {ImageEdge} from "./image.d.ts";
+import type {ProductVariant, ProductVariantsConnection} from "./variant.d.ts";
+import type {Edge, PageInfo} from "./generics.d.ts";
 
 
 export interface ProductEdge<T> {

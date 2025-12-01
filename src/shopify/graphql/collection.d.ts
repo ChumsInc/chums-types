@@ -1,4 +1,4 @@
-import {Count, PageInfo} from "./generics.js";
+import type {Count, PageInfo} from "./generics.d.ts";
 
 
 export interface CollectionNode {

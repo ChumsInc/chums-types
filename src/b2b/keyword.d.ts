@@ -1,4 +1,4 @@
-import {BooleanLike} from "./generic.d.ts";
+import type {BooleanLike} from "./generic.d.ts";
 
 export interface Keyword {
     id: number;

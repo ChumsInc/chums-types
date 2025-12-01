@@ -1,14 +1,14 @@
-export * as MenuTypes from './menu.js';
+export * as MenuTypes from './menu.d.ts';
 export type {
     MenuItem,
     MenuItemEntry,
     UserFavorite
-} from './menu.js'
+} from './menu.d.ts'
 
-export * as TabTypes from './tabs.js';
-export type {Tab} from './tabs.js';
+export * as TabTypes from './tabs.d.ts';
+export type {Tab} from './tabs.d.ts';
 export type {
     ObjectSortFunction,
     SortFunction,
     SortProps
-} from './sort.js'
+} from './sort.d.ts'

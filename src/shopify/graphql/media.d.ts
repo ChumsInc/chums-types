@@ -1,5 +1,5 @@
-import {Image} from "./image.js";
-import {Connection} from "./generics.js";
+import type {Image} from "./image.d.ts";
+import type {Connection} from "./generics.d.ts";
 
 
 export interface Media {

@@ -1,4 +1,4 @@
-import {SalesOrderHeader} from "../sales-orders.js";
+import type {SalesOrderHeader} from "../sales-orders.d.ts";
 
 export type EDIOrderStatusField = 'imported' | 'inventory' | 'printed' | 'logistics' | 'ucc' | 'sps-invoiced'
     | 'work-cell' | 'picked' | 'routed' | 'asn' | 'picked-up' | 'invoiced' | 'completed'|string;

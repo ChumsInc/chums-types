@@ -1,4 +1,4 @@
-import {MoneyV2} from "./generics.js";
+import type {MoneyV2} from "./generics.d.ts";
 
 export interface PayoutBalanceTransaction {
     id: string;

@@ -1,7 +1,7 @@
-import {ProductNode} from "./product.js";
-import {Edge, UserError} from "./generics.js";
-import {InventoryItem} from "./inventory.js";
-import {Media, MediaConnection} from "./media.js";
+import type {ProductNode} from "./product.d.ts";
+import type {Edge, UserError} from "./generics.d.ts";
+import type {InventoryItem} from "./inventory.d.ts";
+import type {Media, MediaConnection} from "./media.d.ts";
 
 export interface VariantsConnection<T> {
     edges: Edge<T>[];

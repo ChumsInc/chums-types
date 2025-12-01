@@ -1,5 +1,5 @@
-import type {UserError, Weight, PageInfo} from "./generics.js";
-import type {ProductVariantNode} from "./variant.js";
+import type {UserError, Weight, PageInfo} from "./generics.d.ts";
+import type {ProductVariantNode} from "./variant.d.ts";
 
 export interface InventoryItemsResponse {
     inventoryItems: {

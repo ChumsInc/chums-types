@@ -1,13 +1,13 @@
-export * as EDIOrderStatusTypes from './order-status.js';
+export * as EDIOrderStatusTypes from './order-status.d.ts';
 export type {
     EDICustomer,
     EDIOrder,
     EDIOrderStatus,
     EDIOrderStatusField,
     EDIOrderStatusGroup,
-} from './order-status.js'
+} from './order-status.d.ts'
 
-export * as SPSIntegrationTypes from './sps-integration.js';
+export * as SPSIntegrationTypes from './sps-integration.d.ts';
 export type {
     SPSCustomerMapRow,
     SPSOrderMapField,
@@ -27,4 +27,4 @@ export type {
     SPSShipToKey,
     SPSValueMap,
     SPSValueMapRow
-} from './sps-integration.js'
+} from './sps-integration.d.ts'

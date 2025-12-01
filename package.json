@@ -21,12 +21,10 @@
   "homepage": "https://github.com/ChumsInc/chums-types#readme",
   "devDependencies": {
     "@eslint/js": "^9.35.0",
-    "@tsconfig/node18": "^18.2.0",
+    "@tsconfig/node20": "^20.1.8",
     "auto-changelog": "^2.4.0",
     "eslint": "^9.35.0",
     "globals": "^15.15.0",
-    "rimraf": "^5.0.7",
-    "typeconv": "^2.3.1",
     "typescript": "^5.1.6",
     "typescript-eslint": "^8.43.0"
   },

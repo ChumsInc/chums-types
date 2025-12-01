@@ -1,4 +1,4 @@
-import {CLIssue} from "./contract-labor.js";
+import type {CLIssue} from "./contract-labor.d.ts";
 
 export type WorkTicketScalingMethod = 'N' | 'P' | 'Y' | 'M'; // N = No Scaling, P = Production Run, Y = No. of parents per template, M = No of templates per parent
 export type WorkTicketStatus = 'O' | 'Q' | 'R' | 'C' | 'X'; // Open, Estimate/Quote, Released, Closed, Deleted
