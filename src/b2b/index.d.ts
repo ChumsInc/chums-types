@@ -186,38 +186,6 @@ export type {VersionState} from './state/version-state.d.ts'
 export type {PreloadedState} from './state/preloaded-state.d.ts'
 
 export type {
-    AddToCartBody,
-    AddToCartProps,
-    AddToNewCartProps,
-    CartActionBody,
-    CartActionProps,
-    CartActionBase,
-    CartAppendBody,
-    CartDetailBody,
-    DeleteCartBody,
-    CartAppendCommentBody,
-    CartDeleteItemBody,
-    CartItemActionProps,
-    ApplyPromoCodeBody,
-    CartAction,
-    DuplicateSalesOrderBody,
-    LoadCartDetailProps,
-    LoadCartItemProps,
-    LoadCartProps,
-    LoadCartsProps,
-    NewCartActionProps,
-    NewCartBody,
-    PromoteCartBody,
-    SyncSalesOrderBody,
-    UpdateCartBody,
-    UpdateCartHeaderBody,
-    UpdateCartItemBody,
-    UpdateCartItemProps,
-    UpdateCartItemsBody,
-    UpdateCartProps
-} from './cart-action-props.d.ts'
-
-export type {
     B2BCartDetail,
     B2BCartLine,
     SalesOrderDetail,
