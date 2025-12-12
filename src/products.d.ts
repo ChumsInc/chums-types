@@ -8,32 +8,32 @@ export type ProductType = 'F'|'K'|'R'|'D';
 export type ItemType = '1'|'2'|'3'|'4'|'5';
 
 export interface Warehouse {
-    WarehouseCode:string,
-    WarehouseDesc: string,
-    WarehouseStatus: 'A'|'I',
+    WarehouseCode:string;
+    WarehouseDesc: string;
+    WarehouseStatus: 'A'|'I';
 }
 
 export interface ProductLine {
-    ProductLine: string,
-    ProductLineDesc: string,
-    Valuation: string,
-    ExplodedKitItems: string,
-    active: boolean,
+    ProductLine: string;
+    ProductLineDesc: string;
+    Valuation: string;
+    ExplodedKitItems: string;
+    active: boolean;
 }
 
 export interface ProductCategory {
-    Category2: string,
-    id: number|null,
-    code: string,
-    description: string|null,
-    active: boolean,
-    notes: string|null,
-    tags: unknown|null,
-    productLine: string|null,
+    Category2: string;
+    id: number|null;
+    code: string;
+    description: string|null;
+    active: boolean;
+    notes: string|null;
+    tags: unknown|null;
+    productLine: string|null;
 }
 
 export interface ProductCollection {
-    Category3: string,
+    Category3: string;
 }
 
 
@@ -42,172 +42,176 @@ export interface ProductCollection {
  */
 
 export interface BaseSKU {
-    id: number,
-    sku_group_id: number,
-    sku: string,
-    description: string,
-    upc: string,
-    active: boolean,
-    notes?: string|null,
-    tags?: unknown|null,
+    id: number;
+    sku_group_id: number;
+    sku: string;
+    description: string;
+    upc: string;
+    active: boolean;
+    notes?: string|null;
+    tags?: unknown|null;
 }
 
 /**
  * BaseSKUSearch should be used when loading search filters from '/api/search'...
  */
 export interface BaseSKUSearch {
-    Category4: string,
-    id: number|null,
-    sku_group_id: number|null,
-    sku: string|null,
-    description: string|null,
-    upc: string|null,
-    active: boolean|null,
-    notes?: string|null,
-    tags?: unknown|null,
+    Category4: string;
+    id: number|null;
+    sku_group_id: number|null;
+    sku: string|null;
+    description: string|null;
+    upc: string|null;
+    active: boolean|null;
+    notes?: string|null;
+    tags?: unknown|null;
 }
 
 
 export interface ProductColor {
-    id: number,
-    code: string,
-    description: string,
-    active: boolean,
-    notes: string|null,
-    tags: unknown|null,
+    id: number;
+    code: string;
+    description: string;
+    active: boolean;
+    notes: string|null;
+    tags: unknown|null;
 }
 
 export interface ProductMixInfo {
-    id: number,
-    code: string,
-    description: string,
-    active: boolean,
-    notes: string|null,
-    tags: unknown|null,
+    id: number;
+    code: string;
+    description: string;
+    active: boolean;
+    notes: string|null;
+    tags: unknown|null;
 }
 
 
 export interface CountryOfOrigin {
-    countryOfOrigin: string,
+    countryOfOrigin: string;
 }
 
 export interface PrimaryVendor {
-    PrimaryVendorNo: string,
-    VendorName: string,
+    PrimaryVendorNo: string;
+    VendorName: string;
 }
 
 
 export interface ProductStatus {
-    id: number,
-    code: string,
-    description: string,
+    id: number;
+    code: string;
+    description: string;
+}
+
+export interface ProductSeasonProperties {
+    color: string;
 }
 
 export interface ProductSeason {
-    id: number,
-    code: string,
-    description: string,
-    properties: {
-        color: string,
-    },
-    notes: string,
-    active: boolean,
-    userId: number,
+    id: number;
+    code: string;
+    description: string;
+    properties: ProductSeasonProperties;
+    notes: string;
+    active: boolean;
+    userId: number;
+    dateCreated: string;
+    dateUpdated: string;
 }
 
 export interface ProductWarehouse {
-    WarehouseCode: string,
-    WarehouseDesc: string,
-    WarehouseStatus: string,
+    WarehouseCode: string;
+    WarehouseDesc: string;
+    WarehouseStatus: string;
 }
 
 export interface SKUGroup {
-    id: number,
-    code: string,
-    description: string,
-    active: boolean,
-    notes: string|null,
-    tags: unknown,
-    productLine: string,
+    id: number;
+    code: string;
+    description: string;
+    active: boolean;
+    notes: string|null;
+    tags: unknown;
+    productLine: string;
 }
 
 export interface ProductMaterial {
-    id: number,
-    code: string,
-    notes: string,
-    description: string,
-    active: boolean,
+    id: number;
+    code: string;
+    notes: string;
+    description: string;
+    active: boolean;
 }
 
 export interface ProductDimension {
-    quantity?: number,
-    length?: number|null,
-    width?: number|null,
-    weight?: number|null,
-    height?: number|null,
+    quantity?: number;
+    length?: number|null;
+    width?: number|null;
+    weight?: number|null;
+    height?: number|null;
     readonly volume?: number;
 }
 
 export interface AdjustableDimension {
-    min?: number|null,
-    max?: number|null,
-    name?: string,
-    isAdjustable?: boolean,
+    min?: number|null;
+    max?: number|null;
+    name?: string;
+    isAdjustable?: boolean;
 }
 export interface ProductAttributes {
-    notes?: string,
-    material?: ProductMaterial,
-    dimensionNotes?: string,
-    casePackDimensions?: ProductDimension,
-    adjustable?: AdjustableDimension,
-    shippingDimensions?: ProductDimension,
-    colors?: [],
-    dimensions?: ProductDimension,
+    notes?: string;
+    material?: ProductMaterial;
+    dimensionNotes?: string;
+    casePackDimensions?: ProductDimension;
+    adjustable?: AdjustableDimension;
+    shippingDimensions?: ProductDimension;
+    colors?: [];
+    dimensions?: ProductDimension;
 }
 
 export interface ProductStatusAttributes {
-    new?: boolean,
-    updating?: boolean,
-    approved?: boolean,
-    live?: boolean,
-    discontinued?: boolean,
+    new?: boolean;
+    updating?: boolean;
+    approved?: boolean;
+    live?: boolean;
+    discontinued?: boolean;
 }
 
 export interface ProductMaster {
-    id: number,
-    company: string,
-    devCode: string,
-    name: string,
-    status: ProductStatusAttributes,
-    active: boolean,
-    productType: ProductType|null,
-    productLine: string|null,
-    category: string|null,
-    subCategory: string|null,
-    idSKUGroup: number,
-    SKU: string,
-    UPC: string,
-    sellAsSelf: boolean,
-    sellAsMix: boolean,
-    sellAsColors: boolean,
-    color: string|null,
-    suggestedRetailPrice: number,
-    stdPrice: number,
-    stdCost: number,
-    notes: string|null,
-    userId: number|null,
-    dateCreated: string,
-    dateUpdated: string,
-    season: Pick<ProductSeason, 'id'|'code'|'active'>|null,
-    attributes?: ProductAttributes,
-    itemQuantity?: number,
+    id: number;
+    company: string;
+    devCode: string;
+    name: string;
+    status: ProductStatusAttributes;
+    active: boolean;
+    productType: ProductType|null;
+    productLine: string|null;
+    category: string|null;
+    subCategory: string|null;
+    idSKUGroup: number;
+    SKU: string;
+    UPC: string;
+    sellAsSelf: boolean;
+    sellAsMix: boolean;
+    sellAsColors: boolean;
+    color: string|null;
+    suggestedRetailPrice: number;
+    stdPrice: number;
+    stdCost: number;
+    notes: string|null;
+    userId: number|null;
+    dateCreated: string;
+    dateUpdated: string;
+    season: Pick<ProductSeason, 'id'|'code'|'active'>|null;
+    attributes?: ProductAttributes;
+    itemQuantity?: number;
 }
 
 export interface BinLocation {
     WarehouseCode: string;
     ItemCode: string;
-    ItemCodeDesc?: string,
-    SalesUnitOfMeasure?: string,
+    ItemCodeDesc?: string;
+    SalesUnitOfMeasure?: string;
     BinLocation: string;
 }
 
