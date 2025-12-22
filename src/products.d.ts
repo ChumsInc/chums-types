@@ -171,9 +171,10 @@ export interface ProductAttributes {
 
 export interface ProductStatusAttributes {
     new?: boolean;
-    updating?: boolean;
     approved?: boolean;
     live?: boolean;
+    updating?: boolean;
+    watch?: boolean;
     discontinued?: boolean;
 }
 
