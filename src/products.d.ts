@@ -149,6 +149,7 @@ export interface ProductDimension {
     width?: number|null;
     weight?: number|null;
     height?: number|null;
+    floatCapacity?: number|null;
     readonly volume?: number;
 }
 
