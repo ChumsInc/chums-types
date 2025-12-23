@@ -144,13 +144,13 @@ export interface ProductMaterial {
 }
 
 export interface ProductDimension {
-    quantity?: number;
-    length?: number|null;
-    width?: number|null;
-    weight?: number|null;
-    height?: number|null;
-    floatCapacity?: number|null;
-    readonly volume?: number;
+    quantity?: number|string;
+    length?: number|string|null;
+    width?: number|string|null;
+    weight?: number|string|null;
+    height?: number|string|null;
+    floatCapacity?: number|string|null;
+    readonly volume?: number|string;
 }
 
 export interface AdjustableDimension {
