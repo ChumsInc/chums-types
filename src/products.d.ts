@@ -196,9 +196,9 @@ export interface ProductMaster {
     sellAsMix: boolean;
     sellAsColors: boolean;
     color: string|null;
-    suggestedRetailPrice: number;
-    stdPrice: number;
-    stdCost: number;
+    suggestedRetailPrice: number|string;
+    stdPrice: number|string;
+    stdCost: number|string;
     notes: string|null;
     userId: number|null;
     dateCreated: string;
