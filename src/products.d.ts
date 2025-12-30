@@ -133,6 +133,7 @@ export interface SKUGroup {
     notes: string|null;
     tags: unknown;
     productLine: string;
+    timestamp?: string;
 }
 
 export interface ProductMaterial {
