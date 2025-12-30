@@ -41,6 +41,10 @@ export interface ProductCollection {
  * BaseSKU should be used in SKU System editor
  */
 
+export interface ItemStats {
+    items: number;
+    activeItems: number;
+}
 export interface BaseSKU {
     id: number;
     sku_group_id: number;
@@ -50,6 +54,8 @@ export interface BaseSKU {
     active: boolean;
     notes?: string|null;
     tags?: unknown|null;
+    itemStats?: ItemStats|null;
+    timestamp?: string;
 }
 
 /**
