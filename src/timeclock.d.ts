@@ -12,3 +12,11 @@ export interface PayPeriod {
     endDate: string;
     completed: boolean;
 }
+
+export interface Holiday {
+    id: number;
+    date: string;
+    description: string;
+    paid: boolean;
+    timestamp: string;
+}

@@ -350,7 +350,7 @@ export {
 } from './production/work-ticket-status.d.ts'
 
 export type * as TimeclockTypes from './timeclock.d.ts';
-export type {BannerImage, PayPeriod,} from './timeclock.d.ts'
+export type {BannerImage, PayPeriod, Holiday} from './timeclock.d.ts'
 export type {MailerReportObject, MailerReportContent, MailerMultiPartContent} from './mailer.d.ts'
 
 export type * as CookieConsentTypes from './cookie-consent.d.ts';
