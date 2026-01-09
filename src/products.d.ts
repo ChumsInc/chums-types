@@ -32,6 +32,11 @@ export interface ProductCategory {
     productLine: string|null;
 }
 
+export interface ExtendedProductCategory extends ProductCategory {
+    timestamp: string | null;
+    productCount: number;
+}
+
 export interface ProductCollection {
     Category3: string;
 }

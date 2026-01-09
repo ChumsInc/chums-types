@@ -148,6 +148,7 @@ export type {
     ProductAttributes,
     ProductStatusAttributes,
     ProductCategory,
+    ExtendedProductCategory,
     ProductCollection,
     ProductColor,
     ProductColorUPC,
@@ -167,6 +168,8 @@ export type {
     SKUGroup,
     BinLocation,
     ItemType,
+    ItemStats,
+    ProductSeasonProperties,
 } from './products.d.ts';
 
 export type * as ProductionManagementTypes from './production/production-management.d.ts';
