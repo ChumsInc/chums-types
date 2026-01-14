@@ -208,6 +208,7 @@ export interface SageImportResponse {
     lineResponse: unknown[];
     import_status: string;
     import_order: object;
+    validation: string[];
 }
 
 export interface SavedOrderRow extends Omit<SavedOrder, 'import_result'|'shopify_order'> {
