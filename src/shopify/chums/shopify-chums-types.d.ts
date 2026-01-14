@@ -79,7 +79,8 @@ export interface SavedOrderV2 {
     salesOrderNo: string|null;
     importStatus: string|null;
     dataType: string;
-    shopifyOrder: Order|ShopifyOrder;
+    shopifyOrder: ShopifyOrder|null;
+    graphqlOrder: Order|null;
     importResult: SageImportResponse|null;
     createdAt: string;
     updatedAt: string;
