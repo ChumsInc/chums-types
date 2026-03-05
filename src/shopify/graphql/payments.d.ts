@@ -1,4 +1,6 @@
-import type {MoneyV2} from "./generics.d.ts";
+import type {ShopifyPaymentsBalanceTransaction} from "../../shopify-graphql/admin.types.js";
+
+export type PaymentsBalanceTransaction = Pick<ShopifyPaymentsBalanceTransaction, 'id' | 'type' | 'associatedPayout' | 'transactionDate' | 'associatedOrder' | 'net' | 'amount' | 'fee'>
 
 export interface PayoutBalanceTransaction {
     id: string;
@@ -7,7 +9,7 @@ export interface PayoutBalanceTransaction {
     transactionDate: string;
     associatedOrderId: string | null;
     associatedOrderName: string | null;
-    response: ShopifyPaymentsBalanceTransaction;
+    response: PaymentsBalanceTransaction;
     sage_SalesOrderNo: string | null;
     emailAddress: string | null;
     invoiceNo: string | null;
@@ -18,33 +20,4 @@ export interface PayoutBalanceTransaction {
         hasDiscount: boolean;
         tags: string;
     }
-}
-
-export interface ShopifyPaymentsBalanceTransaction {
-    id: string;
-    type: string;
-    associatedPayout: ShopifyPaymentsBalanceTransactionAssociatedPayout;
-    transactionDate: string;
-    associatedOrder: ShopifyPaymentsAssociatedOrder | null;
-    net: MoneyV2;
-    amount: MoneyV2;
-    fee: MoneyV2;
-    test: boolean;
-}
-
-export interface ShopifyPaymentsAssociatedOrder {
-    id: string;
-    name: string;
-}
-
-export interface ShopifyPaymentsBalanceTransactionAssociatedPayout {
-    id: string;
-}
-
-export interface ShopifyPaymentsPayout {
-    id: string;
-    issuedAt: string;
-    net: MoneyV2;
-    status: string;
-    legacyResourceId: string;
 }
