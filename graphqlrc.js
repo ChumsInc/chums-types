@@ -3,7 +3,7 @@ import { shopifyApiProject, ApiType } from '@shopify/api-codegen-preset';
 export default {
     // For syntax highlighting / auto-complete when writing operations
     schema: 'https://shopify.dev/admin-graphql-direct-proxy/2023-10',
-    documents: ['./shopify-dev-query/**/*.ts'],
+    documents: ['./shopify-dev-query/**/*.js'],
     projects: {
         // To produce variable / return types for Admin API operations
         default: shopifyApiProject({

@@ -1,0 +1,6 @@
+schema:
+  - https://${SHOPIFY_STORE_URL}/admin/api/2026-01/graphql.json:
+      headers:
+        Content-Type: application/json
+        Accept: application.json
+        X-Shopify-Access-Token: ${SHOPIFY_GRAPHQL_ACCESS_TOKEN}
