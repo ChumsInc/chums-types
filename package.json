@@ -57,7 +57,7 @@
       "types": "./src/shopify/index.d.ts"
     },
     "./shopify-graphql": {
-      "types": "./src/shopify-graphql/admin.types.d.ts",
+      "types": "./src/shopify-graphql/admin.types.d.ts"
     },
     "./ui": {
       "types": "./src/ui/index.d.ts"
