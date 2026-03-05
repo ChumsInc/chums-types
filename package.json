@@ -7,6 +7,7 @@
   "types": "./src/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "codegen": "graphql-codegen --config graphqlrc.js",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "repository": {
@@ -20,11 +21,13 @@
   },
   "homepage": "https://github.com/ChumsInc/chums-types#readme",
   "devDependencies": {
-    "@eslint/js": "^9.35.0",
+    "@eslint/js": "^10.0.1",
+    "@graphql-codegen/cli": "^6.1.1",
+    "@shopify/api-codegen-preset": "^1.2.2",
     "@tsconfig/node20": "^20.1.8",
     "auto-changelog": "^2.4.0",
-    "eslint": "^9.35.0",
-    "globals": "^15.15.0",
+    "eslint": "^10.0.1",
+    "globals": "^17.3.0",
     "typescript": "^5.1.6",
     "typescript-eslint": "^8.43.0"
   },
@@ -52,6 +55,9 @@
     },
     "./shopify": {
       "types": "./src/shopify/index.d.ts"
+    },
+    "./shopify-graphql": {
+      "types": "./src/shopify-graphql/admin.types.d.ts",
     },
     "./ui": {
       "types": "./src/ui/index.d.ts"
