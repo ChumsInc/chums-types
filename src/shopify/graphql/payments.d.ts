@@ -19,5 +19,6 @@ export interface PayoutBalanceTransaction {
         fulfillmentStatus: string | null;
         hasDiscount: boolean;
         tags: string;
+        refunded: boolean;
     }
 }
