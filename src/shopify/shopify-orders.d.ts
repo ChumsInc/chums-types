@@ -1,6 +1,7 @@
 import type {MoneyString, PriceSet} from "./shopify-generics.d.ts";
 import type {SageItem} from "./chums/shopify-chums-types.d.ts";
 import type {OrderRiskSummary} from "./graphql/index.d.ts";
+import type {Order} from "../shopify-graphql/admin.types.js";
 
 export interface ShopifyDiscountCode {
     type: string;
@@ -25,7 +26,6 @@ export interface ShopifyShippingLine {
     source: string;
     tax_lines: ShopifyTaxLine[],
     discount_allocations: ShopifyDiscountAllocation[]
-
 }
 
 
@@ -191,13 +191,14 @@ export type SagePaymentType = 'WEBCC' | 'PAYPA';
 export interface SavedOrder {
     id: number | string;
     gid: string;
-    import_result: SageImportResponse|null;
+    import_result?: SageImportResponse|null;
     sage_Company: 'chums';
     sage_SalesOrderNo: string;
     import_status: string;
     created_at: string;
     updated_at: string | null;
     shopify_order: ShopifyOrder|null;
+    graphqlOrder: Order|null;
 }
 export interface SageImportResponse {
     error?: string;
@@ -211,9 +212,10 @@ export interface SageImportResponse {
     validation: string[];
 }
 
-export interface SavedOrderRow extends Omit<SavedOrder, 'import_result'|'shopify_order'> {
-    import_result: string | null;
+export interface SavedOrderRow extends Omit<SavedOrder, 'import_result'|'shopify_order'|'graphqlOrder'> {
+    import_result?: string | null;
     shopify_order: string | null;
+    graphqlOrder: string | null;
 }
 
 export interface ExtendedSavedOrder extends SavedOrder {
@@ -227,9 +229,10 @@ export interface ExtendedSavedOrder extends SavedOrder {
     Balance: string | null;
 }
 
-export interface ExtendedSavedOrderRow  extends Omit<ExtendedSavedOrder, 'import_result'|'shopify_order'> {
-    import_result: string | null;
+export interface ExtendedSavedOrderRow  extends Omit<ExtendedSavedOrder, 'import_result'|'shopify_order'|'graphqlOrder'> {
+    import_result?: string | null;
     shopify_order: string | null;
+    graphqlOrder: string | null;
 }
 export interface SageImportableOrder {
     orders_id: string | number;
