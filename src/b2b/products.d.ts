@@ -361,6 +361,7 @@ export interface CartProduct extends CartItem {
     season?: ProductSeason|null;
     message?: string;
     requiresCustomization?: boolean;
+    productStatus?: string | null;
 }
 
 export interface ProductImage {
