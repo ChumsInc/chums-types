@@ -22,8 +22,8 @@
   "homepage": "https://github.com/ChumsInc/chums-types#readme",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@graphql-codegen/cli": "^6.1.1",
-    "@shopify/api-codegen-preset": "^1.2.2",
+    "@graphql-codegen/cli": "^6.2.1",
+    "@shopify/api-codegen-preset": "^2.0.0",
     "@tsconfig/node20": "^20.1.8",
     "auto-changelog": "^2.4.0",
     "eslint": "^10.0.1",

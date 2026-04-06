@@ -1,0 +1,1 @@
+export declare const queryThemes = "\n#graphql\nquery GetThemes {\n    themes(first:50) {\n        edges {\n            node {\n                id\n                name\n                role\n                createdAt\n                updatedAt\n            }\n        }\n    }\n}";
