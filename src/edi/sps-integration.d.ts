@@ -4,9 +4,7 @@ export interface SPSBaseCustomer {
     CustomerName?: string;
 }
 
-export interface SPSCustomerKey extends SPSBaseCustomer {
-    Company: string;
-}
+export type SPSCustomerKey = SPSBaseCustomer
 
 export interface SPSSalesOrder extends SPSCustomerKey {
     CustomerPONo: string;
@@ -86,9 +84,7 @@ export interface SPSValueMap {
     MappedOptions: SPSCustomerValueOptions | null;
 }
 
-export interface SPSValueMapRow
-    extends Omit<SPSValueMap, 'MappedOptions'> {
-}
+export type SPSValueMapRow = Omit<SPSValueMap, 'MappedOptions'>;
 
 export interface SPSItemUnit {
     ItemCode: string;
