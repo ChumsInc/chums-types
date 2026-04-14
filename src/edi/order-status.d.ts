@@ -36,6 +36,6 @@ export interface EDIOrder extends Pick<SalesOrderHeader, 'ARDivisionNo'|'Custome
 export interface EDICustomer {
     ARDivisionNo: string;
     CustomerNo: string;
-    CustomerName: stirng;
+    CustomerName: string;
     isMAPADOC: boolean;
 }
