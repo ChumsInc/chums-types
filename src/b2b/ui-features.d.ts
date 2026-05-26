@@ -82,7 +82,7 @@ export interface ContentPage {
     css?: string | null;
     subtitle?: string | null;
     searchWords: string | null;
-    redirectTo?: number | null;
+    redirectTo?: string | null;
     requiresLogin?: boolean | null;
 }
 
