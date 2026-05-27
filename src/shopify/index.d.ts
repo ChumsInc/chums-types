@@ -82,4 +82,4 @@ export type {
 } from './shopify-products.d.ts';
 
 export type * from './graphql/index.d.ts'
-export * as ShopifyGraphQL from './graphql/index.d.ts';
+export type * as ShopifyGraphQL from './graphql/index.d.ts';

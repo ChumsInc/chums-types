@@ -1,4 +1,4 @@
-export * as EDIOrderStatusTypes from './order-status.d.ts';
+export type * as EDIOrderStatusTypes from './order-status.d.ts';
 export type {
     EDICustomer,
     EDIOrder,
@@ -7,7 +7,7 @@ export type {
     EDIOrderStatusGroup,
 } from './order-status.d.ts'
 
-export * as SPSIntegrationTypes from './sps-integration.d.ts';
+export type * as SPSIntegrationTypes from './sps-integration.d.ts';
 export type {
     SPSCustomerMapRow,
     SPSOrderMapField,

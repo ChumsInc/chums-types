@@ -123,7 +123,7 @@ export type {
     PriceCodeItem,
 } from './pricing.d.ts';
 
-export * as ProductImageTypes from './product-image.d.ts'
+export type * as ProductImageTypes from './product-image.d.ts'
 export type {
     GenericImage,
     ImageSize,
@@ -335,12 +335,12 @@ export type {
 } from './production/work-order.d.ts';
 
 export type * as WorkTicketTypes from './production/work-ticket.d.ts';
-export {
+export type {
     WorkTicket, WorkTicketHeader, WorkTicketDetail, WorkTicketScalingMethod, WorkTicketResponse, WorkTicketStatus,
     WorkTicketType, WorkTicketStep,
 } from './production/work-ticket.d.ts'
 
-export {
+export type {
     WorkTicketStatusEntry,
     WorkTicketStatusSet,
     WorkTicketWorkStatusItem,

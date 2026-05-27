@@ -162,7 +162,7 @@ export type {
     UserAccessType,
 } from './user.d.ts';
 
-export {
+export type {
     CookieConsentSection,
     CookieConsentRecord,
     CookieConsentSettings,

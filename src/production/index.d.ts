@@ -7,7 +7,7 @@ export type {
     BillHeader
 } from './bill-materials.d.ts'
 
-export * as ContractLabor from './contract-labor.d.ts';
+export type * as ContractLabor from './contract-labor.d.ts';
 export type {
     CLIssue,
     CLIssueSearchParams,
@@ -24,7 +24,7 @@ export type {
     CLIssueDetail,
 } from './contract-labor.d.ts';
 
-export * as DirectLabor from './direct-labor.d.ts';
+export type * as DirectLabor from './direct-labor.d.ts';
 export type {
     DLCode,
     DLEntry,
@@ -39,7 +39,7 @@ export type {
     DLDepartmentKey,
 } from './direct-labor.d.ts'
 
-export * as PhysicalInventory from './physical-inventory.d.ts';
+export type * as PhysicalInventory from './physical-inventory.d.ts';
 export type {
     ConversionInstance,
     ConversionProblems,
@@ -68,7 +68,7 @@ export type {
     UnconvertedEntry,
 } from './physical-inventory.d.ts';
 
-export * as ProductStatusTypes from './product-status.d.ts'
+export type * as ProductStatusTypes from './product-status.d.ts'
 export type {
     ItemStatusHistory,
     ItemStatusRecord,
@@ -84,7 +84,7 @@ export type {
     ActivityCode,
 } from './production-management.d.ts';
 
-export * as ShortageTypes from './shortage.d.ts';
+export type * as ShortageTypes from './shortage.d.ts';
 export type {
     ShortageITStatusItem,
     ShortagePlanner,
@@ -99,7 +99,7 @@ export type {
 } from './shortage.d.ts';
 
 
-export * as WorkTicketTypes from './work-ticket.d.ts';
+export type * as WorkTicketTypes from './work-ticket.d.ts';
 export type {
     PMManifestEntry,
     PMManifestEntryItem,
