@@ -14,7 +14,6 @@ export interface Product {
     description: string;
     features: string;
     defaultCategoryId: number;
-    defaultItemCode: string;
 }
 
 export interface ProductSageItem {
