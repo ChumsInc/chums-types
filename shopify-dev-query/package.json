@@ -1,0 +1,17 @@
+{
+  "name": "shopify-dev-query",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Steve Montgomery",
+  "type": "module",
+  "main": "query-themes.js",
+  "types": "./query-themes.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^7.0.0",
+    "@shopify/api-codegen-preset": "^2.0.0"
+  }
+}
