@@ -8,9 +8,9 @@ export default {
         // To produce variable / return types for Admin API operations
         default: shopifyApiProject({
             apiType: ApiType.Admin,
-            apiVersion: '2026-01',
+            apiVersion: '2026-04',
             // documents: ['./src/**/*.ts'],
-            outputDir: '../src/shopify-graphql',
+            outputDir: './types',
         }),
     },
 };

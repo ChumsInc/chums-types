@@ -1,4 +1,4 @@
-import type {ShopifyPaymentsBalanceTransaction} from "../../shopify-graphql/admin.types.js";
+import type {ShopifyPaymentsBalanceTransaction} from "../../../shopify-graphql/types/admin.types.js";
 
 export type PaymentsBalanceTransaction = Pick<ShopifyPaymentsBalanceTransaction, 'id' | 'type' | 'associatedPayout' | 'transactionDate' | 'associatedOrder' | 'net' | 'amount' | 'fee'>
 
