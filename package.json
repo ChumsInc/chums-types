@@ -3,6 +3,8 @@
   "version": "3.5.0",
   "description": "CHUMS common types",
   "types": "./src/index.d.ts",
+  "type": "module",
+  "sideEffects": false,
   "scripts": {
     "build": "tsc",
     "codegen": "graphql-codegen --config graphqlrc.js",
@@ -58,5 +60,11 @@
     "./ui": {
       "types": "./src/ui/index.d.ts"
     }
-  }
+  },
+  
+  "files": [
+    "src/**/*.d.ts",
+    "package.json",
+    "CHANGELOG.md"
+  ]
 }
