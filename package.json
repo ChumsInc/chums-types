@@ -63,6 +63,7 @@
   },
   "files": [
     "src/**/*.d.ts",
+    "shopify-graphql/**/*.d.ts",
     "package.json",
     "CHANGELOG.md"
   ]
