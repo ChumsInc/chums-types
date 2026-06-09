@@ -7,7 +7,6 @@
   "sideEffects": false,
   "scripts": {
     "build": "tsc",
-    "codegen": "graphql-codegen --config graphqlrc.js",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "repository": {
@@ -36,29 +35,50 @@
   },
   "exports": {
     ".": {
-      "types": "./src/index.d.ts"
+      "types": "./src/index.d.ts",
+      "import": "./src/empty.js",
+      "default": "./src/empty.js"
     },
     "./package.json": "./package.json",
     "./b2b": {
-      "types": "./src/b2b/index.d.ts"
+      "types": "./src/b2b/index.d.ts",
+      "import": "./src/empty.js",
+      "default": "./src/empty.js"
+    },
+    "./b2b/*": {
+      "types": "./src/b2b/*.d.ts",
+      "import": "./src/empty.js",
+      "default": "./src/empty.js"
     },
     "./edi": {
-      "types": "./src/edi/index.d.ts"
+      "types": "./src/edi/index.d.ts",
+      "import": "./src/empty.js",
+      "default": "./src/empty.js"
     },
     "./production": {
-      "types": "./src/production/index.d.ts"
+      "types": "./src/production/index.d.ts",
+      "import": "./src/empty.js",
+      "default": "./src/empty.js"
     },
     "./sales": {
-      "types": "./src/sales/index.d.ts"
+      "types": "./src/sales/index.d.ts",
+      "import": "./src/empty.js",
+      "default": "./src/empty.js"
     },
     "./shopify": {
-      "types": "./src/shopify/index.d.ts"
+      "types": "./src/shopify/index.d.ts",
+      "import": "./src/empty.js",
+      "default": "./src/empty.js"
     },
     "./shopify-graphql": {
-      "types": "./shopify-graphql/types/admin.types.d.ts"
+      "types": "./shopify-graphql/types/admin.types.d.ts",
+      "import": "./src/empty.js",
+      "default": "./src/empty.js"
     },
     "./ui": {
-      "types": "./src/ui/index.d.ts"
+      "types": "./src/ui/index.d.ts",
+      "import": "./src/empty.js",
+      "default": "./src/empty.js"
     }
   },
   "files": [
