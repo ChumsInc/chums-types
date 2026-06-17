@@ -25,10 +25,10 @@ export type SortablePaths<T, Depth extends number = 5> = Depth extends 0
         ? T extends unknown[] // Ignore standard array fields unless targeting explicit indices
             ? never
             : {
-                [K in keyof T & string]: T[K] extends SortablePrimitive
+                [K in keyof T & string]: NonNullable<T[K]> extends SortablePrimitive
                     ? K // Found a sortable leaf node
-                    : T[K] extends object
-                        ? `${K}.${SortablePaths<T[K], DepthGuard[Depth]>}` // Keep digging
+                    : NonNullable<T[K]> extends object
+                        ? `${K}.${SortablePaths<NonNullable<T[K]>, DepthGuard[Depth]>}` // Keep digging
                         : never;
             }[keyof T & string]
         : never;
