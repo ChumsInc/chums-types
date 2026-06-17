@@ -371,4 +371,4 @@ export type {
 
 export type * as B2BTypes from './b2b/index.d.ts';
 
-export type {NestedPaths} from './nested-paths.d.ts'
+export type {NestedPaths, SortablePaths} from './nested-paths.d.ts'
