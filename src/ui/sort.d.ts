@@ -1,5 +1,7 @@
+import {NestedPaths} from '../nested-paths.d.ts'
+
 export interface SortProps<T = unknown> {
-    field: keyof T;
+    field: NestedPaths<T>;
     ascending: boolean;
 }
 

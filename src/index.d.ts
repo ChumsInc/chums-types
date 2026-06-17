@@ -370,3 +370,5 @@ export type {
 } from './cookie-consent.d.ts';
 
 export type * as B2BTypes from './b2b/index.d.ts';
+
+export type {NestedPaths} from './nested-paths.d.ts'
