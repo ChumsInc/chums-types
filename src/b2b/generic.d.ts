@@ -12,12 +12,6 @@ export interface Editable {
 
 export type ActionStatus = 'idle'|'loading'|'saving'|'deleting';
 
-
-export interface SortProps<T = unknown> {
-    field: keyof T,
-    ascending: boolean,
-}
-
 export interface FieldValue<T = unknown> {
     field: keyof T,
     value: T;

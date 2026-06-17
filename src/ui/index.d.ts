@@ -10,5 +10,6 @@ export type {Tab} from './tabs.d.ts';
 export type {
     ObjectSortFunction,
     SortFunction,
-    SortProps
+    SortProps,
+    SortFactory,
 } from './sort.d.ts'

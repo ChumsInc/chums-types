@@ -45,7 +45,6 @@ export type {
     B2BDebugError,
     Editable,
     FieldValue,
-    SortProps,
     LayoutWidth,
     Appendable,
     ActionStatus,
@@ -55,6 +54,12 @@ export type {
     WhereUsed,
     BooleanLike,
 } from './generic.d.ts';
+
+export type {
+    SortProps,
+    SortFunction,
+    SortFactory
+} from '../ui/index.d.ts'
 
 export type {
     InvoicePaperless,
