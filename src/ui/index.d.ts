@@ -12,4 +12,5 @@ export type {
     SortFunction,
     SortProps,
     SortFactory,
+    NestedSortProps,
 } from './sort.d.ts'

@@ -58,7 +58,8 @@ export type {
 export type {
     SortProps,
     SortFunction,
-    SortFactory
+    SortFactory,
+    NestedSortProps,
 } from '../ui/index.d.ts'
 
 export type {

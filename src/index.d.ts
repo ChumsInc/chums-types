@@ -281,7 +281,7 @@ export type {
     ShopifyProducts,
 } from './shopify/index.d.ts'
 
-export type {SortProps, SortFunction, SortFactory} from './ui/sort.d.ts';
+export type {SortProps, NestedSortProps, SortFunction, SortFactory} from './ui/sort.d.ts';
 export type {StoreMapCustomer} from './store-map.d.ts';
 export type {Tab} from './ui/tabs.d.ts';
 
