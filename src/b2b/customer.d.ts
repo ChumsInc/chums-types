@@ -126,7 +126,7 @@ export interface CustomerPriceList {
 
 export interface CustomerUser {
     id: number;
-    accessId: number;
+    accessId?: number; // not sure why we have this, it seems like it might be a legacy field that was never implemented
     name: string;
     email: string;
     accountType: UserAccessType;
