@@ -4,6 +4,8 @@ export type {
 } from './shopify-generics.d.ts';
 
 export type * as ShopifyChumsTypes from './chums/shopify-chums-types.d.ts';
+export type {ItemValidation} from './chums/item-validation.d.ts';
+
 export type {
     SavedOrderV2,
     SageItem,
