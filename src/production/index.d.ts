@@ -119,6 +119,7 @@ export type {
     WorkTicketWorkStatusKey,
     WorkTicketStatusEntry,
     WorkTicketWorkStatusGroup,
+    WorkTicketStatusRecord,
     WorkTicketWorkStatusItem,
     WorkTicketStatusGroup,
     WorkTicketGroup,

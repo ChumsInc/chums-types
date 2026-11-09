@@ -57,3 +57,6 @@ export type WorkTicketWorkStatusKey =
 
 
 export type WorkTicketStatusGroup = Record<WorkTicketWorkStatusKey, WorkTicketStatusEntry | undefined>
+export type WorkTicketStatusRecord = Record<WorkTicketWorkStatusKey, WorkTicketStatusEntry | undefined>;
+
+// export interface WorkTicketStatusGroup
