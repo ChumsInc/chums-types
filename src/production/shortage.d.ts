@@ -1,20 +1,20 @@
-import type {WorkTicketStatusGroup} from "./work-ticket-status.d.ts";
+import type {WorkTicketStatusRecord} from "./work-ticket-status.d.ts";
 import type {Warehouse} from "../products.d.ts";
 import type {ProductStatusRecord} from "./product-status.d.ts";
 
 export interface ShortageItem {
     ItemCode: string;
-    ItemCodeDesc: string|null;
+    ItemCodeDesc: string | null;
     WarehouseCode: string;
-    ProductLine: string|null;
+    ProductLine: string | null;
     BuyerCode: string;
     PlannerCode: string;
     PrimaryVendorNo: string;
     AverageUnitCost: number;
     BinLocation: string;
     ProductStatus: string;
-    InventoryCycle: string|null;
-    QuantityOnHand: string|number;
+    InventoryCycle: string | null;
+    QuantityOnHand: string | number;
     QuantityOnPurchaseOrder: number;
     QuantityOnSalesOrder: number;
     QuantityOnBackOrder: number;
@@ -35,20 +35,20 @@ export interface ShortageItem {
 
 export interface ShortageWorkTicketItem {
     ItemCode: string;
-    WarehouseCode: string|null;
-    StatusJSON: WorkTicketStatusGroup;
+    WarehouseCode: string | null;
+    StatusJSON: WorkTicketStatusRecord;
     WorkTicketNo: string;
-    ProductionDueDate: string|null;
-    QtyDue: string|number|null;
+    ProductionDueDate: string | null;
+    QtyDue: string | number | null;
 }
 
 export interface ShortageITStatusItem {
     ItemCode: string;
-    WarehouseCode: string|null;
+    WarehouseCode: string | null;
     PurchaseOrderNo: string;
-    StatusJSON:WorkTicketStatusGroup;
+    StatusJSON: WorkTicketStatusRecord;
     WorkTicketKey: string;
-    WODueDate: string|null;
+    WODueDate: string | null;
 }
 
 export interface ShortageStatus {
@@ -65,15 +65,15 @@ export interface ShortageSettings {
 }
 
 export interface ShortagePlanner {
-    PlannerCode: string|null;
+    PlannerCode: string | null;
 }
 
 
 export interface ShortageBuyer {
-    BuyerCode: string|null;
+    BuyerCode: string | null;
 }
 
-export type ShortageWarehouse = Pick<Warehouse, 'WarehouseCode'|'WarehouseDesc'>;
+export type ShortageWarehouse = Pick<Warehouse, 'WarehouseCode' | 'WarehouseDesc'>;
 
 export interface ShortageVendor {
     PrimaryVendorNo: string;
