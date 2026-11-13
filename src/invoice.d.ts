@@ -150,3 +150,7 @@ export interface ExtendedInvoice extends InvoiceHistoryHeader {
     Track?: InvoiceTrackingRecord[],
     Payments?: InvoicePaymentRecord[]
 }
+
+export type PrivacyPurgeInvoice = Pick<InvoiceHistoryHeader, 'InvoiceNo'|'HeaderSeqNo'|'EmailAddress'
+    |'BillToName'|'BillToAddress1'|'BillToZipCode'|'BillToCountryCode'
+    |'ShipToName'|'ShipToAddress1'|'ShipToZipCode'|'ShipToCountryCode'>;

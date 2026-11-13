@@ -53,10 +53,24 @@ export type WorkTicketWorkStatusKey =
     | 'plan'
     | 'prd'
     | 'pull'
-    | 'rush';
+    | 'rush'
+    | 'rushst'  // SLC Priority Flag
+    | 'rushst2' // SLC Priority 2 Flag
+    ;
 
 
-export type WorkTicketStatusGroup = Record<WorkTicketWorkStatusKey, WorkTicketStatusEntry | undefined>
-export type WorkTicketStatusRecord = Record<WorkTicketWorkStatusKey, WorkTicketStatusEntry | undefined>;
+export type WorkTicketStatusRecord = Partial<Record<WorkTicketWorkStatusKey, WorkTicketStatusEntry>>;
 
-// export interface WorkTicketStatusGroup
+export interface WorkTicketStatusGroup {
+    id: number;
+    locationName: string;
+    groupName: string;
+    active: boolean;
+    history: [{ userId: number, updated: string }]
+}
+
+export interface WorkTicketStatusItem {
+    id: number,
+    groupId: number,
+    itemCode: string,
+}

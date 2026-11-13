@@ -13,6 +13,7 @@ export interface ShortageItem {
     AverageUnitCost: number;
     BinLocation: string;
     ProductStatus: string;
+    InventoryCycle: string|null;
     QuantityOnHand: string|number;
     QuantityOnPurchaseOrder: number;
     QuantityOnSalesOrder: number;

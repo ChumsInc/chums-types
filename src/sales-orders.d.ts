@@ -192,4 +192,37 @@ export interface SalesOrderWithStatus extends Pick<SalesOrderHeader, 'ARDivision
     isWebsite: boolean;
     CustomerName: string;
     status: SalesOrderStatus|null;
+    lineComments: string[];
+}
+
+export interface OrderStatusEntry {
+   statusCode: string;
+   userId: number;
+   notes: string|null;
+   timestamp?: string;
+}
+export interface OpenOrderStatus {
+    SalesOrderNo: string;
+    currentStatus: OrderStatusEntry|null;
+    statusHistory: StatusHistory[]|null;
+    timestamp: string;
+}
+
+export interface OpenOrderStatusBody {
+    salesOrderNo: string;
+    state: string;
+    note?: string|null;
+}
+
+
+export interface SalesOrderSearchResult {
+    SalesOrderNo: string;
+    ARDivisionNo:string;
+    CustomerNo: string;
+    BillToName: string;
+    CustomerPONo: string;
+    OrderDate: string;
+    ShipToCode: string|null;
+    ShipToName: string|null;
+    OrderStatus: SalesOrderStatus|null;
 }

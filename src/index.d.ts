@@ -98,6 +98,7 @@ export type {
     InvoiceTrackingRecord,
     InvoiceType,
     PaperlessLogRow,
+    PrivacyPurgeInvoice,
 } from './invoice.d.ts';
 
 export type {
@@ -200,6 +201,9 @@ export type {
     SalesOrderStatus,
     StatusHistory,
     SalesOrderWithStatus,
+    OpenOrderStatus,
+    OrderStatusEntry,
+    OpenOrderStatusBody,
 } from './sales-orders.d.ts';
 export type {Salesperson, SalespersonLookupResult} from './salesperson.d.ts';
 

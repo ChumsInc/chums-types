@@ -115,18 +115,7 @@ export type {
 } from './work-ticket.d.ts'
 
 export type * as WorkTicketStatusTypes from './work-ticket-status.d.ts'
-export type {
-    WorkTicketWorkStatusKey,
-    WorkTicketStatusEntry,
-    WorkTicketWorkStatusGroup,
-    WorkTicketStatusRecord,
-    WorkTicketWorkStatusItem,
-    WorkTicketStatusGroup,
-    WorkTicketGroup,
-    WorkTicketGroupItem,
-    WorkTicketStatusSet,
-    WorkTicketWorkStatusDetail,
-} from './work-ticket-status.d.ts'
+export * from './work-ticket-status.d.ts'
 
 export type * as SearchTypes from './search.d.ts';
 export type {
