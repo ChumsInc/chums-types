@@ -19,6 +19,8 @@ export interface WorkTicketWorkStatusItem extends Pick<WorkTicketHeader,
     StatusJSON: WorkTicketStatusSet;
     WorkCenters: string[];
     isRush: boolean;
+    InventoryCycle?: string|null;
+    shipDate?: string|null;
 }
 
 

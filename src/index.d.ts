@@ -79,7 +79,9 @@ export type {
 export type {
     YesNo,
     Editable,
-    LoadingStatus
+    LoadingStatus,
+    ErrorResponse,
+    ErrorsResponse,
 } from './generics.d.ts';
 
 export type {
